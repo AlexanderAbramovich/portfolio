@@ -48,10 +48,16 @@ export default function Home() {
 
         <div className={styles.heroContent}>
           <span className={styles.heroLabel}>{t.label}</span>
-          <h1 className={styles.heroTitle}>
-            <span className={styles.heroLine1}>{t.title1}</span>
-            <span className={styles.heroLine2}>{t.title2}</span>
-          </h1>
+
+          <div className={styles.heroTitleWrap}>
+            <div className={styles.decorLineTop} />
+            <h1 className={styles.heroTitle}>
+              <span className={styles.heroLine1}>{t.title1}</span>
+              <span className={styles.heroLine2}>{t.title2}</span>
+            </h1>
+            <div className={styles.decorLineBottom} />
+          </div>
+
           <Link to="/works" className={`btn-accent ${styles.heroCta}`}>
             <span>{t.cta}</span>
           </Link>

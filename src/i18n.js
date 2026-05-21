@@ -1,6 +1,7 @@
 export const translations = {
   ru: {
     nav: {
+      home: 'ГЛАВНАЯ',
       works: 'РАБОТЫ',
       about: 'ОБО МНЕ',
       services: 'УСЛУГИ',
@@ -142,6 +143,7 @@ export const translations = {
 
   en: {
     nav: {
+      home: 'HOME',
       works: 'WORKS',
       about: 'ABOUT',
       services: 'SERVICES',

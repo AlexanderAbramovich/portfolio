@@ -25,6 +25,7 @@ export default function Header() {
   }, [menuOpen])
 
   const links = [
+    { to: '/',         label: t.home },
     { to: '/works',    label: t.works },
     { to: '/about',    label: t.about },
     { to: '/services', label: t.services },
@@ -35,7 +36,11 @@ export default function Header() {
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
       <div className={`${styles.inner} container`}>
         <Link to="/" className={styles.logo} aria-label="Home">
-          <span className={styles.logoText}>AA</span>
+          <div className={styles.logoMark}>
+            <span className={styles.logoSolid}>A</span>
+            <span className={styles.logoOutline}>A</span>
+          </div>
+          <div className={styles.logoBar} />
         </Link>
 
         <nav className={`${styles.nav} ${menuOpen ? styles.navOpen : ''}`}>
@@ -43,7 +48,7 @@ export default function Header() {
             <Link
               key={to}
               to={to}
-              className={`${styles.link} ${location.pathname === to ? styles.linkActive : ''}`}
+              className={`${styles.link} ${location.pathname === to && (to !== '/' || location.pathname === '/') ? styles.linkActive : ''}`}
             >
               {label}
             </Link>
