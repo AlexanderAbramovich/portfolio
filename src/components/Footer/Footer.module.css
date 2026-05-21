@@ -1,0 +1,50 @@
+.footer {
+  background: var(--bg);
+  padding: 0;
+  margin-top: auto;
+}
+
+.line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  opacity: 0.5;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  gap: 16px;
+}
+
+.copy {
+  font-family: 'Oswald', sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.socialLink {
+  color: var(--text-muted);
+  transition: color 0.2s, transform 0.2s;
+  display: flex;
+  align-items: center;
+}
+
+.socialLink:hover {
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+  .inner { flex-direction: column; gap: 14px; }
+}
