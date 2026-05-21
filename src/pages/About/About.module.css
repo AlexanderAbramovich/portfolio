@@ -179,7 +179,12 @@
     gap: 40px;
     padding-top: 40px;
   }
-  .photoCol { position: static; }
-  .photo { max-width: 320px; }
+  .photoCol {
+    position: static;
+    max-width: 320px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .photo { width: 100%; max-width: 100%; }
   .infoCol { padding-top: 0; }
 }

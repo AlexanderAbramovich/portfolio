@@ -30,6 +30,7 @@ export default function Home() {
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
       <section className={styles.hero}>
         <div className={styles.heroBg}>
+          <div className={styles.heroFallback} />
           {!videoError && (
             <video
               ref={videoRef}
@@ -42,9 +43,52 @@ export default function Home() {
               onError={() => setVideoError(true)}
             />
           )}
-          <div className={styles.heroFallback} />
         </div>
         <div className={styles.heroOverlay} />
+
+        {/* ── Doodles ──────────────────────────────────────────────────── */}
+        <svg className={styles.heroDoodles} viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          {/* top-left: triangle */}
+          <polygon points="62,148 104,72 146,148" />
+          {/* top-left: X */}
+          <line x1="198" y1="52" x2="228" y2="82" /><line x1="228" y1="52" x2="198" y2="82" />
+          {/* top-left: small dot-circle */}
+          <circle cx="310" cy="38" r="10" />
+
+          {/* top-right: ring */}
+          <circle cx="1298" cy="108" r="42" />
+          {/* top-right: small ring inside */}
+          <circle cx="1298" cy="108" r="22" />
+          {/* top-right: diamond */}
+          <polygon points="1158,198 1182,154 1206,198 1182,242" />
+
+          {/* mid-left: diamond */}
+          <polygon points="36,400 68,358 100,400 68,442" />
+          {/* mid-left: plus */}
+          <line x1="38" y1="530" x2="38" y2="570" /><line x1="18" y1="550" x2="58" y2="550" />
+
+          {/* mid-right: triangle small */}
+          <polygon points="1380,360 1410,308 1440,360" />
+          {/* mid-right: cross */}
+          <line x1="1392" y1="460" x2="1428" y2="496" /><line x1="1428" y1="460" x2="1392" y2="496" />
+
+          {/* bottom-left: X */}
+          <line x1="62" y1="692" x2="106" y2="736" /><line x1="106" y1="692" x2="62" y2="736" />
+          {/* bottom-left: small circle */}
+          <circle cx="210" cy="808" r="18" />
+          {/* bottom-left: plus */}
+          <line x1="320" y1="840" x2="320" y2="872" /><line x1="304" y1="856" x2="336" y2="856" />
+
+          {/* bottom-right: triangle */}
+          <polygon points="1258,792 1296,724 1334,792" />
+          {/* bottom-right: ring */}
+          <circle cx="1400" cy="820" r="28" />
+
+          {/* scattered smalls */}
+          <circle cx="680" cy="44" r="7" />
+          <polygon points="760,840 778,810 796,840" />
+          <line x1="500" y1="862" x2="530" y2="862" /><line x1="515" y1="847" x2="515" y2="877" />
+        </svg>
 
         <div className={styles.heroContent}>
           <span className={styles.heroLabel}>{t.label}</span>

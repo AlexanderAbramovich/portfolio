@@ -13,7 +13,6 @@ export default function Case() {
   const navigate = useNavigate()
 
   const [lightbox, setLightbox] = useState(null) // index or null
-  const [coverError, setCoverError] = useState(false)
 
   useScrollReveal()
 
@@ -44,6 +43,8 @@ export default function Case() {
 
   if (!project) return null
 
+  const singleColumn = ['identity', 'packaging', 'presentation'].includes(project.category)
+
   const title    = lang === 'en' ? project.titleEn    : project.title
   const desc     = lang === 'en' ? project.descriptionEn : project.description
   const tags     = lang === 'en' ? project.tagsEn     : project.tags
@@ -52,22 +53,14 @@ export default function Case() {
 
   return (
     <div className={`page-wrapper ${styles.page}`}>
-      {/* ── HERO ─────────────────────────────────────────────────────────── */}
-      <div className={styles.hero}>
-        {!coverError ? (
-          <img
-            src={project.cover}
-            alt={title}
-            className={styles.heroCover}
-            onError={() => setCoverError(true)}
-          />
-        ) : (
-          <div className={styles.heroCoverFallback} />
-        )}
-        <div className={styles.heroOverlay} />
-        <div className={`container ${styles.heroMeta}`}>
-          <span className={styles.heroCat}>{catLabel}</span>
-          <h1 className={styles.heroTitle}>{title}</h1>
+
+      {/* ── PAGE HEADER ──────────────────────────────────────────────────── */}
+      <div className={styles.pageHeader}>
+        <div className="container">
+          <Link to="/works" className={styles.backLink}>{t.back}</Link>
+          <span className={styles.headerCat}>{catLabel}</span>
+          <h1 className={styles.headerTitle}>{title}</h1>
+          <div className={styles.headerLine} />
         </div>
       </div>
 
@@ -100,31 +93,50 @@ export default function Case() {
       </section>
 
       {/* ── GALLERY ──────────────────────────────────────────────────────── */}
-      <section className={styles.gallery}>
-        <div className="container">
-          <h2 className={`section-title reveal ${styles.galleryTitle}`}>{t.gallery}</h2>
-          <div className={styles.galleryGrid}>
-            {project.images.map((img, i) => (
-              <div
-                key={i}
-                className={`${styles.galleryItem} reveal`}
-                style={{ animationDelay: `${i * 0.07}s` }}
-                onClick={() => setLightbox(i)}
-                data-cursor="pointer"
-              >
-                <GalleryImage src={img} alt={`${title} — ${i + 1}`} />
-              </div>
-            ))}
+      {project.images.length > 0 && (
+        <section className={styles.gallery}>
+          <div className="container">
+            <h2 className={`section-title reveal ${styles.galleryTitle}`}>{t.gallery}</h2>
+            <div className={singleColumn ? styles.galleryGridSingle : styles.galleryGrid}>
+              {project.images.map((img, i) => (
+                <div
+                  key={i}
+                  className={`${styles.galleryItem} reveal`}
+                  style={{ animationDelay: `${i * 0.07}s` }}
+                  onClick={() => setLightbox(i)}
+                  data-cursor="pointer"
+                >
+                  <GalleryImage src={img} alt={`${title} — ${i + 1}`} />
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
-      {/* ── NAV ──────────────────────────────────────────────────────────── */}
-      <div className="container">
-        <div className={styles.navRow}>
-          <Link to="/works" className={`btn-outline ${styles.backBtn}`}>{t.back}</Link>
-        </div>
-      </div>
+      {/* ── VIDEOS ───────────────────────────────────────────────────────── */}
+      {project.videos && project.videos.length > 0 && (
+        <section className={styles.videos}>
+          <div className="container">
+            <h2 className={`section-title reveal ${styles.galleryTitle}`}>{t.gallery}</h2>
+            <div className={styles.videosList}>
+              {project.videos.map((src, i) => (
+                <div key={i} className={`${styles.videoItem} reveal`}>
+                  <video
+                    src={src}
+                    className={styles.videoEl}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    controls
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* ── NEXT PROJECT ─────────────────────────────────────────────────── */}
       <Link to={`/works/${next.id}`} className={styles.nextProject} data-cursor="pointer">

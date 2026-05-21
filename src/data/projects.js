@@ -1,5 +1,7 @@
 const BASE = import.meta.env.BASE_URL
 
+const img = (folder, ...nums) => nums.map(n => `${BASE}images/projects/${folder}/${n}.jpg`)
+
 export const projects = [
   // ─── АЙДЕНТИКА ────────────────────────────────────────────────────────────
   {
@@ -14,12 +16,7 @@ export const projects = [
     location: 'Улан-Удэ',
     description: 'Разработка полного фирменного стиля для кофейни «Сопка» в Улан-Удэ. Концепция основана на образе байкальских сопок — сдержанная мощь природы, переведённая в современную айдентику. Логотип, носители, меню, навигация.',
     descriptionEn: 'Full brand identity development for Sopka Coffee in Ulan-Ude. The concept is based on the image of Baikal hills — the restrained power of nature translated into modern identity. Logo, brand carriers, menu, navigation.',
-    images: [
-      `${BASE}images/projects/sopka/1.jpg`,
-      `${BASE}images/projects/sopka/2.jpg`,
-      `${BASE}images/projects/sopka/3.jpg`,
-      `${BASE}images/projects/sopka/4.jpg`,
-    ],
+    images: img('sopka', 1, 2, 3, 4, 5, 6, 7),
     featured: true,
   },
   {
@@ -34,11 +31,7 @@ export const projects = [
     location: 'Иркутск',
     description: 'Айдентика для студии пилатеса FORM в Иркутске. Минималистичный, телесный, точный — как сам пилатес. Шрифтовой логотип с геометрической выверенностью, нейтральная палитра с кожаным акцентом.',
     descriptionEn: 'Identity for FORM pilates studio in Irkutsk. Minimalist, bodily, precise — like pilates itself. Typographic logo with geometric precision, neutral palette with a leather accent.',
-    images: [
-      `${BASE}images/projects/form/1.jpg`,
-      `${BASE}images/projects/form/2.jpg`,
-      `${BASE}images/projects/form/3.jpg`,
-    ],
+    images: img('form', 1, 2, 3, 4, 5, 6, 7, 8, 9),
     featured: true,
   },
   {
@@ -53,11 +46,7 @@ export const projects = [
     location: 'Улан-Удэ',
     description: 'Брендинг крафтовой пекарни «Тесто». Тёплая, домашняя эстетика с ремесленным характером. Логотип на основе пшеничного колоса, крафтовая упаковка, фирменные элементы.',
     descriptionEn: 'Branding for Testo craft bakery. Warm, homely aesthetic with artisanal character. Wheat ear-based logo, craft packaging, brand elements.',
-    images: [
-      `${BASE}images/projects/testo/1.jpg`,
-      `${BASE}images/projects/testo/2.jpg`,
-      `${BASE}images/projects/testo/3.jpg`,
-    ],
+    images: img('testo', 1, 2, 3, 4, 5, 6, 7, 8, 9),
     featured: true,
   },
 
@@ -74,11 +63,7 @@ export const projects = [
     location: 'WB / Ozon',
     description: 'Серия карточек для косметического бренда GoldenRoseHips на Wildberries и Ozon. Натуральная тематика, байкальские мотивы, чистая инфографика для конверсии.',
     descriptionEn: 'Card series for the GoldenRoseHips cosmetics brand on Wildberries and Ozon. Natural themes, Baikal motifs, clean infographics for conversion.',
-    images: [
-      `${BASE}images/projects/golden/1.jpg`,
-      `${BASE}images/projects/golden/2.jpg`,
-      `${BASE}images/projects/golden/3.jpg`,
-    ],
+    images: img('golden', 1, 2, 3, 4, 5, 6),
     featured: false,
   },
   {
@@ -93,11 +78,7 @@ export const projects = [
     location: 'WB / Ozon',
     description: 'Дизайн карточек товара для беспроводных наушников Hoco EQ24 Estrella. Тёмный технологичный стиль, акцент на характеристиках и lifestyle-образах.',
     descriptionEn: 'Product card design for Hoco EQ24 Estrella wireless headphones. Dark tech style, emphasis on specs and lifestyle imagery.',
-    images: [
-      `${BASE}images/projects/hoco/1.jpg`,
-      `${BASE}images/projects/hoco/2.jpg`,
-      `${BASE}images/projects/hoco/3.jpg`,
-    ],
+    images: img('hoco', 1, 2, 3, 4, 5, 6),
     featured: false,
   },
   {
@@ -112,11 +93,7 @@ export const projects = [
     location: 'WB / Ozon',
     description: 'Карточки товара для кукольного домика PAREMO. Светлая, игровая подача, акцент на деталях конструктора и радости ребёнка.',
     descriptionEn: 'Product cards for the PAREMO dollhouse. Light, playful presentation, emphasis on construction details and child joy.',
-    images: [
-      `${BASE}images/projects/paremo/1.jpg`,
-      `${BASE}images/projects/paremo/2.jpg`,
-      `${BASE}images/projects/paremo/3.jpg`,
-    ],
+    images: img('paremo', 1, 2, 3, 4, 5, 6),
     featured: false,
   },
   {
@@ -131,11 +108,7 @@ export const projects = [
     location: 'WB / Ozon',
     description: 'Дизайн карточек для хвойного чая «Сибирская клетчатка». Природная эстетика, доверие через состав и происхождение, экологичный визуальный стиль.',
     descriptionEn: 'Card design for Siberian Fiber pine tea. Natural aesthetics, trust through composition and origin, eco-friendly visual style.',
-    images: [
-      `${BASE}images/projects/tea/1.jpg`,
-      `${BASE}images/projects/tea/2.jpg`,
-      `${BASE}images/projects/tea/3.jpg`,
-    ],
+    images: img('tea', 1, 2, 3, 4, 5, 6),
     featured: false,
   },
   {
@@ -150,11 +123,7 @@ export const projects = [
     location: 'WB / Ozon',
     description: 'Карточки товара для пуховика с мехом от Mexa России. Премиальный образ, акцент на материалах и теплоте, стильная подача одежды для маркетплейса.',
     descriptionEn: 'Product cards for Mexa Russia fur down jacket. Premium image, emphasis on materials and warmth, stylish apparel presentation for marketplace.',
-    images: [
-      `${BASE}images/projects/coat/1.jpg`,
-      `${BASE}images/projects/coat/2.jpg`,
-      `${BASE}images/projects/coat/3.jpg`,
-    ],
+    images: img('coat', 1, 2, 3, 4, 5, 6),
     featured: false,
   },
   {
@@ -169,10 +138,7 @@ export const projects = [
     location: 'WB / Ozon',
     description: 'Карточки для спортивной ветровки. Энергичный визуальный стиль, акцент на технических характеристиках ткани, динамичная подача.',
     descriptionEn: 'Cards for a sports windbreaker. Energetic visual style, emphasis on fabric technical specs, dynamic presentation.',
-    images: [
-      `${BASE}images/projects/windbreaker/1.jpg`,
-      `${BASE}images/projects/windbreaker/2.jpg`,
-    ],
+    images: img('windbreaker', 1, 2, 3, 4, 5),
     featured: false,
   },
 
@@ -189,11 +155,7 @@ export const projects = [
     location: 'Улан-Удэ',
     description: 'Серия постов и сторис для фитнес-клуба «Любимый фитнес». Минималистичный чистый стиль, акцент на мотивации и расписании занятий.',
     descriptionEn: 'Post and story series for Lyubimiy fitness club. Clean minimalist style, emphasis on motivation and class schedules.',
-    images: [
-      `${BASE}images/projects/fitness/1.jpg`,
-      `${BASE}images/projects/fitness/2.jpg`,
-      `${BASE}images/projects/fitness/3.jpg`,
-    ],
+    images: img('fitness', 1, 2, 3, 4, 5, 6, 7, 8),
     featured: false,
   },
   {
@@ -208,11 +170,7 @@ export const projects = [
     location: 'Улан-Удэ',
     description: 'Контент для соцсетей пекарни «Тесто». Тёплая, домашняя подача: крупные планы выпечки, крафтовые текстуры, уютная атмосфера.',
     descriptionEn: 'Social media content for Testo bakery. Warm, homely presentation: close-ups of pastries, craft textures, cozy atmosphere.',
-    images: [
-      `${BASE}images/projects/testo-social/1.jpg`,
-      `${BASE}images/projects/testo-social/2.jpg`,
-      `${BASE}images/projects/testo-social/3.jpg`,
-    ],
+    images: img('testo-social', 1, 2, 3, 4, 5, 6, 7, 8),
     featured: false,
   },
   {
@@ -227,11 +185,7 @@ export const projects = [
     location: 'Улан-Удэ',
     description: 'Соцсети для кофейни «Сопка». Дерзкий, городской визуальный стиль — контраст тёмного и золотого, сильные типографические решения.',
     descriptionEn: 'Social media for Sopka Coffee. Bold, urban visual style — contrast of dark and gold, strong typographic solutions.',
-    images: [
-      `${BASE}images/projects/sopka-social/1.jpg`,
-      `${BASE}images/projects/sopka-social/2.jpg`,
-      `${BASE}images/projects/sopka-social/3.jpg`,
-    ],
+    images: img('sopka-social', 1, 2, 3, 4, 5, 6, 7),
     featured: true,
   },
 
@@ -248,11 +202,7 @@ export const projects = [
     location: 'Улан-Удэ',
     description: 'Дизайн упаковки для чайного бренда «Таёжница». Природные иллюстрации, атмосфера сибирской тайги, экологичные материалы как часть концепции.',
     descriptionEn: 'Packaging design for Taejnica tea brand. Natural illustrations, Siberian taiga atmosphere, eco-friendly materials as part of the concept.',
-    images: [
-      `${BASE}images/projects/taejnica/1.jpg`,
-      `${BASE}images/projects/taejnica/2.jpg`,
-      `${BASE}images/projects/taejnica/3.jpg`,
-    ],
+    images: img('taejnica', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
     featured: true,
   },
   {
@@ -267,11 +217,7 @@ export const projects = [
     location: 'Иркутск',
     description: 'Дизайн упаковки БАД Омега-3 из омуля от «Байкал Продукт». Байкальский характер, медицинская точность, премиальный образ регионального продукта.',
     descriptionEn: 'Packaging design for Baikal Product Omega-3 supplement from omul fish. Baikal character, medical precision, premium image of a regional product.',
-    images: [
-      `${BASE}images/projects/omega/1.jpg`,
-      `${BASE}images/projects/omega/2.jpg`,
-      `${BASE}images/projects/omega/3.jpg`,
-    ],
+    images: img('omega', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
     featured: false,
   },
 
@@ -288,11 +234,7 @@ export const projects = [
     location: 'Улан-Удэ',
     description: 'Инвестиционная презентация для фудтех-стартапа BaikalFresh. Чистая структура, сильные данные, визуал, внушающий доверие инвесторам.',
     descriptionEn: 'Investment presentation for BaikalFresh foodtech startup. Clean structure, strong data, visuals that inspire investor confidence.',
-    images: [
-      `${BASE}images/projects/baikalfresh/1.jpg`,
-      `${BASE}images/projects/baikalfresh/2.jpg`,
-      `${BASE}images/projects/baikalfresh/3.jpg`,
-    ],
+    images: img('baikalfresh', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12),
     featured: false,
   },
   {
@@ -307,11 +249,7 @@ export const projects = [
     location: 'Иркутск',
     description: 'Корпоративная презентация туристической компании «Байкал Тур». Природные фотографии, информативная инфографика маршрутов, чистый и профессиональный стиль.',
     descriptionEn: 'Corporate presentation for Baikal Tour travel company. Nature photography, informative route infographics, clean and professional style.',
-    images: [
-      `${BASE}images/projects/baikaltour/1.jpg`,
-      `${BASE}images/projects/baikaltour/2.jpg`,
-      `${BASE}images/projects/baikaltour/3.jpg`,
-    ],
+    images: img('baikaltour', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
     featured: false,
   },
 
@@ -328,10 +266,8 @@ export const projects = [
     location: 'After Effects',
     description: 'Анимация логотипа кофейни «Сопка» в After Effects. Логотип появляется с нарастающим контуром, напоминающим силуэт горы — медленно и с характером.',
     descriptionEn: 'Logo animation for Sopka Coffee in After Effects. The logo appears with a growing outline resembling a mountain silhouette — slowly and with character.',
-    images: [
-      `${BASE}images/projects/sopka-motion/1.jpg`,
-      `${BASE}images/projects/sopka-motion/2.jpg`,
-    ],
+    images: [],
+    videos: [`${BASE}images/projects/sopka-motion/%D0%90%D0%BD%D0%B8%D0%BC%D0%B0%D1%86%D0%B8%D1%8F%20%D0%BB%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF%D0%B0%20%D0%BA%D0%BE%D1%84%D0%B5%D0%B9%D0%BD%D0%B8%20%C2%AB%D0%A1%D0%BE%D0%BF%D0%BA%D0%B0%C2%BB.mp4`],
     featured: false,
   },
   {
@@ -346,10 +282,8 @@ export const projects = [
     location: 'After Effects',
     description: 'Серия анимированных сторис для студии пилатеса FORM к акции записи. Лаконичная анимация типографики, плавные переходы, работа в рамках брендбука.',
     descriptionEn: 'Series of animated stories for FORM pilates studio for a sign-up promotion. Concise typography animation, smooth transitions, working within the brand book.',
-    images: [
-      `${BASE}images/projects/form-motion/1.jpg`,
-      `${BASE}images/projects/form-motion/2.jpg`,
-    ],
+    images: [],
+    videos: [`${BASE}images/projects/form-motion/%D0%90%D0%BD%D0%B8%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%B0%D1%8F%20%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%81%20%D0%B4%D0%BB%D1%8F%20%D0%B0%D0%BA%D1%86%D0%B8%D0%B8%20%C2%ABFORM%C2%BB.mp4`],
     featured: false,
   },
 
@@ -366,11 +300,7 @@ export const projects = [
     location: 'HTML / CSS',
     description: 'Лендинг для крафтовой пекарни «Тесто». Тёплая атмосфера, адаптивная вёрстка, акцент на меню и форме заказа. HTML/CSS без фреймворков.',
     descriptionEn: 'Landing page for Testo craft bakery. Warm atmosphere, responsive layout, emphasis on menu and order form. HTML/CSS without frameworks.',
-    images: [
-      `${BASE}images/projects/testo-web/1.jpg`,
-      `${BASE}images/projects/testo-web/2.jpg`,
-      `${BASE}images/projects/testo-web/3.jpg`,
-    ],
+    images: img('testo-web', 1),
     featured: false,
   },
   {
@@ -385,11 +315,7 @@ export const projects = [
     location: 'HTML / CSS',
     description: 'Лендинг для студии пилатеса FORM. Минималистичный дизайн, запись на пробное занятие, расписание, отзывы. Полностью адаптивный.',
     descriptionEn: 'Landing page for FORM pilates studio. Minimalist design, trial class booking, schedule, reviews. Fully responsive.',
-    images: [
-      `${BASE}images/projects/form-web/1.jpg`,
-      `${BASE}images/projects/form-web/2.jpg`,
-      `${BASE}images/projects/form-web/3.jpg`,
-    ],
+    images: img('form-web', 1),
     featured: true,
   },
 ]
