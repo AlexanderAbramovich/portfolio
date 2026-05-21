@@ -37,7 +37,7 @@
 }
 
 .logoSolid {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Anton', sans-serif;
   font-size: 34px;
   color: var(--accent);
   line-height: 1;
@@ -45,7 +45,7 @@
 }
 
 .logoOutline {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Anton', sans-serif;
   font-size: 34px;
   color: transparent;
   -webkit-text-stroke: 1.5px var(--accent);

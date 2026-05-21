@@ -35,7 +35,7 @@
 }
 
 .catTitle {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Anton', sans-serif;
   font-size: 22px;
   letter-spacing: 0.08em;
   color: var(--accent);
@@ -103,7 +103,7 @@
 }
 
 .ctaTitle {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Anton', sans-serif;
   font-size: clamp(28px, 4vw, 52px);
   color: var(--text);
   line-height: 1;

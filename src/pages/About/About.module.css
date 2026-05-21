@@ -35,7 +35,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Anton', sans-serif;
   font-size: 80px;
   color: var(--text-muted);
   border: 1px solid rgba(200,134,10,0.15);

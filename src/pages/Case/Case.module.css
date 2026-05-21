@@ -31,7 +31,7 @@
 }
 
 .headerTitle {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Anton', sans-serif;
   font-size: clamp(48px, 8vw, 120px);
   color: var(--text);
   line-height: 0.92;
@@ -227,7 +227,7 @@
 }
 
 .nextTitle {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Anton', sans-serif;
   font-size: clamp(24px, 4vw, 48px);
   color: var(--text);
   flex: 1;

@@ -42,9 +42,8 @@
 
 /* ── Grid ──────────────────────────────────────────────────────────────── */
 .grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  columns: 3;
+  column-gap: 20px;
   transition: opacity 0.22s ease;
 }
 
@@ -54,6 +53,8 @@
 }
 
 .cardWrap {
+  break-inside: avoid;
+  margin-bottom: 20px;
   animation: cardAppear 0.45s ease both;
 }
 
@@ -73,15 +74,16 @@
 
 /* ── Responsive ─────────────────────────────────────────────────────────── */
 @media (max-width: 1200px) {
-  .grid { grid-template-columns: repeat(2, 1fr); }
+  .grid { columns: 2; }
 }
 
 @media (max-width: 768px) {
-  .grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .grid { columns: 2; column-gap: 12px; }
+  .cardWrap { margin-bottom: 12px; }
   .filters { gap: 8px; }
   .filterBtn { font-size: 12px; padding: 7px 14px; }
 }
 
 @media (max-width: 480px) {
-  .grid { grid-template-columns: 1fr; }
+  .grid { columns: 1; }
 }
