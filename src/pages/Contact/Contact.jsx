@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useLanguage } from '../../context/LanguageContext'
 import { translations } from '../../i18n'
 import { useScrollReveal } from '../../hooks/useScrollReveal'
+import { useMeta } from '../../hooks/useMeta'
 import styles from './Contact.module.css'
 
 const CONTACTS = [
@@ -17,6 +18,7 @@ const CONTACTS = [
   },
   {
     label: 'ВКонтакте',
+    labelEn: 'VK',
     value: 'vk.com/idkapen',
     href: 'https://vk.com/idkapen',
     icon: (
@@ -47,6 +49,7 @@ const CONTACTS = [
   },
   {
     label: 'Телефон',
+    labelEn: 'Phone',
     value: '+7 902 161 14 41',
     href: 'tel:+79021611441',
     icon: (
@@ -63,15 +66,20 @@ export default function Contact() {
   const [form, setForm] = useState({ name: '', contact: '', message: '' })
 
   useScrollReveal()
+  useMeta({ ...translations[lang].meta.contact, lang })
 
   const handleChange = (e) => setForm(f => ({ ...f, [e.target.name]: e.target.value }))
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    const subject = encodeURIComponent(`Проект от ${form.name}`)
-    const body = encodeURIComponent(
-      `Имя: ${form.name}\nКонтакт: ${form.contact}\n\nСообщение:\n${form.message}`
+    const en = lang === 'en'
+    const subject = encodeURIComponent(
+      en ? `Project from ${form.name}` : `Проект от ${form.name}`
     )
+    const lines = en
+      ? [`Name: ${form.name}`, `Contact: ${form.contact}`, '', 'Message:', form.message]
+      : [`Имя: ${form.name}`, `Контакт: ${form.contact}`, '', 'Сообщение:', form.message]
+    const body = encodeURIComponent(lines.join('\n'))
     window.location.href = `mailto:kapen4design@gmail.com?subject=${subject}&body=${body}`
   }
 
@@ -95,7 +103,7 @@ export default function Contact() {
                   >
                     <span className={styles.contactIcon}>{c.icon}</span>
                     <span className={styles.contactText}>
-                      <span className={styles.contactLabel}>{c.label}</span>
+                      <span className={styles.contactLabel}>{lang === 'en' ? (c.labelEn || c.label) : c.label}</span>
                       <span className={styles.contactValue}>{c.value}</span>
                     </span>
                     <span className={styles.contactArrow}>→</span>

@@ -35,7 +35,7 @@
 }
 
 .catTitle {
-  font-family: 'Anton', sans-serif;
+  font-family: var(--font-display);
   font-size: 22px;
   letter-spacing: 0.08em;
   color: var(--accent);
@@ -61,7 +61,7 @@
 .item:last-child { border-bottom: none; }
 
 .itemName {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-body);
   font-size: 14px;
   color: var(--text-muted);
   flex: 1;
@@ -76,7 +76,7 @@
 }
 
 .itemPrice {
-  font-family: 'Oswald', sans-serif;
+  font-family: var(--font-mono);
   font-size: 15px;
   font-weight: 600;
   color: var(--text);
@@ -103,7 +103,7 @@
 }
 
 .ctaTitle {
-  font-family: 'Anton', sans-serif;
+  font-family: var(--font-display);
   font-size: clamp(28px, 4vw, 52px);
   color: var(--text);
   line-height: 1;

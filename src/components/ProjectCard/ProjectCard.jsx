@@ -2,18 +2,26 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useLanguage } from '../../context/LanguageContext'
 import { categoryLabels } from '../../data/projects'
+import imageAr from '../../data/imageAr.json'
 import styles from './ProjectCard.module.css'
 
-export default function ProjectCard({ project }) {
+export default function ProjectCard({ project, showCategory = true }) {
   const { lang } = useLanguage()
   const [imgError, setImgError] = useState(false)
+
+  // обложки бывают 2:1 и 16:9 - карточка подстраивается, чтобы ничего не срезало
+  const coverAr = (() => {
+    const raw = imageAr[project.cover.replace(import.meta.env.BASE_URL, '')]
+    if (!raw) return 16 / 9
+    return Math.min(2.2, Math.max(1.4, raw))
+  })()
 
   const title    = lang === 'en' ? project.titleEn    : project.title
   const catLabel = categoryLabels[lang][project.category] ?? project.category
 
   return (
-    <Link to={`/works/${project.id}`} className={styles.card} data-cursor="pointer">
-      <div className={styles.imageWrap}>
+    <Link to={`/works/${project.aliasOf || project.id}`} className={styles.card} data-cursor="pointer">
+      <div className={styles.imageWrap} style={{ aspectRatio: String(coverAr) }}>
         {!imgError ? (
           <img
             src={project.cover}
@@ -28,7 +36,7 @@ export default function ProjectCard({ project }) {
           </div>
         )}
         <div className={styles.overlay} />
-        <span className={styles.tag}>{catLabel}</span>
+        {showCategory && <span className={styles.tag}>{catLabel}</span>}
       </div>
 
       <div className={styles.info}>

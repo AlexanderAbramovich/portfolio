@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useLanguage } from '../../context/LanguageContext'
 import { translations } from '../../i18n'
 import { useScrollReveal } from '../../hooks/useScrollReveal'
+import { useMeta } from '../../hooks/useMeta'
 import styles from './About.module.css'
 
 const BASE = import.meta.env.BASE_URL
@@ -12,9 +13,6 @@ const TOOLS = [
   { name: 'After Effects', icon: 'Ae' },
   { name: 'Premiere Pro', icon: 'Pr' },
   { name: 'Figma', icon: 'Fig' },
-  { name: 'Kling AI', icon: 'KI' },
-  { name: 'ChatGPT', icon: 'GPT' },
-  { name: 'Claude', icon: 'Cl' },
 ]
 
 export default function About() {
@@ -23,6 +21,7 @@ export default function About() {
   const [imgError, setImgError] = useState(false)
 
   useScrollReveal()
+  useMeta({ ...translations[lang].meta.about, lang })
 
   return (
     <div className={`page-wrapper ${styles.page}`}>
@@ -46,6 +45,7 @@ export default function About() {
               <div className={styles.photoVignette} />
               <div className={styles.photoAccentLine} />
             </div>
+
           </div>
 
           {/* ── RIGHT: Info ─────────────────────────────────────────────── */}

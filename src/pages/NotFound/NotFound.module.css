@@ -1,0 +1,44 @@
+.page {
+  min-height: 68vh;
+  display: flex;
+  align-items: center;
+}
+
+.code {
+  display: inline-block;
+  font-size: 0.78rem;
+  letter-spacing: 0.22em;
+  color: var(--red);
+  border-bottom: 2px solid var(--red);
+  padding-bottom: 4px;
+  margin-bottom: 28px;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: clamp(3rem, 13vw, 9rem);
+  line-height: 0.88;
+  letter-spacing: -0.03em;
+  color: var(--cream);
+  margin: 0 0 26px;
+}
+
+.text {
+  max-width: 46ch;
+  color: var(--cream-dim);
+  line-height: 1.65;
+  margin-bottom: 38px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+@media (max-width: 600px) {
+  .page { min-height: 60vh; }
+  .actions > * { flex: 1 1 100%; text-align: center; }
+}

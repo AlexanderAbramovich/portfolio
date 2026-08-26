@@ -9,10 +9,10 @@
 }
 
 .header.scrolled {
-  background: rgba(13, 11, 9, 0.88);
+  background: color-mix(in srgb, var(--bg) 90%, transparent);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  box-shadow: 0 1px 0 rgba(200, 134, 10, 0.15);
+  box-shadow: 0 1px 0 var(--line);
 }
 
 .inner {
@@ -37,20 +37,11 @@
 }
 
 .logoSolid {
-  font-family: 'Anton', sans-serif;
+  font-family: var(--font-display);
   font-size: 34px;
   color: var(--accent);
   line-height: 1;
   transition: color 0.2s;
-}
-
-.logoOutline {
-  font-family: 'Anton', sans-serif;
-  font-size: 34px;
-  color: transparent;
-  -webkit-text-stroke: 1.5px var(--accent);
-  line-height: 1;
-  transition: -webkit-text-stroke-color 0.2s;
 }
 
 .logoBar {
@@ -62,7 +53,6 @@
 }
 
 .logo:hover .logoSolid { color: var(--accent-light); }
-.logo:hover .logoOutline { -webkit-text-stroke-color: var(--accent-light); }
 
 /* Nav */
 .nav {
@@ -72,7 +62,7 @@
 }
 
 .link {
-  font-family: 'Oswald', sans-serif;
+  font-family: var(--font-mono);
   font-size: 14px;
   font-weight: 400;
   letter-spacing: 0.12em;
@@ -115,13 +105,13 @@
 }
 
 .langBtn {
-  font-family: 'Oswald', sans-serif;
+  font-family: var(--font-mono);
   font-size: 13px;
   letter-spacing: 0.1em;
   color: var(--text-muted);
   background: none;
   border: none;
-  cursor: none;
+  cursor: pointer;
   display: flex;
   align-items: center;
   gap: 4px;
@@ -147,7 +137,7 @@
   height: 32px;
   background: none;
   border: none;
-  cursor: none;
+  cursor: pointer;
   padding: 4px;
 }
 
@@ -167,7 +157,7 @@
   .nav {
     position: fixed;
     inset: 0;
-    background: rgba(13, 11, 9, 0.97);
+    background: color-mix(in srgb, var(--bg) 97%, transparent);
     flex-direction: column;
     justify-content: center;
     gap: 28px;
@@ -189,4 +179,19 @@
   }
 
   .burger { display: flex; }
+}
+
+
+/* над тёмным первым экраном шапка светлая, даже если страница белая */
+.overDark {
+  --cream: #EDE4D3;
+  --cream-dim: #948A7A;
+  --line: rgba(237, 228, 211, 0.16);
+  color: var(--cream);
+}
+
+/* пока шапка над тёмным первым экраном - и плашка при скролле тоже тёмная */
+.overDark.scrolled {
+  background: rgba(12, 10, 9, 0.88);
+  box-shadow: 0 1px 0 rgba(237, 228, 211, 0.14);
 }

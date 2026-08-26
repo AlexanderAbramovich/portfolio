@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useLanguage } from '../../context/LanguageContext'
 import { translations } from '../../i18n'
@@ -21,15 +22,42 @@ const InstagramIcon = () => (
   </svg>
 )
 
+function useIrkutskTime() {
+  const [time, setTime] = useState('')
+  useEffect(() => {
+    const tick = () => {
+      try {
+        setTime(new Intl.DateTimeFormat('ru-RU', {
+          hour: '2-digit', minute: '2-digit', second: '2-digit',
+          timeZone: 'Asia/Irkutsk',
+        }).format(new Date()))
+      } catch {
+        setTime('')
+      }
+    }
+    tick()
+    const id = setInterval(tick, 1000)
+    return () => clearInterval(id)
+  }, [])
+  return time
+}
+
 export default function Footer() {
   const { lang } = useLanguage()
   const t = translations[lang].footer
+  const time = useIrkutskTime()
 
   return (
     <footer className={styles.footer}>
-      <div className={styles.line} />
       <div className={`${styles.inner} container`}>
-        <p className={styles.copy}>{t.copyright}</p>
+        <div className={styles.status}>
+          <span className={styles.dot} />
+          <span className="mono">{t.status}</span>
+        </div>
+        <div className={styles.metaCol}>
+          <span className="mono">{t.timeLabel} · {time || 'UTC+8'}</span>
+          <span className="mono">{t.reply}</span>
+        </div>
 
         <nav className={styles.socials} aria-label="Social links">
           <a
@@ -60,6 +88,11 @@ export default function Footer() {
             <InstagramIcon />
           </a>
         </nav>
+
+        <div className={styles.copyCol}>
+          <span className="barcode" aria-hidden="true" />
+          <p className={`mono ${styles.copy}`}>{t.copyright}</p>
+        </div>
       </div>
     </footer>
   )

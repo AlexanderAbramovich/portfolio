@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { useLanguage } from '../../context/LanguageContext'
 import { translations } from '../../i18n'
 import { useScrollReveal } from '../../hooks/useScrollReveal'
+import { useMeta } from '../../hooks/useMeta'
 import styles from './Services.module.css'
 
 export default function Services() {
@@ -9,6 +10,7 @@ export default function Services() {
   const t = translations[lang].services
 
   useScrollReveal()
+  useMeta({ ...translations[lang].meta.services, lang })
 
   return (
     <div className={`page-wrapper ${styles.page}`}>
@@ -26,11 +28,6 @@ export default function Services() {
                 {cat.items.map((item, ii) => (
                   <div key={ii} className={styles.item}>
                     <span className={styles.itemName}>{item.name}</span>
-                    <span className={styles.itemDivider} />
-                    <span className={styles.itemPrice}>
-                      <span className={styles.fromLabel}>{t.from} </span>
-                      {item.price}
-                    </span>
                   </div>
                 ))}
               </div>

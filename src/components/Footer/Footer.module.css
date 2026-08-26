@@ -2,29 +2,78 @@
   background: var(--bg);
   padding: 0;
   margin-top: auto;
+  border-top: 1px solid var(--line);
 }
 
-.line {
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--accent), transparent);
-  opacity: 0.5;
+.ctaRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-top: 48px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--line);
+  flex-wrap: wrap;
+}
+
+.ctaLink {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(38px, 5.5vw, 84px);
+  line-height: 1.0;
+  text-transform: uppercase;
+  color: var(--cream);
+  transition: color 0.2s;
+}
+
+.ctaLink:hover { color: var(--red-hot); }
+
+.arrow {
+  display: inline-block;
+  color: var(--red);
+  transition: transform 0.25s;
+}
+
+.ctaLink:hover .arrow { transform: translateX(12px); }
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--red);
+  animation: blink 1.6s ease infinite;
 }
 
 .inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: 22px;
+  padding-bottom: 26px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.metaCol {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.copyCol {
+  display: flex;
+  align-items: center;
   gap: 16px;
 }
 
 .copy {
-  font-family: 'Oswald', sans-serif;
-  font-size: 13px;
-  font-weight: 300;
-  letter-spacing: 0.08em;
-  color: var(--text-muted);
+  font-size: 12px;
 }
 
 .socials {
@@ -34,17 +83,21 @@
 }
 
 .socialLink {
-  color: var(--text-muted);
+  color: var(--cream-dim);
   transition: color 0.2s, transform 0.2s;
   display: flex;
   align-items: center;
 }
 
 .socialLink:hover {
-  color: var(--accent);
+  color: var(--red-hot);
   transform: translateY(-2px);
 }
 
+@media (max-width: 768px) {
+  .ctaRow { padding-top: 36px; padding-bottom: 30px; }
+}
+
 @media (max-width: 480px) {
-  .inner { flex-direction: column; gap: 14px; }
+  .inner { flex-direction: column; gap: 14px; align-items: flex-start; }
 }

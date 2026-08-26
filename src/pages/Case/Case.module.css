@@ -8,7 +8,7 @@
 
 .backLink {
   display: inline-block;
-  font-family: 'Oswald', sans-serif;
+  font-family: var(--font-mono);
   font-size: 12px;
   letter-spacing: 0.18em;
   color: var(--text-muted);
@@ -22,7 +22,7 @@
 
 .headerCat {
   display: block;
-  font-family: 'Oswald', sans-serif;
+  font-family: var(--font-mono);
   font-size: 13px;
   letter-spacing: 0.24em;
   color: var(--accent);
@@ -31,10 +31,10 @@
 }
 
 .headerTitle {
-  font-family: 'Anton', sans-serif;
+  font-family: var(--font-display);
   font-size: clamp(48px, 8vw, 120px);
   color: var(--text);
-  line-height: 0.92;
+  line-height: 1.02;
   letter-spacing: 0.03em;
   margin-bottom: 32px;
 }
@@ -60,7 +60,7 @@
 /* ── INFO ──────────────────────────────────────────────────────────────── */
 .info {
   padding: 64px 0;
-  border-bottom: 1px solid rgba(200,134,10,0.12);
+  border-bottom: 1px solid var(--line);
 }
 
 .infoGrid {
@@ -77,7 +77,7 @@
 }
 
 .infoLabel {
-  font-family: 'Oswald', sans-serif;
+  font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -85,7 +85,7 @@
 }
 
 .infoValue {
-  font-family: 'Oswald', sans-serif;
+  font-family: var(--font-mono);
   font-size: 16px;
   font-weight: 500;
   color: var(--text);
@@ -98,11 +98,11 @@
 }
 
 .tagBadge {
-  font-family: 'Oswald', sans-serif;
+  font-family: var(--font-mono);
   font-size: 12px;
   letter-spacing: 0.08em;
   padding: 4px 12px;
-  border: 1px solid rgba(200,134,10,0.3);
+  border: 1px solid var(--line);
   color: var(--text-muted);
 }
 
@@ -164,7 +164,7 @@
 
 .galleryItem {
   overflow: hidden;
-  cursor: none;
+  cursor: pointer;
   background: var(--bg-card);
   position: relative;
   break-inside: avoid;
@@ -202,7 +202,7 @@
   display: block;
   margin-top: 48px;
   background: var(--bg-card);
-  border-top: 1px solid rgba(200,134,10,0.2);
+  border-top: 1px solid var(--line);
   text-decoration: none;
   transition: background 0.25s;
 }
@@ -218,7 +218,7 @@
 }
 
 .nextLabel {
-  font-family: 'Oswald', sans-serif;
+  font-family: var(--font-mono);
   font-size: 12px;
   letter-spacing: 0.2em;
   color: var(--accent);
@@ -227,7 +227,7 @@
 }
 
 .nextTitle {
-  font-family: 'Anton', sans-serif;
+  font-family: var(--font-display);
   font-size: clamp(24px, 4vw, 48px);
   color: var(--text);
   flex: 1;
@@ -271,7 +271,7 @@
 }
 
 .lbCounter {
-  font-family: 'Oswald', sans-serif;
+  font-family: var(--font-mono);
   font-size: 13px;
   letter-spacing: 0.12em;
   color: var(--text-muted);
@@ -285,7 +285,7 @@
   color: var(--text-muted);
   background: none;
   border: none;
-  cursor: none;
+  cursor: pointer;
   padding: 8px;
   transition: color 0.2s;
   z-index: 9996;
@@ -301,7 +301,7 @@
   color: var(--text-muted);
   background: none;
   border: none;
-  cursor: none;
+  cursor: pointer;
   padding: 16px;
   transition: color 0.2s;
   z-index: 9996;
@@ -317,4 +317,462 @@
   .infoGrid { grid-template-columns: 1fr; gap: 24px; }
   .galleryGrid { columns: 1; }
   .pageHeader { padding-top: calc(var(--header-height) + 28px); }
+}
+
+/* ── Case: задача / решение / результат ── */
+.caseGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 44px;
+}
+
+.caseBlock {
+  border-left: 2px solid var(--red);
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.caseBlock p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--cream);
+}
+
+.baSection {
+  padding: 40px 0 20px;
+}
+
+@media (max-width: 900px) {
+  .caseGrid { grid-template-columns: 1fr; gap: 20px; }
+}
+
+/* ── Live hero: обложка-ссылка на живой сайт ── */
+.liveHero { padding: 8px 0 10px; }
+.liveLink { display: block; position: relative; overflow: hidden; border: 1px solid var(--line); }
+.liveCover { width: 100%; display: block; transition: transform 0.5s cubic-bezier(0.2, 0.6, 0.2, 1); }
+.liveLink:hover .liveCover { transform: scale(1.02); }
+.liveBadge {
+  position: absolute; right: 18px; bottom: 18px;
+  background: var(--red); color: var(--bg);
+  font-family: var(--font-display); font-weight: 600; font-size: 17px;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 10px 22px 12px;
+  transition: transform 0.2s;
+}
+.liveLink:hover .liveBadge { transform: translate(-2px, -2px); box-shadow: 4px 4px 0 rgba(12,10,9,0.55); }
+
+/* ── Этапы работы ── */
+.steps { margin-top: 42px; }
+.stepsList { list-style: none; margin-top: 16px; display: grid; gap: 12px; max-width: 720px; }
+.stepsList li { display: flex; gap: 16px; align-items: baseline; border-bottom: 1px solid var(--line); padding-bottom: 12px; }
+.stepNum { font-family: var(--font-mono); color: var(--red); font-size: 13px; letter-spacing: 0.1em; }
+.stepsList p { color: var(--cream); font-size: 15px; line-height: 1.55; }
+
+/* ── БЛОКИ ГАЛЕРЕИ: структура как в папках ─────────────────────────────── */
+.blocks { display: grid; gap: 60px; }
+
+.blockHead {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--line);
+}
+
+.blockNum {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  color: var(--red);
+  flex-shrink: 0;
+}
+
+.blockTitle {
+  font-family: var(--font-display);
+  font-size: clamp(21px, 2.6vw, 32px);
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: var(--text);
+}
+
+.blockCount {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+/* карточки маркетплейса - жёсткие плитки 3:4 */
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.cardGrid .galleryItem {
+  aspect-ratio: 3 / 4;
+  margin-bottom: 0;
+}
+
+.cardGrid .galleryImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* широкие макеты наружки - натуральные пропорции */
+.wideGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+
+.wideGrid .galleryItem { margin-bottom: 0; }
+.wideGridFull { grid-template-columns: 1fr; }
+
+@media (max-width: 1280px) { .cardGrid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 900px)  {
+  .cardGrid { grid-template-columns: repeat(2, 1fr); }
+  .wideGrid { grid-template-columns: 1fr; }
+  .blocks   { gap: 44px; }
+}
+@media (max-width: 480px) {
+  .cardGrid { gap: 10px; }
+  .blockHead { gap: 10px; margin-bottom: 14px; }
+}
+
+/* вертикальные носители (стела, навигация) - вписываем целиком в плитку 3:4 */
+.tallGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.tallGrid .galleryItem {
+  aspect-ratio: 3 / 4;
+  margin-bottom: 0;
+  padding: 10px;
+}
+
+.tallGrid .galleryImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 1280px) { .tallGrid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 900px)  { .tallGrid { grid-template-columns: repeat(2, 1fr); } }
+
+/* плотная сетка в 3 колонки - для серий одинаковых пропорций (таблички) */
+.wideGrid3 { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 900px) { .wideGrid3 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .wideGrid3 { grid-template-columns: 1fr; } }
+
+/* сторис - вертикали 9:16 */
+.storyGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.storyGrid .galleryItem { aspect-ratio: 9 / 16; margin-bottom: 0; }
+.storyGrid .galleryImg { width: 100%; height: 100%; object-fit: cover; }
+
+@media (max-width: 1280px) { .storyGrid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 900px)  { .storyGrid { grid-template-columns: repeat(2, 1fr); } }
+
+/* ── СЛАЙДЕРЫ ДО/ПОСЛЕ ──────────────────────────────────────────────────── */
+.pairs {
+  display: grid;
+  gap: 44px;
+}
+
+.pairItem { margin: 0; }
+
+.pairCaption {
+  margin-top: 12px;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--text-muted);
+}
+
+.subLabel {
+  display: block;
+  margin: 36px 0 16px;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.blockNote {
+  max-width: 760px;
+  margin-bottom: 24px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+/* пара «было / стало» рядом - когда жанры кадров разные и слайдер соврёт */
+.pairSide {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+.pairHalf {
+  position: relative;
+  border: 1px solid var(--line);
+  background: var(--card);
+  overflow: hidden;
+}
+
+.pairHalf img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.pairTag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  padding: 4px 10px;
+  background: var(--bg);
+  color: var(--text-muted);
+  border: 1px solid var(--line);
+}
+
+.pairTagAfter {
+  background: var(--red);
+  color: var(--bg);
+  border-color: var(--red);
+}
+
+@media (max-width: 760px) {
+  .pairSide { grid-template-columns: 1fr; }
+}
+
+/* ── БРЕНДОВАЯ ШАПКА КЕЙСА ──────────────────────────────────────────────── */
+.brandHead {
+  background: var(--red);
+  color: var(--bg);
+  padding: calc(var(--header-height) + 72px) 0 56px;
+  margin-bottom: 56px;
+}
+
+.brandBack {
+  display: inline-block;
+  margin-bottom: 36px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--bg);
+  opacity: 0.72;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.brandBack:hover { opacity: 1; }
+
+.brandTitle {
+  font-family: var(--font-display);
+  font-size: clamp(48px, 8.4vw, 122px);
+  line-height: 1.02;
+  letter-spacing: 0.02em;
+  color: var(--bg);
+  margin-bottom: 28px;
+}
+
+.brandMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 28px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--bg);
+  opacity: 0.78;
+  border-top: 1px solid currentColor;
+  padding-top: 16px;
+}
+
+@media (max-width: 768px) {
+  .brandHead { padding: calc(var(--header-height) + 36px) 0 34px; margin-bottom: 34px; }
+  .brandMeta { font-size: 11px; gap: 8px 18px; }
+}
+
+/* ── JUSTIFIED: ряд картинок одной высоты, край в край ──────────────────── */
+.justified {
+  display: flex;
+  flex-direction: column;
+}
+
+.jRow {
+  display: flex;
+  align-items: flex-start;
+}
+
+.galleryImgFill {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* половина пары получает точный бокс от Justified */
+.pairHalf img { width: 100%; height: 100%; object-fit: cover; }
+
+/* логотип: воздух вокруг знака, ничего не режется */
+.logoBlock { display: flex; justify-content: center; padding: 8px 0 4px; }
+
+/* ── ПРЕЗЕНТАЦИЯ: обложка-кнопка и слайды плиткой ───────────────────────── */
+.deckLink {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: none;
+  cursor: pointer;
+}
+
+.deckLink .liveCover { transition: transform 0.5s cubic-bezier(0.2, 0.6, 0.2, 1); }
+.deckLink:hover .liveCover { transform: scale(1.02); }
+.deckLink:hover .liveBadge { transform: translate(-2px, -2px); box-shadow: 4px 4px 0 rgba(12, 10, 9, 0.55); }
+
+/* плитка шоколада: слайды сплошняком, тонкие бороздки между ними */
+.deckSheet {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+}
+
+.deckTile {
+  position: relative;
+  display: block;
+  padding: 0;
+  border: none;
+  background: var(--card);
+  aspect-ratio: var(--slide-ar, 1.7778);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.deckTile img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.deckTile:hover img { transform: scale(1.03); }
+
+.deckNum {
+  position: absolute;
+  left: 8px;
+  bottom: 6px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: var(--text-muted);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.deckTile:hover .deckNum { opacity: 1; }
+
+@media (max-width: 900px) { .deckSheet { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .deckSheet { grid-template-columns: 1fr; } }
+
+/* видео внутри блока кейса */
+.videoGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.videoGrid .blockVideo { aspect-ratio: 16 / 9; }
+.storyGrid .blockVideo { aspect-ratio: 9 / 16; }
+
+.blockVideo {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  background: var(--card);
+  border: 1px solid var(--line);
+}
+
+@media (max-width: 900px) { .videoGrid { grid-template-columns: 1fr; } }
+
+/* слайдеры рядами, а не по одному на экран */
+.pairsGrid {
+  display: grid;
+  grid-template-columns: repeat(var(--pair-cols, 3), 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.pairsGrid .pairCaption { font-size: 12px; }
+
+@media (max-width: 1100px) { .pairsGrid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px)  { .pairsGrid { grid-template-columns: 1fr; } }
+
+/* ролик показываем обложкой с кнопкой, сам плеер - на весь экран */
+.videoTile {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 1px solid var(--line);
+  background: var(--card);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.videoGrid .videoTile { aspect-ratio: 16 / 9; }
+.storyGrid .videoTile { aspect-ratio: 9 / 16; }
+
+.videoTile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+
+.videoTile:hover img { transform: scale(1.03); }
+
+.playBadge {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--red);
+  color: var(--bg);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 10px 22px 12px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  pointer-events: none;
+}
+
+.videoTile:hover .playBadge {
+  transform: translate(calc(-50% - 2px), calc(-50% - 2px));
+  box-shadow: 4px 4px 0 rgba(12, 10, 9, 0.55);
 }

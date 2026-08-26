@@ -1,38 +1,34 @@
 import { useEffect, useRef } from 'react'
 import styles from './CustomCursor.module.css'
 
+/*
+ * Обычный системный курсор всегда виден.
+ * При наведении на интерактив (ссылки, кнопки, [data-cursor])
+ * вокруг курсора плавно расцветает красный кружок.
+ */
 export default function CustomCursor() {
-  const dotRef  = useRef(null)
   const ringRef = useRef(null)
 
   useEffect(() => {
     if (window.matchMedia('(pointer: coarse)').matches) return
 
-    const dot  = dotRef.current
     const ring = ringRef.current
     let raf
 
     const move = (e) => {
       raf = requestAnimationFrame(() => {
-        const x = e.clientX
-        const y = e.clientY
-        dot.style.transform  = `translate(${x}px, ${y}px)`
-        ring.style.transform = `translate(${x}px, ${y}px)`
+        ring.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`
       })
     }
 
     const onOver = (e) => {
-      const el = e.target.closest('a, button, [data-cursor]')
-      if (el) {
-        dot.classList.add(styles.active)
+      if (e.target.closest('a, button, [data-cursor]')) {
         ring.classList.add(styles.active)
       }
     }
 
     const onOut = (e) => {
-      const el = e.target.closest('a, button, [data-cursor]')
-      if (el) {
-        dot.classList.remove(styles.active)
+      if (e.target.closest('a, button, [data-cursor]')) {
         ring.classList.remove(styles.active)
       }
     }
@@ -49,10 +45,5 @@ export default function CustomCursor() {
     }
   }, [])
 
-  return (
-    <>
-      <span ref={dotRef}  className={styles.dot}  aria-hidden="true" />
-      <span ref={ringRef} className={styles.ring} aria-hidden="true" />
-    </>
-  )
+  return <span ref={ringRef} className={styles.ring} aria-hidden="true" />
 }

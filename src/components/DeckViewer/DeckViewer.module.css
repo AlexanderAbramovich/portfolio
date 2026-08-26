@@ -1,0 +1,152 @@
+.wrap {
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  background: #0A0908;
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+}
+
+/* ── верхняя панель ─────────────────────────────────────────────────────── */
+.bar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 18px 24px;
+  transition: opacity 0.35s;
+}
+
+.deckTitle {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(237, 228, 211, 0.55);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.counter {
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  color: #EDE4D3;
+}
+
+.close {
+  background: none;
+  border: 1px solid rgba(237, 228, 211, 0.22);
+  color: rgba(237, 228, 211, 0.75);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  padding: 7px 14px;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.close:hover { color: #EDE4D3; border-color: rgba(237, 228, 211, 0.6); }
+
+/* ── сцена со слайдом ───────────────────────────────────────────────────── */
+.stage {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+}
+
+.slide {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.55);
+  animation: slideIn 0.28s ease both;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: none; }
+}
+
+.zone {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 22%;
+  min-width: 90px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+  transition: opacity 0.3s;
+}
+
+.zonePrev { left: 0; justify-content: flex-start; padding-left: 18px; }
+.zoneNext { right: 0; justify-content: flex-end; padding-right: 18px; }
+
+.arrow {
+  font-size: 54px;
+  line-height: 1;
+  color: rgba(237, 228, 211, 0.4);
+  transition: color 0.2s, transform 0.2s;
+}
+
+.zone:hover .arrow { color: #EDE4D3; }
+.zonePrev:hover .arrow { transform: translateX(-4px); }
+.zoneNext:hover .arrow { transform: translateX(4px); }
+
+/* ── прогресс по слайдам ────────────────────────────────────────────────── */
+.progress {
+  display: flex;
+  gap: 4px;
+  padding: 18px 24px 12px;
+  transition: opacity 0.35s;
+}
+
+.tick {
+  flex: 1;
+  height: 3px;
+  border: none;
+  padding: 0;
+  background: rgba(237, 228, 211, 0.16);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.tick:hover { background: rgba(237, 228, 211, 0.45); }
+.tickOn { background: var(--red, #E0241E); }
+
+.hint {
+  padding: 0 24px 18px;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(237, 228, 211, 0.3);
+  transition: opacity 0.35s;
+}
+
+/* мышь замерла - интерфейс уходит, остаётся только слайд */
+.idle .bar,
+.idle .progress,
+.idle .hint,
+.idle .arrow { opacity: 0; }
+
+@media (max-width: 700px) {
+  .bar { padding: 12px 14px; gap: 12px; }
+  .deckTitle { display: none; }
+  .stage { padding: 0 8px; }
+  .zone { width: 34%; min-width: 0; }
+  .arrow { font-size: 34px; }
+  .progress { padding: 12px 14px 8px; }
+  .hint { display: none; }
+}

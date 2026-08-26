@@ -1,28 +1,21 @@
-import { Routes, Route, useLocation } from 'react-router-dom'
-import { useEffect } from 'react'
+import { Routes, Route } from 'react-router-dom'
 import { LanguageProvider } from './context/LanguageContext'
+import ScrollRestore from './hooks/useScrollRestore'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
-import CustomCursor from './components/CustomCursor/CustomCursor'
 import Home from './pages/Home/Home'
 import Works from './pages/Works/Works'
 import Case from './pages/Case/Case'
 import About from './pages/About/About'
 import Services from './pages/Services/Services'
 import Contact from './pages/Contact/Contact'
-
-function ScrollToTop() {
-  const { pathname } = useLocation()
-  useEffect(() => { window.scrollTo(0, 0) }, [pathname])
-  return null
-}
+import NotFound from './pages/NotFound/NotFound'
 
 function App() {
   return (
     <LanguageProvider>
-      <CustomCursor />
       <Header />
-      <ScrollToTop />
+      <ScrollRestore />
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -31,6 +24,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
       <Footer />

@@ -4,6 +4,7 @@ import { useLanguage } from '../../context/LanguageContext'
 import { translations } from '../../i18n'
 import { projects } from '../../data/projects'
 import { useScrollReveal } from '../../hooks/useScrollReveal'
+import { useMeta } from '../../hooks/useMeta'
 import ProjectCard from '../../components/ProjectCard/ProjectCard'
 import styles from './Home.module.css'
 
@@ -16,8 +17,7 @@ export default function Home() {
   const [videoError, setVideoError] = useState(false)
 
   useScrollReveal()
-
-  const featured = projects.filter(p => p.featured).slice(0, 6)
+  useMeta({ ...translations[lang].meta.home, lang })
 
   useEffect(() => {
     const v = videoRef.current
@@ -25,13 +25,15 @@ export default function Home() {
     v.play().catch(() => setVideoError(true))
   }, [])
 
+  const featured = projects.filter(p => p.featured).slice(0, 6)
+  const tickerLine = [...t.ticker, ...t.ticker]
+
   return (
     <div className={styles.page}>
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
-      <section className={styles.hero}>
-        <div className={styles.heroBg}>
-          <div className={styles.heroFallback} />
-          {!videoError && (
+      <section className={`${styles.hero} dark-island`}>
+        {!videoError && (
+          <div className={styles.heroBg} aria-hidden="true">
             <video
               ref={videoRef}
               className={styles.heroVideo}
@@ -42,84 +44,60 @@ export default function Home() {
               playsInline
               onError={() => setVideoError(true)}
             />
-          )}
+            <div className={styles.heroVideoOverlay} />
+          </div>
+        )}
+
+        <div className={styles.heroFrame} aria-hidden="true">
+          <span className={styles.cornerTL} />
+          <span className={styles.cornerBR} />
         </div>
-        <div className={styles.heroOverlay} />
 
-        {/* ── Doodles ──────────────────────────────────────────────────── */}
-        <svg className={styles.heroDoodles} viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-          {/* top-left: triangle */}
-          <polygon points="62,148 104,72 146,148" />
-          {/* top-left: X */}
-          <line x1="198" y1="52" x2="228" y2="82" /><line x1="228" y1="52" x2="198" y2="82" />
-          {/* top-left: small dot-circle */}
-          <circle cx="310" cy="38" r="10" />
+        <div className={`container ${styles.heroContent}`}>
+          <div className={`mono ${styles.heroLabel}`}>{t.label}</div>
 
-          {/* top-right: ring */}
-          <circle cx="1298" cy="108" r="42" />
-          {/* top-right: small ring inside */}
-          <circle cx="1298" cy="108" r="22" />
-          {/* top-right: diamond */}
-          <polygon points="1158,198 1182,154 1206,198 1182,242" />
+          <h1 className={styles.heroTitle}>
+            <span className={styles.heroLine1}>{t.title1}</span>
+            <span className={styles.heroLine2}>
+              <span className={`plate ${styles.heroPlate}`}>{t.title2}</span>
+            </span>
+          </h1>
 
-          {/* mid-left: diamond */}
-          <polygon points="36,400 68,358 100,400 68,442" />
-          {/* mid-left: plus */}
-          <line x1="38" y1="530" x2="38" y2="570" /><line x1="18" y1="550" x2="58" y2="550" />
+          <p className={styles.heroSubtitle}>{t.subtitle}</p>
 
-          {/* mid-right: triangle small */}
-          <polygon points="1380,360 1410,308 1440,360" />
-          {/* mid-right: cross */}
-          <line x1="1392" y1="460" x2="1428" y2="496" /><line x1="1428" y1="460" x2="1392" y2="496" />
-
-          {/* bottom-left: X */}
-          <line x1="62" y1="692" x2="106" y2="736" /><line x1="106" y1="692" x2="62" y2="736" />
-          {/* bottom-left: small circle */}
-          <circle cx="210" cy="808" r="18" />
-          {/* bottom-left: plus */}
-          <line x1="320" y1="840" x2="320" y2="872" /><line x1="304" y1="856" x2="336" y2="856" />
-
-          {/* bottom-right: triangle */}
-          <polygon points="1258,792 1296,724 1334,792" />
-          {/* bottom-right: ring */}
-          <circle cx="1400" cy="820" r="28" />
-
-          {/* scattered smalls */}
-          <circle cx="680" cy="44" r="7" />
-          <polygon points="760,840 778,810 796,840" />
-          <line x1="500" y1="862" x2="530" y2="862" /><line x1="515" y1="847" x2="515" y2="877" />
-        </svg>
-
-        <div className={styles.heroContent}>
-          <span className={styles.heroLabel}>{t.label}</span>
-
-          <div className={styles.heroTitleWrap}>
-            <div className={styles.decorLineTop} />
-            <h1 className={styles.heroTitle}>
-              <span className={styles.heroLine1}>{t.title1}</span>
-              <span className={styles.heroLine2}>{t.title2}</span>
-            </h1>
-            <div className={styles.decorLineBottom} />
+          <div className={styles.heroActions}>
+            <Link to="/works" className="btn-accent">{t.cta}</Link>
+            <Link to="/contact" className="btn-outline">{t.cta2}</Link>
           </div>
 
-          <Link to="/works" className={`btn-accent ${styles.heroCta}`}>
-            <span>{t.cta}</span>
-          </Link>
+          <div className={styles.heroMeta}>
+            <span className="barcode" />
+            <span className="mono">ALX·2026 · TILDA + CODE · AI</span>
+          </div>
         </div>
 
-        <div className={styles.scrollIndicator}>
-          <span />
-        </div>
+        <div className={styles.scrollIndicator}><span /></div>
       </section>
+
+      {/* ── TICKER ───────────────────────────────────────────────────────── */}
+      <div className="ticker">
+        <div className="ticker-inner">
+          {tickerLine.map((item, i) => (
+            <span key={i} className="ticker-item">
+              {item} <b>✦</b>
+            </span>
+          ))}
+        </div>
+      </div>
 
       {/* ── STATS ────────────────────────────────────────────────────────── */}
       <section className={styles.stats}>
         <div className="container">
           <div className={styles.statsGrid}>
             {t.stats.map((s, i) => (
-              <div key={i} className={styles.statItem}>
+              <div key={i} className={`${styles.statItem} reveal reveal-delay-${Math.min(i + 1, 4)}`}>
                 <span className={styles.statNumber}>{s.number}</span>
-                <span className={styles.statLabel}>{s.label}</span>
+                <span className={`mono ${styles.statLabel}`}>{s.label}</span>
               </div>
             ))}
           </div>
@@ -129,7 +107,8 @@ export default function Home() {
       {/* ── FEATURED ─────────────────────────────────────────────────────── */}
       <section className={styles.featured}>
         <div className="container">
-          <h2 className={`section-title reveal ${styles.featuredHeading}`}>
+          <h2 className={`section-title reveal`}>
+            <span className="idx">01</span>
             {t.featuredTitle}
           </h2>
           <div className={styles.grid}>
@@ -154,9 +133,11 @@ export default function Home() {
       <section className={styles.cta}>
         <div className={`container ${styles.ctaInner}`}>
           <h2 className={styles.ctaTitle}>{t.ctaTitle}</h2>
-          <Link to="/contact" className="btn-accent">
-            <span>{t.ctaButton}</span>
-          </Link>
+          <p className={styles.ctaSubtitle}>{t.ctaSubtitle}</p>
+          <Link to="/contact" className="btn-accent">{t.ctaButton}</Link>
+          <div className={styles.ctaMeta}>
+            <span className="barcode barcode-red" />
+          </div>
         </div>
       </section>
     </div>
