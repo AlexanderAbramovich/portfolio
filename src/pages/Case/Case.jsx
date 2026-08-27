@@ -396,15 +396,24 @@ export default function Case() {
                   : 520
                 const targetSum = sec.layout === 'tall' ? 0.9 : sec.layout === 'full' ? 0.01 : 2.4
 
+                // в сетках без своей пропорции плитка обязана зарезервировать высоту:
+                // иначе бокс нулевой, картинка не входит в зону видимости и lazy никогда не сработает
+                const reserve = uniform && !sec.layout?.startsWith('story')
+                  && project.gridRatio !== 'card'
+
                 const tile = (src, i, base, alt, box) => (
                   <div
                     key={`${base}-${i}`}
                     className={`${styles.galleryItem} reveal`}
-                    style={box ? { width: box.width, height: box.height, flex: '0 0 auto' } : undefined}
+                    style={
+                      box ? { width: box.width, height: box.height, flex: '0 0 auto' }
+                      : reserve ? { aspectRatio: String(sec.ar || arOf(src)) }
+                      : undefined
+                    }
                     onClick={() => setLightbox(base + i)}
                     data-cursor="pointer"
                   >
-                    <GalleryImage src={src} alt={alt} fill={!!box} />
+                    <GalleryImage src={src} alt={alt} fill={!!box || reserve} />
                   </div>
                 )
 

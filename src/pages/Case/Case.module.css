@@ -435,6 +435,7 @@
 }
 
 .wideGrid .galleryItem { margin-bottom: 0; }
+.wideGrid .galleryImg { width: 100%; height: 100%; object-fit: cover; display: block; }
 .wideGridFull { grid-template-columns: 1fr; }
 
 @media (max-width: 1280px) { .cardGrid { grid-template-columns: repeat(3, 1fr); } }
