@@ -237,12 +237,8 @@
 }
 
 @media (max-width: 768px) {
-  /* уголок рамки не должен налезать на логотип в шапке */
-  .heroFrame {
-    inset: 14px;
-    top: calc(var(--header-height) + env(safe-area-inset-top, 0px) + 4px);
-  }
-  .cornerTL, .cornerBR { width: 24px; height: 24px; }
+  /* на телефоне уголки рамки только мешают - экран узкий, они лезут на логотип */
+  .heroFrame { display: none; }
   /* «работаю по всей России» - отдельной строкой, без переноса посередине */
   .labelSep { display: none; }
   .labelGeo { display: block; }
