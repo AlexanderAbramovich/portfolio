@@ -13,16 +13,19 @@
   transition: background 0.35s, backdrop-filter 0.35s, box-shadow 0.35s;
 }
 
-/* Полоса под статус-баром телефона. Отдельным слоем и без прозрачности:
-   у полупрозрачной шапки с backdrop-filter iOS не закрашивает область
-   паддинга, и сквозь вырез просвечивает контент страницы. */
+/* Заглушка над шапкой. Safari на айфоне при свёрнутой панели ставит
+   fixed-шапку не у физического верха экрана, а ниже - на высоту статус-бара,
+   и в этот зазор видно прокручивающийся контент. env(safe-area-inset-top)
+   там равен нулю, поэтому полосу по нему не построить.
+   Решение: заливка уходит ВЫШЕ верха шапки. Нет зазора - она за экраном
+   и никому не мешает; есть зазор - закрывает его целиком. */
 .header::before {
   content: '';
   position: absolute;
-  top: 0;
+  top: calc(-120px - env(safe-area-inset-top, 0px));
   left: 0;
   right: 0;
-  height: env(safe-area-inset-top, 0px);
+  height: calc(120px + env(safe-area-inset-top, 0px));
   background: var(--bg);
   pointer-events: none;
 }
