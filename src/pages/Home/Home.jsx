@@ -6,6 +6,7 @@ import { projects } from '../../data/projects'
 import { useScrollReveal } from '../../hooks/useScrollReveal'
 import { useMeta } from '../../hooks/useMeta'
 import ProjectCard from '../../components/ProjectCard/ProjectCard'
+import Barcode from '../../components/Barcode/Barcode'
 import styles from './Home.module.css'
 
 const BASE = import.meta.env.BASE_URL
@@ -75,7 +76,7 @@ export default function Home() {
           </div>
 
           <div className={styles.heroMeta}>
-            <span className="barcode" />
+            <Barcode />
             <span className="mono">ALX·2026 · TILDA + CODE · AI</span>
           </div>
         </div>
@@ -140,7 +141,7 @@ export default function Home() {
           <p className={styles.ctaSubtitle}>{t.ctaSubtitle}</p>
           <Link to="/contact" className="btn-accent">{t.ctaButton}</Link>
           <div className={styles.ctaMeta}>
-            <span className="barcode barcode-red" />
+            <Barcode red />
           </div>
         </div>
       </section>

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useLanguage } from '../../context/LanguageContext'
 import { translations } from '../../i18n'
+import Barcode from '../Barcode/Barcode'
 import styles from './Footer.module.css'
 
 const TelegramIcon = () => (
@@ -90,7 +91,7 @@ export default function Footer() {
         </nav>
 
         <div className={styles.copyCol}>
-          <span className="barcode" aria-hidden="true" />
+          <Barcode />
           <p className={`mono ${styles.copy}`}>{t.copyright}</p>
         </div>
       </div>

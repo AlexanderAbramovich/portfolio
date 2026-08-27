@@ -141,28 +141,6 @@ button {
 
 .plate-tilt-r { transform: rotate(0.8deg); }
 
-/* Штрихкод — фирменная метка */
-.barcode {
-  height: 26px;
-  width: 120px;
-  background: repeating-linear-gradient(
-    90deg,
-    var(--cream) 0 2px, transparent 2px 5px,
-    var(--cream) 5px 10px, transparent 10px 12px,
-    var(--cream) 12px 13px, transparent 13px 19px
-  );
-  opacity: 0.85;
-}
-
-.barcode-red {
-  background: repeating-linear-gradient(
-    90deg,
-    var(--red) 0 2px, transparent 2px 5px,
-    var(--red) 5px 10px, transparent 10px 12px,
-    var(--red) 12px 13px, transparent 13px 19px
-  );
-}
-
 /* Scroll reveal */
 .reveal {
   opacity: 0;
