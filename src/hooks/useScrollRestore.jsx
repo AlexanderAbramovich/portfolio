@@ -38,9 +38,16 @@ export default function ScrollRestore() {
     }
   }, [])
 
+  const prevPath = useRef(location.pathname)
+
   useEffect(() => {
     keyRef.current = location.key || location.pathname
     const saved = read()[keyRef.current]
+    const samePage = prevPath.current === location.pathname
+    prevPath.current = location.pathname
+
+    // поменялся только query (фильтр работ) - страница та же, прокрутку не трогаем
+    if (samePage && navType === 'REPLACE') return
 
     if (navType === 'POP' && typeof saved === 'number' && saved > 0) {
       // ждём, пока картинки разложатся по сетке, иначе прыгаем не туда
