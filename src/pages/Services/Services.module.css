@@ -25,13 +25,59 @@
 
 .category {
   background: var(--bg-card);
-  padding: 36px 40px;
-  border: 1px solid rgba(200,134,10,0.1);
+  border: 1px solid var(--line);
   transition: border-color 0.25s;
+  display: flex;
+  flex-direction: column;
 }
 
 .category:hover {
-  border-color: rgba(200,134,10,0.3);
+  border-color: var(--line-red);
+}
+
+/* обложка = дверь в кейсы этой услуги */
+.catCover {
+  position: relative;
+  display: block;
+  aspect-ratio: 5 / 2;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+}
+
+.catCover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+
+.category:hover .catCover img {
+  transform: scale(1.035);
+}
+
+.coverBadge {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: var(--red);
+  color: var(--bg);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  padding: 8px 14px;
+  transition: padding-right 0.25s;
+}
+
+.category:hover .coverBadge {
+  padding-right: 22px;
+}
+
+.catBody {
+  padding: 30px 36px 34px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .catTitle {
@@ -39,9 +85,9 @@
   font-size: 22px;
   letter-spacing: 0.08em;
   color: var(--accent);
-  margin-bottom: 24px;
-  padding-bottom: 16px;
-  border-bottom: 1px solid rgba(200,134,10,0.2);
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line-red);
 }
 
 .items {
@@ -55,7 +101,7 @@
   align-items: baseline;
   gap: 12px;
   padding: 12px 0;
-  border-bottom: 1px solid rgba(138,127,114,0.1);
+  border-bottom: 1px solid var(--line);
 }
 
 .item:last-child { border-bottom: none; }
@@ -64,37 +110,29 @@
   font-family: var(--font-body);
   font-size: 14px;
   color: var(--text-muted);
-  flex: 1;
-  line-height: 1.4;
+  line-height: 1.45;
 }
 
 .itemDivider {
   flex: 1;
   min-width: 16px;
-  border-bottom: 1px dashed rgba(138,127,114,0.3);
+  border-bottom: 1px dashed var(--line);
   margin-bottom: 3px;
 }
 
 .itemPrice {
   font-family: var(--font-mono);
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 700;
   color: var(--text);
   white-space: nowrap;
   flex-shrink: 0;
 }
 
-.fromLabel {
-  font-weight: 300;
-  font-size: 12px;
-  color: var(--text-muted);
-  margin-right: 2px;
-}
-
 /* ── CTA ────────────────────────────────────────────────────────────────── */
 .cta {
   background: var(--bg-card);
-  border: 1px solid rgba(200,134,10,0.2);
+  border: 1px solid var(--line-red);
   padding: 56px 64px;
   display: flex;
   align-items: center;
@@ -116,11 +154,12 @@
 
 @media (max-width: 768px) {
   .cta { flex-direction: column; text-align: center; padding: 40px 28px; }
-  .category { padding: 28px 24px; }
+  .catBody { padding: 24px 20px 26px; }
 }
 
 @media (max-width: 480px) {
-  .item { flex-direction: column; gap: 4px; }
+  .item { flex-wrap: wrap; row-gap: 4px; }
+  .itemName { flex: 1 1 100%; }
   .itemDivider { display: none; }
   .itemPrice { color: var(--accent); }
 }
