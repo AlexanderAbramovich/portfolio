@@ -6,17 +6,18 @@ import { useScrollReveal } from '../../hooks/useScrollReveal'
 import { useMeta } from '../../hooks/useMeta'
 import styles from './Services.module.css'
 
-// категория услуг -> фильтр в работах + кейс, чьей обложкой подкрепляем цены
+// категория услуг -> фильтр в работах.
+// Спец-обложки 1600x640 (5:2) появятся позже - слот .catCover в CSS ждёт их.
 const CATEGORY_META = {
-  web:          { cat: 'web',          cover: 'palisad' },
-  presentation: { cat: 'presentation', cover: 'gurman' },
-  marketplace:  { cat: 'marketplace',  cover: 'riif-bodi' },
-  outdoor:      { cat: 'outdoor',      cover: 'mr-naruzhka' },
-  identity:     { cat: 'identity',     cover: 'testo' },
-  ai:           { cat: 'ai',           cover: 'kovsch' },
-  motion:       { cat: 'motion',       cover: 'motion-mr' },
-  youtube:      { cat: 'youtube',      cover: 'yt-preview' },
-  social:       { cat: 'social',       cover: 'stories-mr' },
+  web:          { cat: 'web' },
+  presentation: { cat: 'presentation' },
+  marketplace:  { cat: 'marketplace' },
+  outdoor:      { cat: 'outdoor' },
+  identity:     { cat: 'identity' },
+  ai:           { cat: 'ai' },
+  motion:       { cat: 'motion' },
+  youtube:      { cat: 'youtube' },
+  social:       { cat: 'social' },
 }
 
 export default function Services() {
@@ -37,26 +38,11 @@ export default function Services() {
         <div className={styles.categories}>
           {t.categories.map((cat, ci) => {
             const meta = CATEGORY_META[cat.id]
-            const proj = meta && projects.find((p) => p.id === meta.cover)
             const count = meta
               ? projects.filter((p) => !p.aliasOf && p.category === meta.cat).length
               : 0
             return (
               <div key={cat.id || ci} className={`${styles.category} reveal`} style={{ transitionDelay: `${ci * 0.07}s` }}>
-                {proj && (
-                  <Link
-                    to={`/works?cat=${meta.cat}`}
-                    className={styles.catCover}
-                    aria-label={`${cat.title} - ${t.viewWorks}`}
-                    data-cursor="pointer"
-                  >
-                    <img src={proj.cover} alt={cat.title} loading="lazy" />
-                    <span className={`mono ${styles.coverBadge}`}>
-                      {t.viewWorks} · {count} →
-                    </span>
-                  </Link>
-                )}
-
                 <div className={styles.catBody}>
                   <h2 className={styles.catTitle}>{cat.title}</h2>
                   <div className={styles.items}>
@@ -66,6 +52,15 @@ export default function Services() {
                       </div>
                     ))}
                   </div>
+                  {meta && count > 0 && (
+                    <Link
+                      to={`/works?cat=${meta.cat}`}
+                      className={`mono ${styles.worksLink}`}
+                      data-cursor="pointer"
+                    >
+                      {t.viewWorks} · {count} →
+                    </Link>
+                  )}
                 </div>
               </div>
             )
