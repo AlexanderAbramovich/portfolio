@@ -62,7 +62,7 @@ const toRows = (items, targetSum, width, gap, minRowH, maxSpread) => {
 }
 
 // ряд картинок одной высоты, растянутый по ширине контейнера
-function Justified({ items, gap = 16, maxH = 560, targetSum = 2.4, minRowH = 150, maxSpread = 3, render }) {
+function Justified({ items, gap = 16, maxH = 560, targetSum = 2.4, minRowH = 150, maxSpread = 3, narrowSum = 0.01, render }) {
   const ref = useRef(null)
   const [width, setWidth] = useState(0)
 
@@ -77,8 +77,8 @@ function Justified({ items, gap = 16, maxH = 560, targetSum = 2.4, minRowH = 150
 
   const narrow = width > 0 && width < 620
   const rows = useMemo(
-    () => toRows(items, narrow ? 0.01 : targetSum, width, gap, minRowH, maxSpread),
-    [items, targetSum, narrow, width, gap, minRowH, maxSpread]
+    () => toRows(items, narrow ? narrowSum : targetSum, width, gap, minRowH, maxSpread),
+    [items, targetSum, narrowSum, narrow, width, gap, minRowH, maxSpread]
   )
 
   return (
@@ -427,6 +427,7 @@ export default function Case() {
                       items={list.map((src) => ({ src, ar: arOf(src) }))}
                       maxH={maxH}
                       targetSum={targetSum}
+                      narrowSum={sec.layout === 'logo' ? 1.9 : 0.01}
                       minRowH={sec.pack === 'free' ? 0 : 150}
                       maxSpread={sec.pack === 'free' ? 99 : 3}
                       render={(it, box) =>
