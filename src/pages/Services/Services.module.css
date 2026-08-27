@@ -97,9 +97,6 @@
 }
 
 .item {
-  display: flex;
-  align-items: baseline;
-  gap: 12px;
   padding: 12px 0;
   border-bottom: 1px solid var(--line);
 }
@@ -108,25 +105,9 @@
 
 .itemName {
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 15px;
   color: var(--text-muted);
-  line-height: 1.45;
-}
-
-.itemDivider {
-  flex: 1;
-  min-width: 16px;
-  border-bottom: 1px dashed var(--line);
-  margin-bottom: 3px;
-}
-
-.itemPrice {
-  font-family: var(--font-mono);
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--text);
-  white-space: nowrap;
-  flex-shrink: 0;
+  line-height: 1.5;
 }
 
 /* ── CTA ────────────────────────────────────────────────────────────────── */
@@ -155,11 +136,4 @@
 @media (max-width: 768px) {
   .cta { flex-direction: column; text-align: center; padding: 40px 28px; }
   .catBody { padding: 24px 20px 26px; }
-}
-
-@media (max-width: 480px) {
-  .item { flex-wrap: wrap; row-gap: 4px; }
-  .itemName { flex: 1 1 100%; }
-  .itemDivider { display: none; }
-  .itemPrice { color: var(--accent); }
 }

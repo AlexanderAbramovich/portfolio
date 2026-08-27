@@ -14,7 +14,9 @@ const CATEGORY_META = {
   outdoor:      { cat: 'outdoor',      cover: 'mr-naruzhka' },
   identity:     { cat: 'identity',     cover: 'testo' },
   ai:           { cat: 'ai',           cover: 'kovsch' },
+  motion:       { cat: 'motion',       cover: 'motion-mr' },
   youtube:      { cat: 'youtube',      cover: 'yt-preview' },
+  social:       { cat: 'social',       cover: 'stories-mr' },
 }
 
 export default function Services() {
@@ -61,8 +63,6 @@ export default function Services() {
                     {cat.items.map((item, ii) => (
                       <div key={ii} className={styles.item}>
                         <span className={styles.itemName}>{item.name}</span>
-                        <span className={styles.itemDivider} aria-hidden="true" />
-                        <span className={styles.itemPrice}>{item.price}</span>
                       </div>
                     ))}
                   </div>
