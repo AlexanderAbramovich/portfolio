@@ -113,7 +113,7 @@ button {
 }
 
 .page-wrapper {
-  padding-top: var(--header-height);
+  padding-top: calc(var(--header-height) + env(safe-area-inset-top, 0px));
   min-height: 100vh;
 }
 

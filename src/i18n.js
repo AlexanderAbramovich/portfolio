@@ -37,6 +37,8 @@ const rawTranslations = {
     },
     home: {
       label: 'АЛЕКСАНДР АБРАМОВИЧ · ДИЗАЙНЕР · РАБОТАЮ ПО ВСЕЙ РОССИИ',
+      labelWho: 'АЛЕКСАНДР АБРАМОВИЧ · ДИЗАЙНЕР',
+      labelGeo: 'РАБОТАЮ ПО ВСЕЙ РОССИИ',
       title1: 'САЙТЫ, КОТОРЫЕ',
       title2: 'ПРИВОДЯТ ЗАЯВКИ',
       subtitle: 'Tilda и не только: нестандартные блоки собираю кодом. Плюс всё, что нужно бизнесу вокруг сайта - презентации, карточки маркетплейсов, наружная реклама, AI-контент, моушн.',
@@ -234,6 +236,8 @@ const rawTranslations = {
     },
     home: {
       label: 'ALEXANDER ABRAMOVICH · DESIGNER · WORKING ACROSS RUSSIA',
+      labelWho: 'ALEXANDER ABRAMOVICH · DESIGNER',
+      labelGeo: 'WORKING ACROSS RUSSIA',
       title1: 'WEBSITES THAT',
       title2: 'BRING YOU LEADS',
       subtitle: 'Tilda and beyond: custom blocks built with code. Plus everything a business needs around the website - presentations, marketplace cards, outdoor advertising, AI content, motion.',

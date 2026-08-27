@@ -54,7 +54,11 @@ export default function Home() {
         </div>
 
         <div className={`container ${styles.heroContent}`}>
-          <div className={`mono ${styles.heroLabel}`}>{t.label}</div>
+          <div className={`mono ${styles.heroLabel}`}>
+            <span>{t.labelWho}</span>
+            <span className={styles.labelSep}> · </span>
+            <span className={styles.labelGeo}>{t.labelGeo}</span>
+          </div>
 
           <h1 className={styles.heroTitle}>
             <span className={styles.heroLine1}>{t.title1}</span>
