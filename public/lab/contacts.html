@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Контакты — Александр Абрамович</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23E8102A'/%3E%3Cpath d='M32 11 51 53H41.5l-3.4-8H25.9l-3.4 8H13zm0 14-4 11h8z' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Unbounded:wght@400;600;800;900&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('fx'); setTimeout(() => { if (!window.__fxOK) document.documentElement.classList.remove('fx'); }, 2500);</script>
+<link rel="stylesheet" href="shell.css">
+<style>
+  :root { --bg:#0B0A0C; --fg:#FFF5F8; --fg2:#B9AFB7; --line:rgba(255,245,248,.16); --acc:#E8102A; }
+  .lq { min-height:100svh; justify-content:flex-end; padding:calc(var(--hdr) + 10vh) 4vw 8vh; }
+  .lq .pg-tag em { color:#c9c0c7; }
+  .lq h1 { font:400 clamp(52px,11.4vw,230px)/.92 'Dela Gothic One', 'Arial Black', sans-serif; letter-spacing:-.045em; text-transform:uppercase; }
+  .lq h1 .dot { color:var(--red); }
+  .intro { margin-top:5vh; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:flex-end; gap:3vh 4vw; }
+  .intro p { max-width:640px; font:400 clamp(18px,2vw,30px)/1.3 'Golos Text', system-ui, sans-serif; color:#e9e2e6; }
+  .now { display:flex; flex-wrap:wrap; gap:12px; }
+  .now .pill { color:var(--ink-d); }
+
+  /* способы связи и форма */
+  .reach { display:grid; grid-template-columns:minmax(0,1.1fr) minmax(0,1fr); gap:5vw; padding:12vh 4vw 14vh; }
+  .reach h2 { font:400 clamp(28px,3.2vw,56px)/1 'Dela Gothic One', 'Arial Black', sans-serif; letter-spacing:-.035em; text-transform:uppercase; margin-bottom:4vh; }
+  .ways { list-style:none; border-top:1.5px solid var(--line); }
+  .way { display:grid; grid-template-columns:clamp(96px,8vw,140px) minmax(0,1fr) 40px; align-items:center; gap:20px; padding:26px 0; border-bottom:1.5px solid var(--line);
+    transition:border-color .3s; }
+  .way .lb { font:600 12px 'Unbounded', 'Arial', sans-serif; text-transform:lowercase; color:var(--fg2); }
+  .way .v { min-width:0; font:400 clamp(18px,1.55vw,30px)/1.15 'Dela Gothic One', 'Arial Black', sans-serif; letter-spacing:-.03em; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; transition:color .3s; }
+  .way svg { width:34px; height:34px; justify-self:end; transition:transform .35s, color .3s; }
+  .way:hover, .way:focus-visible { border-color:var(--red); }
+  .way:hover .v, .way:focus-visible .v, .way:hover svg { color:var(--red); }
+  .way:hover svg { transform:translate(4px,-4px); }
+  .way.main .v { font-size:clamp(22px,2.1vw,40px); }
+
+  .form { padding:clamp(22px,2.6vw,40px); border-radius:18px; background:rgba(255,255,255,.05); -webkit-backdrop-filter:blur(18px); backdrop-filter:blur(18px);
+    box-shadow:inset 0 0 0 1px rgba(255,255,255,.14), inset 0 18px 30px rgba(255,255,255,.04), 0 30px 70px rgba(0,0,0,.4); }
+  .form label { display:block; margin-bottom:22px; }
+  .form label span { display:block; margin-bottom:10px; font:600 12px 'Unbounded', 'Arial', sans-serif; text-transform:lowercase; color:var(--fg2); }
+  .form input, .form textarea { width:100%; padding:16px 18px; border-radius:10px; border:1.5px solid var(--line); background:rgba(11,10,12,.5); color:var(--fg);
+    font:400 17px/1.4 'Golos Text', system-ui, sans-serif; transition:border-color .3s, background-color .3s; }
+  .form textarea { min-height:160px; resize:vertical; }
+  .form input::placeholder, .form textarea::placeholder { color:#7d7480; }
+  .form input:focus, .form textarea:focus { outline:none; border-color:var(--red); background:rgba(11,10,12,.75); }
+  .form .btn-red { width:100%; border:0; cursor:pointer; margin-top:6px; }
+  .form .note { margin-top:14px; font:400 13px/1.45 'Golos Text', system-ui, sans-serif; color:var(--fg2); }
+
+  @media (max-width:980px) { .reach { grid-template-columns:1fr; gap:10vh; } }
+  @media (max-width:820px) {
+    .lq h1 { font-size:clamp(38px,11.4vw,90px); }
+    .way { grid-template-columns:minmax(0,1fr) 28px; grid-template-areas:"lb ic" "v v"; row-gap:8px; padding:20px 0; }
+    .way .lb { grid-area:lb; } .way .v { grid-area:v; } .way svg { grid-area:ic; width:26px; height:26px; }
+  }
+</style>
+</head>
+<body class="dark">
+<script src="curtain.js"></script>
+<div id="ring" aria-hidden="true"></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><filter id="lens" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+  <feImage id="lensMap" x="0" y="0" width="96" height="96" preserveAspectRatio="none" result="map"/>
+  <feDisplacementMap in="SourceGraphic" in2="map" scale="34" xChannelSelector="R" yChannelSelector="G"/></filter></svg>
+
+<header id="hdr">
+  <a class="logo" href="home.html" aria-label="Александр Абрамович, на главную">А<i>А</i></a>
+  <span class="hline" aria-hidden="true"></span>
+  <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="nav">Меню<i aria-hidden="true"></i></button>
+  <nav class="nav" id="nav" aria-label="Разделы">
+    <a href="home.html">главная</a>
+    <a href="works.html">работы</a>
+    <a href="services.html">услуги</a>
+    <a href="contacts.html" aria-current="page">контакты</a>
+  </nav>
+</header>
+
+<main>
+  <section class="lq dark" aria-labelledby="h1">
+    <canvas class="lq-c" aria-hidden="true"></canvas><div class="lq-veil"></div>
+    <div class="pg-tag rv">Александр Абрамович<em>графический дизайнер · Иркутск</em></div>
+    <h1 id="h1" class="rv">Давайте<br>работать<span class="dot">.</span></h1>
+    <div class="intro rv">
+      <p>Расскажите, что нужно сделать. Я сориентирую по стоимости и срокам.</p>
+      <div class="now"><span class="pill status">беру в работу</span><span class="pill" id="clock">Иркутск</span></div>
+    </div>
+  </section>
+
+  <section class="reach dark">
+    <div class="rv">
+      <h2>Контакты</h2>
+      <ul class="ways">
+        <li><a class="way main" href="https://t.me/Abramovich_AB" target="_blank" rel="noopener"><span class="lb">Telegram</span><span class="v">@Abramovich_AB</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 18 18 6M8 6h10v10"/></svg></a></li>
+        <li><a class="way" href="mailto:kapen4design@gmail.com"><span class="lb">Почта</span><span class="v">kapen4design@gmail.com</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 18 18 6M8 6h10v10"/></svg></a></li>
+        <li><a class="way" href="tel:+79021611441"><span class="lb">Телефон</span><span class="v">+7 902 161-14-41</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 18 18 6M8 6h10v10"/></svg></a></li>
+        <li><a class="way" href="https://vk.com/idkapen" target="_blank" rel="noopener"><span class="lb">ВКонтакте</span><span class="v">vk.com/idkapen</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 18 18 6M8 6h10v10"/></svg></a></li>
+        <li><a class="way" href="https://www.instagram.com/argib3.0/" target="_blank" rel="noopener"><span class="lb">Instagram</span><span class="v">@argib3.0</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 18 18 6M8 6h10v10"/></svg></a></li>
+      </ul>
+    </div>
+
+    <form class="form rv" id="form" novalidate>
+      <h2>Написать мне</h2>
+      <label><span>Имя</span><input name="name" type="text" placeholder="Как вас зовут?" autocomplete="name" required></label>
+      <label><span>Email или Telegram</span><input name="contact" type="text" placeholder="your@email.com или @username" required></label>
+      <label><span>Сообщение</span><textarea name="message" placeholder="Расскажите о проекте..." required></textarea></label>
+      <button class="btn-red" type="submit">Отправить <span aria-hidden="true">→</span></button>
+      <p class="note">Откроется ваша почта с готовым письмом. Быстрее всего ответ в Telegram.</p>
+    </form>
+  </section>
+</main>
+<footer><span>© 2026 Александр Абрамович</span><span>Иркутск · работаю по всей России</span></footer>
+
+<script src="liquid.js"></script>
+<script src="shell.js"></script>
+<script>
+/* местное время Иркутска: человек из Москвы видит разницу в 5 часов */
+const clock = document.getElementById('clock');
+const tick = () => { clock.textContent = 'Иркутск · ' + new Intl.DateTimeFormat('ru-RU', { hour: '2-digit', minute: '2-digit', timeZone: 'Asia/Irkutsk' }).format(new Date()); };
+tick(); setInterval(tick, 30000);
+
+/* форма как на сайте: собирает письмо и открывает почту */
+document.getElementById('form').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const f = e.target, v = (n) => f.elements[n].value.trim();
+  const bad = ['name', 'contact', 'message'].find((n) => !v(n));
+  if (bad) { f.elements[bad].focus(); return; }
+  const body = [`Имя: ${v('name')}`, `Контакт: ${v('contact')}`, '', 'Сообщение:', v('message')].join('\n');
+  location.href = `mailto:kapen4design@gmail.com?subject=${encodeURIComponent('Проект от ' + v('name'))}&body=${encodeURIComponent(body)}`;
+});
+</script>
+</body>
+</html>

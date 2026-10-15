@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "npm run build && gh-pages -d dist"
+    "deploy": "node scripts/build-site.mjs && node scripts/deploy-site.mjs",
+    "deploy:react": "npm run build && gh-pages -d dist",
+    "build:site": "node scripts/build-site.mjs"
   },
   "dependencies": {
     "react": "^18.2.0",

@@ -1,0 +1,10 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<script type="importmap">{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/" } }</script>
+<style>html,body{margin:0;background:transparent} #h{position:relative;width:1000px;height:1000px}</style></head>
+<body><div id="h"></div>
+<script type="module">
+// запасной кадр капли: тот же материал, радиус 400 из 1000 — страница ставит картинку по тем же координатам
+import { mountHead } from './blob.js';
+mountHead(document.getElementById('h'), { keep: true, model: 'bust.glb', place: () => ({ cx: 500, cy: 500, r: 380 }) });
+</script></body></html>

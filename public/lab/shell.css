@@ -1,0 +1,116 @@
+/* Общий каркас страниц лаборатории (работы, услуги, контакты): токены, шапка, меню, курсор-линза, футер, кнопки, лак.
+   Главная (home.html) пока держит свой встроенный стиль; при переносе в React всё сводится в одну систему. */
+:root {
+  --dark:#0B0A0C; --light:#F4F2F5; --ink:#FFF5F8; --ink-d:#0B0A0C; --muted:#8E8590;
+  --red:#E8102A; --pink:#FF4F93; --violet:#8F3BFF; --blue:#3D6BFF;
+  --hdr:68px;
+  /* тема страницы: на «Работах» перекрашивается под проект */
+  --bg:#F4F2F5; --bg2:#ECE9EE; --card:#FFFFFF; --fg:#0B0A0C; --fg2:#6E6670; --acc:#E8102A; --line:rgba(11,10,12,.14);
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { background:var(--bg); scroll-behavior:smooth; }
+body { font-family:'Golos Text', system-ui, sans-serif; overflow-x:hidden; color:var(--fg); background:var(--bg); }
+a { color:inherit; text-decoration:none; }
+img { display:block; max-width:100%; }
+.sr { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+:focus-visible { outline:2px solid var(--acc); outline-offset:4px; border-radius:4px; }
+main { overflow-x:clip; }
+section { position:relative; }
+.dark { background:var(--dark); color:var(--ink); }
+
+/* шапка: как на главной; на «Работах» берёт цвета темы */
+header { position:fixed; top:0; left:0; right:0; z-index:10; height:var(--hdr); display:flex; align-items:center; justify-content:space-between; padding:0 4vw;
+  color:var(--fg); transition:color .5s, background-color .5s; }
+header.on-dark { color:var(--ink); }
+header.solid { background:color-mix(in srgb, var(--bg) 72%, transparent); -webkit-backdrop-filter:blur(20px) saturate(1.8); backdrop-filter:blur(20px) saturate(1.8);
+  box-shadow:inset 0 -1px 0 var(--line); }
+header.solid.on-dark { background:rgba(11,10,12,.62); box-shadow:inset 0 -1px 0 rgba(255,255,255,.12); }
+.logo { font:400 22px 'Dela Gothic One', 'Arial Black', sans-serif; letter-spacing:-.03em; padding:8px 0; }
+.logo i { font-style:normal; color:var(--acc); transition:color .5s; }
+.hline { flex:1; height:1.5px; background:currentColor; opacity:.85; margin:0 3vw; }
+.nav { display:flex; gap:28px; }
+.nav a { font:600 12px 'Unbounded', 'Arial', sans-serif; letter-spacing:.02em; text-transform:lowercase; position:relative; padding:10px 0; }
+.nav a::after { content:''; position:absolute; left:0; right:100%; bottom:3px; height:2px; background:linear-gradient(90deg,#FF4F93,#E8102A,#8F3BFF,#3D6BFF); transition:right .35s; }
+.nav a:hover::after, .nav a:focus-visible::after, .nav a[aria-current="page"]::after { right:0; }
+.menu-btn { display:none; }
+
+/* заголовок страницы: тяжёлые буквы на светлой комнате-сетке */
+.pg-head { position:relative; padding:calc(var(--hdr) + 9vh) 4vw 6vh; overflow:hidden; }
+.pg-head::before { content:''; position:absolute; inset:0; pointer-events:none; opacity:.9;
+  background:linear-gradient(var(--line) 1px, transparent 1px) 0 0/ 9vw 9vw, linear-gradient(90deg, var(--line) 1px, transparent 1px) 0 0/ 9vw 9vw;
+  -webkit-mask-image:radial-gradient(ellipse 80% 90% at 70% 0%, #000 0%, transparent 75%); mask-image:radial-gradient(ellipse 80% 90% at 70% 0%, #000 0%, transparent 75%); }
+.pg-head > * { position:relative; }
+.pg-tag { font:600 12px/1.6 'Unbounded', 'Arial', sans-serif; margin-bottom:4vh; }
+.pg-tag em { font-style:normal; display:block; font-weight:400; color:var(--fg2); }
+.pg-h { font:400 clamp(56px,12.5vw,240px)/.9 'Dela Gothic One', 'Arial Black', sans-serif; letter-spacing:-.045em; text-transform:uppercase; }
+.pg-h sup { font:600 clamp(14px,1.3vw,22px) 'Unbounded', 'Arial', sans-serif; letter-spacing:0; vertical-align:top; margin-left:.4em; color:var(--acc); transition:color .5s; }
+.pg-lead { max-width:640px; margin-top:4vh; font:500 clamp(17px,1.5vw,22px)/1.4 'Golos Text', system-ui, sans-serif; }
+
+/* стеклянные плашки и кнопки */
+.pill { display:inline-flex; align-items:center; gap:10px; font:500 clamp(13px,1vw,15px) 'Unbounded', 'Arial', sans-serif; padding:12px 18px; border-radius:40px; white-space:nowrap;
+  border:1.5px solid transparent; background:linear-gradient(rgba(255,255,255,.72),rgba(255,255,255,.72)) padding-box, linear-gradient(100deg,var(--line),var(--line)) border-box;
+  box-shadow:inset 0 1px 0 #fff, 0 6px 18px rgba(11,10,12,.05); color:var(--ink-d); }
+.status::before { content:''; width:9px; height:9px; border-radius:50%; background:#1FBF5A; animation:pingG 1.8s infinite; }
+.pill.status { background:linear-gradient(rgba(255,255,255,.8),rgba(255,255,255,.8)) padding-box, linear-gradient(100deg,#FF4F93,#E8102A 30%,#8F3BFF 65%,#3D6BFF) border-box; }
+@keyframes pingG { 0% { box-shadow:0 0 0 0 rgba(31,191,90,.5); } 70% { box-shadow:0 0 0 10px rgba(31,191,90,0); } 100% { box-shadow:0 0 0 0 rgba(31,191,90,0); } }
+.btn-red { display:inline-flex; align-items:center; justify-content:space-between; gap:22px; color:#fff; font:600 15px 'Unbounded', 'Arial', sans-serif; padding:0 26px; height:60px; border-radius:8px; white-space:nowrap;
+  background-image:linear-gradient(100deg,#E8102A,#E8102A,#FF4F93,#8F3BFF,#3D6BFF); background-size:300% 100%; background-position:0 0; transition:background-position .7s cubic-bezier(.3,.7,.2,1); }
+.btn-red:hover { background-position:100% 0; }
+.btn-red span[aria-hidden] { font:400 24px 'Golos Text', system-ui, sans-serif; transition:transform .3s; }
+.btn-red:hover span[aria-hidden] { transform:translateX(5px); }
+
+/* финальный блок на жидком лаке (как «Обсудим ваш проект» на главной) */
+.lq { min-height:86svh; display:flex; flex-direction:column; justify-content:center; padding:14vh 4vw; overflow:hidden; background:var(--dark); color:var(--ink); }
+.lq canvas.lq-c { position:absolute; inset:0; width:100%; height:100%; z-index:0; }
+.lq.no-gl { background:radial-gradient(55% 45% at 92% 88%, rgba(232,16,42,.55), transparent 70%), radial-gradient(45% 40% at 8% 6%, rgba(143,59,255,.4), transparent 70%), var(--dark); }
+.lq-veil { position:absolute; inset:0; z-index:0; pointer-events:none; background:radial-gradient(ellipse 75% 60% at 42% 52%, rgba(5,4,6,.84) 0%, rgba(5,4,6,.5) 55%, rgba(5,4,6,0) 100%); }
+.lq > *:not(.lq-c):not(.lq-veil) { position:relative; z-index:1; }
+.lq h2 { font:400 clamp(40px,9.4vw,190px)/1 'Dela Gothic One', 'Arial Black', sans-serif; letter-spacing:-.04em; text-transform:uppercase; }
+.lq h2 .dot { color:var(--red); }
+
+/* курсор — стеклянная линза */
+#ring { position:fixed; left:0; top:0; width:96px; height:96px; margin:-48px 0 0 -48px; border-radius:50%; z-index:50; pointer-events:none; opacity:0;
+  scale:.46; transition:scale .45s cubic-bezier(.3,1.6,.4,1), opacity .25s;
+  -webkit-backdrop-filter:blur(.6px) saturate(1.6); backdrop-filter:url(#lens) saturate(1.6) brightness(1.04);
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.7), inset 0 12px 20px rgba(255,255,255,.45), inset 0 -10px 18px rgba(143,59,255,.18), 0 10px 26px rgba(11,10,12,.14); }
+#ring::after { content:''; position:absolute; inset:0; border-radius:50%; padding:1.5px; opacity:.75;
+  background:conic-gradient(from var(--a,0deg), #FF4F93, #E8102A, #8F3BFF, #3D6BFF, #62D8FF, #FF4F93);
+  -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite:xor; mask-composite:exclude; }
+#ring.big { scale:1; }
+@media (hover:none) { #ring { display:none; } }
+
+footer { display:flex; flex-wrap:wrap; justify-content:space-between; gap:6px 24px; padding:26px 4vw; border-top:1px solid rgba(255,245,248,.12); color:var(--muted); font-size:13px; background:var(--dark); }
+
+/* появление блоков — только когда скрипт подключился */
+html.fx .rv { opacity:0; transform:translateY(40px); transition:opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1); }
+html.fx .rv.in { opacity:1; transform:none; }
+
+@media (max-width:820px) {
+  :root { --hdr:60px; }
+  .hline { display:none; }
+  .logo { font-size:20px; }
+  .menu-btn { display:inline-flex; align-items:center; gap:10px; height:44px; padding:0 16px; border-radius:22px; border:1.5px solid currentColor; background:none; color:inherit;
+    font:600 12px 'Unbounded', 'Arial', sans-serif; cursor:pointer; }
+  .menu-btn i { position:relative; width:14px; height:8px; border-top:1.5px solid; border-bottom:1.5px solid; transition:transform .3s, border-color .3s; }
+  header.open .menu-btn i { border-bottom-color:transparent; transform:translateY(3px) rotate(45deg); }
+  .nav { position:absolute; top:calc(var(--hdr) - 4px); left:4vw; right:4vw; flex-direction:column; gap:0; padding:8px; border-radius:14px; background:var(--dark); color:var(--ink);
+    box-shadow:0 24px 60px rgba(0,0,0,.35); visibility:hidden; opacity:0; transform:translateY(-8px); transition:opacity .25s, transform .25s, visibility 0s .25s; }
+  header.open .nav { visibility:visible; opacity:1; transform:none; transition:opacity .25s, transform .25s; }
+  .nav a { font:400 22px 'Dela Gothic One', 'Arial Black', sans-serif; letter-spacing:-.02em; padding:14px 12px; border-radius:8px; }
+  .nav a::first-letter { text-transform:uppercase; }
+  .nav a::after { display:none; }
+  .nav a[aria-current="page"] { color:var(--red); }
+  html:not(.fx) .menu-btn { display:none; }
+  html:not(.fx) .nav { position:static; visibility:visible; opacity:1; transform:none; flex-direction:row; background:none; color:inherit; box-shadow:none; padding:0; }
+  html:not(.fx) .nav a { font:600 11px 'Unbounded', 'Arial', sans-serif; padding:10px 6px; }
+  .pg-head { padding:calc(var(--hdr) + 7vh) 4vw 5vh; }
+  .pg-head::before { background-size:18vw 18vw; }
+  .pg-h { font-size:clamp(48px,16vw,96px); }
+  .btn-red { width:100%; height:56px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior:auto; }
+  html.fx .rv { opacity:1; transform:none; transition:none; }
+  .status::before { animation:none; }
+  #ring { display:none; }
+}

@@ -1,0 +1,1544 @@
+{
+ "works": [
+  {
+   "id": "argos-site",
+   "title": "Сайт батальона «Аргос»",
+   "category": "web",
+   "tags": [
+    "Tilda + код",
+    "3D",
+    "Сцены на скролле"
+   ],
+   "year": 2026,
+   "location": "argos-bpla.tilda.ws",
+   "cover": "../images/projects/argos-site/cover.jpg",
+   "description": "Лендинг набора на контракт в батальон беспилотных систем. 3D-модель дрона с точками-подсказками, сцены, которые собираются на прокрутке, видеофоны и счётчики. Всё работает внутри Тильды и держит 60 кадров в секунду на телефоне. Студия приняла со словами «очень прикольный интерактивный сайт».",
+   "featured": true,
+   "theme": {
+    "mode": "dark",
+    "bg": "#0D0C0A",
+    "bg2": "#171512",
+    "card": "#1F1D19",
+    "cardHover": "#2A2722",
+    "text": "#EDE6D6",
+    "textMuted": "#8F897B",
+    "accent": "#E0372F",
+    "accent2": "#B9A27A",
+    "line": "rgba(237,230,214,0.14)",
+    "lineAccent": "rgba(224,55,47,0.4)"
+   },
+   "liveUrl": "https://argos-bpla.tilda.ws/"
+  },
+  {
+   "id": "aps",
+   "title": "Академия Проф Стандарта",
+   "category": "web",
+   "tags": [
+    "Tilda",
+    "Многостраничник",
+    "11 страниц"
+   ],
+   "year": 2026,
+   "location": "yc-aps.ru",
+   "cover": "../images/projects/aps/cover.jpg",
+   "description": "Учебному центру нужен был раздел «Профессиональная переподготовка» и десять страниц направлений: бухгалтер, кадры, логопед, закупки и другие. Сверстал за неделю в стиле действующего сайта, с программами, ценами, документами и вопросами. Заказчица написала: «безумно довольны, всё идеально».",
+   "featured": true,
+   "theme": {
+    "mode": "light",
+    "bg": "#F5F8F1",
+    "bg2": "#EDF2E7",
+    "card": "#E7EEDF",
+    "cardHover": "#DDE7D3",
+    "text": "#15241A",
+    "textMuted": "#5E6B60",
+    "accent": "#2F7A1F",
+    "accent2": "#6DB33F",
+    "line": "rgba(21,36,26,0.14)",
+    "lineAccent": "rgba(47,122,31,0.34)"
+   },
+   "liveUrl": "https://yc-aps.ru/professionalnaya-perepodgotovka"
+  },
+  {
+   "id": "polina",
+   "title": "Фотограф Полина Павельчук",
+   "category": "identity",
+   "tags": [
+    "Логотип",
+    "Бланк письма",
+    "Шпаргалка"
+   ],
+   "year": 2026,
+   "location": "Санкт-Петербург",
+   "cover": "../images/projects/polina/cover.jpg",
+   "description": "Логотип для фотографа: камера одной линией и спокойная антиква. Версии для сайта, соцсетей и печати, палитра из пяти цветов, один бесплатный шрифт на всё и бланк письма в Word, который клиентка заполняет сама.",
+   "featured": true,
+   "theme": {
+    "mode": "light",
+    "bg": "#F4F0E8",
+    "bg2": "#EDE8DE",
+    "card": "#E7E1D5",
+    "cardHover": "#DED7C9",
+    "text": "#1B2E25",
+    "textMuted": "#686A60",
+    "accent": "#1B4032",
+    "accent2": "#5A1F2A",
+    "line": "rgba(27,46,37,0.14)",
+    "lineAccent": "rgba(27,64,50,0.34)"
+   },
+   "liveUrl": ""
+  },
+  {
+   "id": "cocos",
+   "title": "КП студии красоты COCOS",
+   "category": "presentation",
+   "tags": [
+    "КП",
+    "Партнёрство",
+    "8 слайдов"
+   ],
+   "year": 2026,
+   "location": "Тюмень",
+   "cover": "../images/projects/cocos/cover.jpg",
+   "description": "Коммерческое предложение студии красоты для партнёров: аудитория из 4 500 постоянных клиенток, охваты, пакеты сотрудничества и контакты. Крупные цифры и живые фото студии вместо стоков. Прошло четыре круга правок с заказчицей и было принято.",
+   "featured": true,
+   "theme": {
+    "mode": "dark",
+    "bg": "#0F0E0D",
+    "bg2": "#191816",
+    "card": "#22201D",
+    "cardHover": "#2D2A26",
+    "text": "#F2EBDF",
+    "textMuted": "#968D80",
+    "accent": "#C9A46A",
+    "accent2": "#E2CDA6",
+    "line": "rgba(242,235,223,0.14)",
+    "lineAccent": "rgba(201,164,106,0.38)"
+   },
+   "liveUrl": ""
+  },
+  {
+   "id": "yuliana",
+   "title": "Презентация мастерской «Юлиана»",
+   "category": "presentation",
+   "tags": [
+    "Презентация",
+    "Полиграфия",
+    "B2B"
+   ],
+   "year": 2026,
+   "location": "Уфа",
+   "cover": "../images/projects/yuliana/cover.jpg",
+   "description": "Презентация мастерской полиграфии и корпоративного мерча для B2B-рассылки: продукция по разделам, сроки, условия работы и клиенты. Первую версию заказчица не приняла, поэтому подачу пересобрали в цветных блоках с фото продукции, вырезанной из фона. Отдельные файлы для рассылки и печати.",
+   "featured": false,
+   "theme": {
+    "mode": "light",
+    "bg": "#F7F4FA",
+    "bg2": "#F0EBF5",
+    "card": "#EAE3F1",
+    "cardHover": "#E1D8EA",
+    "text": "#1E1428",
+    "textMuted": "#685E73",
+    "accent": "#7A2FC0",
+    "accent2": "#D0388F",
+    "line": "rgba(30,20,40,0.14)",
+    "lineAccent": "rgba(122,47,192,0.34)"
+   },
+   "liveUrl": ""
+  },
+  {
+   "id": "argos-intro",
+   "title": "Заставки для видео «Аргос»",
+   "category": "motion",
+   "tags": [
+    "Интро",
+    "Аутро",
+    "AI-видео"
+   ],
+   "year": 2026,
+   "location": "Kling + After Effects",
+   "cover": "../images/projects/argos-intro/cover.jpg",
+   "description": "Интро на пять секунд и аутро на три для видео батальона в Telegram: герб проявляется из бетона, флаг на ветру. Генерация в Kling, сборка, свет и звук в After Effects. Отдал две версии, полную и простую, после одного круга правок.",
+   "featured": true,
+   "theme": null,
+   "liveUrl": ""
+  },
+  {
+   "id": "julia-invite",
+   "title": "Сайт-приглашение «Герои и злодеи»",
+   "category": "web",
+   "tags": [
+    "Код",
+    "Видео",
+    "Анкета гостей"
+   ],
+   "year": 2026,
+   "location": "Чита",
+   "cover": "../images/projects/julia-invite/cover.jpg",
+   "description": "Сайт-приглашение на юбилей в тематике «герои и злодеи». Гость называет имя, проходит в дверь и попадает в зал: детали вечера, дресс-код, карточка ведущего и анкета с выбором напитков. Ответы приходят имениннице в кабинет и Telegram-бот. Видео сгенерировано, всё собрано кодом.",
+   "featured": false,
+   "theme": {
+    "mode": "dark",
+    "bg": "#120807",
+    "bg2": "#1C110E",
+    "card": "#251814",
+    "cardHover": "#31221C",
+    "text": "#F1E3C8",
+    "textMuted": "#A08E74",
+    "accent": "#D9B26E",
+    "accent2": "#B23A2E",
+    "line": "rgba(241,227,200,0.14)",
+    "lineAccent": "rgba(217,178,110,0.38)"
+   },
+   "liveUrl": ""
+  },
+  {
+   "id": "perimetr",
+   "title": "Дека «Безопасный периметр»",
+   "category": "presentation",
+   "tags": [
+    "Презентация",
+    "Видеонаблюдение",
+    "B2B"
+   ],
+   "year": 2026,
+   "location": "B2B",
+   "cover": "../images/projects/perimetr/cover.jpg",
+   "description": "Партнёрская программа для управляющих компаний и застройщиков: видеонаблюдение без вложений, абонентская плата и выгода для ЖК. Четыре слайда, где главное читается с одного взгляда: 0 ₽ за монтаж, 70 ₽ в месяц с квартиры.",
+   "featured": false,
+   "theme": {
+    "mode": "dark",
+    "bg": "#0E1726",
+    "bg2": "#16202F",
+    "card": "#1D2838",
+    "cardHover": "#273345",
+    "text": "#EEF2F7",
+    "textMuted": "#8794A6",
+    "accent": "#F2B705",
+    "accent2": "#F5CB45",
+    "line": "rgba(238,242,247,0.14)",
+    "lineAccent": "rgba(242,183,5,0.38)"
+   },
+   "liveUrl": ""
+  },
+  {
+   "id": "vtn-avito",
+   "title": "Обложки Авито для VTN",
+   "category": "marketplace",
+   "tags": [
+    "Авито",
+    "До / после",
+    "Детейлинг"
+   ],
+   "year": 2026,
+   "location": "Уфа",
+   "cover": "../images/projects/vtn-avito/cover.jpg",
+   "description": "Обложки объявлений для детейлинг-центра: полировка, химчистка, тонировка, мойка. Диагональ «до / после» и крупная услуга, чтобы объявление читалось в ленте Авито с телефона. Шаблон собран так, что смена услуги или подарка занимает секунды.",
+   "featured": false,
+   "theme": {
+    "mode": "dark",
+    "bg": "#0B0B0B",
+    "bg2": "#151515",
+    "card": "#1D1D1D",
+    "cardHover": "#282828",
+    "text": "#F4F4F4",
+    "textMuted": "#959595",
+    "accent": "#F0262D",
+    "accent2": "#FFFFFF",
+    "line": "rgba(244,244,244,0.14)",
+    "lineAccent": "rgba(240,38,45,0.4)"
+   },
+   "liveUrl": ""
+  },
+  {
+   "id": "vtn-reel",
+   "title": "Рилс детейлинг-центра VTN",
+   "category": "motion",
+   "tags": [
+    "Рилс",
+    "Монтаж",
+    "Титры"
+   ],
+   "year": 2026,
+   "location": "Соцсети",
+   "cover": "../images/projects/vtn-reel/cover.jpg",
+   "description": "Вертикальный ролик на 41 секунду для детейлинг-центра: монтаж под речь мастеров, крупные титры, простая анимированная схема и звук. Рассчитан на просмотр без звука, суть понятна по титрам.",
+   "featured": false,
+   "theme": null,
+   "liveUrl": ""
+  },
+  {
+   "id": "gurman",
+   "title": "Концепция GURMAN",
+   "category": "presentation",
+   "tags": [
+    "Презентация",
+    "Кофейня",
+    "15 слайдов"
+   ],
+   "year": 2026,
+   "location": "Москва",
+   "cover": "../images/projects/gurman/cover.jpg",
+   "description": "Концепция развития кофейного бизнеса GURMAN: четыре направления - кофейни, B2B, собственное производство и бренд. Тёмная дека на 15 слайдов, кофейный чёрный с бронзой, тонкие рамки и капсулы - подача уровня «больше чем просто кофе».",
+   "featured": true,
+   "theme": {
+    "mode": "dark",
+    "bg": "#17110C",
+    "bg2": "#231D17",
+    "card": "#2B251F",
+    "cardHover": "#39322C",
+    "text": "#F3EAE0",
+    "textMuted": "#837B74",
+    "accent": "#C08A4E",
+    "accent2": "#E0A867",
+    "line": "rgba(243,234,224,0.14)",
+    "lineAccent": "rgba(192,138,78,0.34)"
+   },
+   "liveUrl": ""
+  },
+  {
+   "id": "zelen-lavka",
+   "title": "КП «Зелень» для Яндекс Лавки",
+   "category": "presentation",
+   "tags": [
+    "КП",
+    "Поставки",
+    "Ритейл"
+   ],
+   "year": 2026,
+   "location": "Яндекс Лавка",
+   "cover": "../images/projects/zelen-lavka/cover.jpg",
+   "description": "Коммерческое предложение на поставку свежей зелени в дарксторы Яндекс Лавки: авиадоставка от фермы, температурный режим, ЭДО и упаковка под стандарты ритейла. Плотный лист, где всё считается с одного взгляда - объёмы, сроки годности, логистика.",
+   "featured": true,
+   "theme": {
+    "mode": "light",
+    "bg": "#F4FAF3",
+    "bg2": "#EDF3EC",
+    "card": "#E8EFE7",
+    "cardHover": "#DFE6DF",
+    "text": "#12291A",
+    "textMuted": "#66766A",
+    "accent": "#1A8A3B",
+    "accent2": "#8CD62B",
+    "line": "rgba(18,41,26,0.14)",
+    "lineAccent": "rgba(26,138,59,0.34)"
+   },
+   "liveUrl": ""
+  },
+  {
+   "id": "palisad",
+   "title": "Сайт «Палисад-Сервис»",
+   "category": "web",
+   "tags": [
+    "Tilda + код",
+    "Корпоративный сайт",
+    "Приносит заявки"
+   ],
+   "year": 2026,
+   "location": "palisad-service.ru",
+   "cover": "../images/projects/palisad/cover.jpg",
+   "description": "Корпоративный сайт строительной компании: карточки услуг, галереи объектов, формы заявок. Собран на Tilda с нестандартными блоками кодом. Принят заказчиком с формулировкой «очень понравилось», живёт на домене и приносит заявки.",
+   "featured": true,
+   "theme": {
+    "mode": "light",
+    "bg": "#F6F8F4",
+    "bg2": "#EFF1ED",
+    "card": "#EAECE8",
+    "cardHover": "#E1E4E0",
+    "text": "#14201A",
+    "textMuted": "#6A726D",
+    "accent": "#2C8341",
+    "accent2": "#3E9A51",
+    "line": "rgba(20,32,26,0.14)",
+    "lineAccent": "rgba(44,131,65,0.34)"
+   },
+   "liveUrl": "https://palisad-service.ru/"
+  },
+  {
+   "id": "skorohod",
+   "title": "Сайт «Дмитрий Скороход»",
+   "category": "web",
+   "tags": [
+    "Tilda + код",
+    "Промышленный сайт",
+    "Сдан в срок"
+   ],
+   "year": 2026,
+   "location": "russian-mining.com",
+   "cover": "../images/projects/skorohod/cover.jpg",
+   "description": "Сайт для промышленного направления: горнодобывающее оборудование, тарифы, контактные формы. Строгая сетка, читаемые таблицы, быстрая загрузка. Сдан в срок, работает на живом трафике.",
+   "featured": true,
+   "theme": {
+    "mode": "light",
+    "bg": "#F2EDE9",
+    "bg2": "#EBE6E3",
+    "card": "#E6E2DF",
+    "cardHover": "#DDDAD7",
+    "text": "#16212C",
+    "textMuted": "#676C72",
+    "accent": "#0D3D6E",
+    "accent2": "#C9A227",
+    "line": "rgba(22,33,44,0.14)",
+    "lineAccent": "rgba(13,61,110,0.34)"
+   },
+   "liveUrl": "https://russian-mining.com/"
+  },
+  {
+   "id": "daria",
+   "title": "Портфолио иллюстратора",
+   "category": "web",
+   "tags": [
+    "Редизайн",
+    "Портфолио",
+    "Код"
+   ],
+   "year": 2026,
+   "location": "danaria-art",
+   "cover": "../images/projects/daria/cover.jpg",
+   "description": "Редизайн портфолио художницы: галерея работ с акцентом на сами иллюстрации, лёгкая навигация, аккуратная типографика. Сайт собран кодом и живёт в вебе.",
+   "featured": true,
+   "theme": {
+    "mode": "light",
+    "bg": "#F3F0E9",
+    "bg2": "#ECE9E2",
+    "card": "#E7E4DD",
+    "cardHover": "#DFDCD5",
+    "text": "#191611",
+    "textMuted": "#706D67",
+    "accent": "#B5492D",
+    "accent2": "#D2705A",
+    "line": "rgba(25,22,17,0.14)",
+    "lineAccent": "rgba(181,73,45,0.34)"
+   },
+   "liveUrl": "https://alexanderabramovich.github.io/danaria-art/"
+  },
+  {
+   "id": "form-site",
+   "title": "Лендинг студии пилатеса FORM",
+   "category": "web",
+   "tags": [
+    "Лендинг",
+    "HTML/CSS",
+    "Концепт"
+   ],
+   "year": 2025,
+   "location": "HTML / CSS",
+   "cover": "../images/projects/form-site/cover.jpg",
+   "description": "Лендинг для студии пилатеса: запись на пробное занятие, расписание, отзывы. Минималистичный дизайн, полностью адаптивный, собран чистым кодом без конструкторов.",
+   "featured": false,
+   "theme": {
+    "mode": "light",
+    "bg": "#F4F1EC",
+    "bg2": "#EDEAE5",
+    "card": "#E9E6E1",
+    "cardHover": "#E1DED9",
+    "text": "#2A2724",
+    "textMuted": "#716E6A",
+    "accent": "#A85B40",
+    "accent2": "#C98063",
+    "line": "rgba(42,39,36,0.14)",
+    "lineAccent": "rgba(168,91,64,0.34)"
+   },
+   "liveUrl": "/portfolio/sites/form/index.html"
+  },
+  {
+   "id": "testo-site",
+   "title": "Лендинг пекарни «Тесто»",
+   "category": "web",
+   "tags": [
+    "Лендинг",
+    "HTML/CSS",
+    "Концепт"
+   ],
+   "year": 2025,
+   "location": "HTML / CSS",
+   "cover": "../images/projects/testo-site/cover.jpg",
+   "description": "Лендинг крафтовой пекарни: тёплая атмосфера, меню, форма заказа. Уютная типографика и цвет, адаптивная вёрстка чистым кодом.",
+   "featured": false,
+   "theme": {
+    "mode": "light",
+    "bg": "#F0E4CC",
+    "bg2": "#EADEC6",
+    "card": "#E6D9C2",
+    "cardHover": "#DFD2BB",
+    "text": "#3A2413",
+    "textMuted": "#766350",
+    "accent": "#8B5A2B",
+    "accent2": "#C88E52",
+    "line": "rgba(58,36,19,0.14)",
+    "lineAccent": "rgba(139,90,43,0.34)"
+   },
+   "liveUrl": "/portfolio/sites/testo/index.html"
+  },
+  {
+   "id": "spektr",
+   "title": "Дека завода «СПЕКТР»",
+   "category": "presentation",
+   "tags": [
+    "Презентация",
+    "Промышленность",
+    "15 слайдов"
+   ],
+   "year": 2026,
+   "location": "Промышленное остекление",
+   "cover": "../images/projects/spektr/cover.jpg",
+   "description": "Презентация завода промышленного остекления для отправки клиентам: тёмная дека на 15 слайдов - производство, цифры, преимущества, без воды. Принята без правок.",
+   "featured": true,
+   "theme": {
+    "mode": "dark",
+    "bg": "#0B1116",
+    "bg2": "#171D22",
+    "card": "#1F252A",
+    "cardHover": "#2D3338",
+    "text": "#E6F0F5",
+    "textMuted": "#767E83",
+    "accent": "#6FCFE8",
+    "accent2": "#F5B23C",
+    "line": "rgba(230,240,245,0.14)",
+    "lineAccent": "rgba(111,207,232,0.34)"
+   },
+   "liveUrl": ""
+  },
+  {
+   "id": "konstanta",
+   "title": "КП «Константа»",
+   "category": "presentation",
+   "tags": [
+    "КП",
+    "Типография",
+    "Дизайн под печать"
+   ],
+   "year": 2026,
+   "location": "Типография",
+   "cover": "../images/projects/konstanta/cover.jpg",
+   "description": "Коммерческое предложение для типографии: структура, дизайн, вёрстка. Несколько кругов правок с заказчиком - доведено до принятия.",
+   "featured": false,
+   "theme": {
+    "mode": "dark",
+    "bg": "#0B1F38",
+    "bg2": "#172B43",
+    "card": "#20324A",
+    "cardHover": "#2E4056",
+    "text": "#F1F6FB",
+    "textMuted": "#7C8898",
+    "accent": "#80B8E9",
+    "accent2": "#A9D4F7",
+    "line": "rgba(241,246,251,0.14)",
+    "lineAccent": "rgba(128,184,233,0.34)"
+   },
+   "liveUrl": ""
+  },
+  {
+   "id": "tender",
+   "title": "Дека «Тендерное сопровождение»",
+   "category": "presentation",
+   "tags": [
+    "Презентация",
+    "B2B услуги"
+   ],
+   "year": 2026,
+   "location": "B2B",
+   "cover": "../images/projects/tender/cover.jpg",
+   "description": "Презентация услуг тендерного сопровождения: сложную юридическую тему упаковали в понятную структуру с чистой инфографикой.",
+   "featured": false,
+   "theme": {
+    "mode": "light",
+    "bg": "#F4F7FC",
+    "bg2": "#ECF0F6",
+    "card": "#E7EBF1",
+    "cardHover": "#DFE3EA",
+    "text": "#10203C",
+    "textMuted": "#677285",
+    "accent": "#12509E",
+    "accent2": "#2E77D2",
+    "line": "rgba(16,32,60,0.14)",
+    "lineAccent": "rgba(18,80,158,0.34)"
+   },
+   "liveUrl": ""
+  },
+  {
+   "id": "teplodom",
+   "title": "Дека «Теплодом» RU + EN",
+   "category": "presentation",
+   "tags": [
+    "Презентация",
+    "Двуязычная",
+    "Строительство"
+   ],
+   "year": 2026,
+   "location": "Строительство",
+   "cover": "../images/projects/teplodom/cover.jpg",
+   "description": "Двуязычная презентация строительной компании: русская и английская версии в едином стиле, визуализация клиентов и проектов.",
+   "featured": false,
+   "theme": {
+    "mode": "light",
+    "bg": "#F0F1F6",
+    "bg2": "#E9EAF0",
+    "card": "#E4E6EC",
+    "cardHover": "#DCDEE4",
+    "text": "#1B2338",
+    "textMuted": "#686D7C",
+    "accent": "#BE4E09",
+    "accent2": "#E06510",
+    "line": "rgba(27,35,56,0.14)",
+    "lineAccent": "rgba(190,78,9,0.34)"
+   },
+   "liveUrl": ""
+  },
+  {
+   "id": "pepilota",
+   "title": "Дека PEPILOTA",
+   "category": "presentation",
+   "tags": [
+    "Презентация",
+    "Груминг",
+    "Мир бренда"
+   ],
+   "year": 2026,
+   "location": "Груминг-студия",
+   "cover": "../images/projects/pepilota/cover.jpg",
+   "description": "Презентация груминг-студии: декор из мира бренда, продающие фото, игривая, но структурная подача.",
+   "featured": false,
+   "theme": {
+    "mode": "light",
+    "bg": "#EEE2D2",
+    "bg2": "#E7DBCC",
+    "card": "#E3D7C8",
+    "cardHover": "#DBCFC0",
+    "text": "#241A14",
+    "textMuted": "#6F645A",
+    "accent": "#666941",
+    "accent2": "#9A6A42",
+    "line": "rgba(36,26,20,0.14)",
+    "lineAccent": "rgba(102,105,65,0.34)"
+   },
+   "liveUrl": ""
+  },
+  {
+   "id": "mtk",
+   "title": "КП «МТК Логистика»",
+   "category": "presentation",
+   "tags": [
+    "КП",
+    "Логистика"
+   ],
+   "year": 2026,
+   "location": "Логистика",
+   "cover": "../images/projects/mtk/cover.jpg",
+   "description": "Коммерческое предложение логистической компании: краткое, цифры вперёд, чистая вёрстка.",
+   "featured": false,
+   "theme": {
+    "mode": "light",
+    "bg": "#FAFAF8",
+    "bg2": "#F3F3F1",
+    "card": "#EEEEEC",
+    "cardHover": "#E5E6E4",
+    "text": "#1E211F",
+    "textMuted": "#727371",
+    "accent": "#39523D",
+    "accent2": "#54755A",
+    "line": "rgba(30,33,31,0.14)",
+    "lineAccent": "rgba(57,82,61,0.34)"
+   },
+   "liveUrl": ""
+  },
+  {
+   "id": "riif-bodi",
+   "title": "RIIF: карточки боди",
+   "category": "marketplace",
+   "tags": [
+    "Карточки WB",
+    "Одежда",
+    "Инфографика"
+   ],
+   "year": 2026,
+   "location": "Wildberries",
+   "cover": "../images/projects/riif-bodi/cover.jpg",
+   "description": "Карточки линейки боди для бренда RIIF: продающая структура, инфографика по тканям и посадке, единый стиль всей серии. Сдано, оплачено, заказчик вернулся за следующей линейкой.",
+   "featured": true,
+   "theme": {
+    "mode": "light",
+    "bg": "#F3E7D9",
+    "bg2": "#ECE0D2",
+    "card": "#E8DCCE",
+    "cardHover": "#E0D3C6",
+    "text": "#241611",
+    "textMuted": "#73655D",
+    "accent": "#6B4630",
+    "accent2": "#9A6B44",
+    "line": "rgba(36,22,17,0.14)",
+    "lineAccent": "rgba(107,70,48,0.34)"
+   },
+   "liveUrl": ""
+  },
+  {
+   "id": "riif-komplekty",
+   "title": "RIIF: карточки комплектов",
+   "category": "marketplace",
+   "tags": [
+    "Карточки WB",
+    "Одежда",
+    "Серия"
+   ],
+   "year": 2026,
+   "location": "Wildberries",
+   "cover": "../images/projects/riif-komplekty/cover.jpg",
+   "description": "Карточки комплектов RIIF: составы, преимущества, посадка - в едином стиле бренда.",
+   "featured": false,
+   "theme": {
+    "mode": "light",
+    "bg": "#F8F1EA",
+    "bg2": "#F1EAE3",
+    "card": "#ECE5DE",
+    "cardHover": "#E4DDD6",
+    "text": "#211A18",
+    "textMuted": "#736C68",
+    "accent": "#A25851",
+    "accent2": "#D9739F",
+    "line": "rgba(33,26,24,0.14)",
+    "lineAccent": "rgba(162,88,81,0.34)"
+   },
+   "liveUrl": ""
+  },
+  {
+   "id": "riif-longi",
+   "title": "RIIF: карточки лонгсливов",
+   "category": "marketplace",
+   "tags": [
+    "Карточки WB",
+    "Одежда",
+    "Серия"
+   ],
+   "year": 2026,
+   "location": "Wildberries",
+   "cover": "../images/projects/riif-longi/cover.jpg",
+   "description": "Карточки лонгсливов RIIF: продающие слайды в единой системе линейки.",
+   "featured": false,
+   "theme": {
+    "mode": "light",
+    "bg": "#F4EDE4",
+    "bg2": "#EDE6DD",
+    "card": "#E8E1D9",
+    "cardHover": "#E0D9D1",
+    "text": "#1E1A18",
+    "textMuted": "#6F6A66",
+    "accent": "#BC4A1E",
+    "accent2": "#EE5F36",
+    "line": "rgba(30,26,24,0.14)",
+    "lineAccent": "rgba(188,74,30,0.34)"
+   },
+   "liveUrl": ""
+  },
+  {
+   "id": "sopka",
+   "title": "Кофейня «Сопка»",
+   "category": "identity",
+   "tags": [
+    "Айдентика",
+    "Логотип",
+    "Носители"
+   ],
+   "year": 2025,
+   "location": "Улан-Удэ",
+   "cover": "../images/projects/sopka/cover.jpg",
+   "description": "Фирменный стиль кофейни «Сопка»: образ байкальских сопок в современной айдентике. Логотип, носители, меню, навигация.",
+   "featured": false,
+   "theme": {
+    "mode": "light",
+    "bg": "#F3EFE6",
+    "bg2": "#ECE8DF",
+    "card": "#E7E4DB",
+    "cardHover": "#DFDCD3",
+    "text": "#1F1F1C",
+    "textMuted": "#6D6C67",
+    "accent": "#24382F",
+    "accent2": "#B9823A",
+    "line": "rgba(31,31,28,0.14)",
+    "lineAccent": "rgba(36,56,47,0.34)"
+   },
+   "liveUrl": ""
+  },
+  {
+   "id": "form",
+   "title": "Студия пилатеса FORM",
+   "category": "identity",
+   "tags": [
+    "Айдентика",
+    "Логотип",
+    "Минимализм"
+   ],
+   "year": 2025,
+   "location": "Иркутск",
+   "cover": "../images/projects/form/cover.jpg",
+   "description": "Айдентика студии пилатеса FORM: минималистичный шрифтовой логотип, нейтральная палитра, комплект носителей.",
+   "featured": false,
+   "theme": {
+    "mode": "light",
+    "bg": "#F6F3EF",
+    "bg2": "#EFECE8",
+    "card": "#EAE7E4",
+    "cardHover": "#E2DFDC",
+    "text": "#1F1F1F",
+    "textMuted": "#6F6D6C",
+    "accent": "#B4573A",
+    "accent2": "#D9764E",
+    "line": "rgba(31,31,31,0.14)",
+    "lineAccent": "rgba(180,87,58,0.34)"
+   },
+   "liveUrl": ""
+  },
+  {
+   "id": "testo",
+   "title": "Пекарня «Тесто»",
+   "category": "identity",
+   "tags": [
+    "Айдентика",
+    "Логотип",
+    "Крафт"
+   ],
+   "year": 2025,
+   "location": "Улан-Удэ",
+   "cover": "../images/projects/testo/cover.jpg",
+   "description": "Брендинг крафтовой пекарни «Тесто»: тёплая ремесленная эстетика, логотип на основе колоса, упаковка и носители.",
+   "featured": false,
+   "theme": {
+    "mode": "light",
+    "bg": "#F2E7D0",
+    "bg2": "#ECE1CA",
+    "card": "#E8DDC6",
+    "cardHover": "#E1D5BF",
+    "text": "#3E2A19",
+    "textMuted": "#766552",
+    "accent": "#5B3A20",
+    "accent2": "#C69A6B",
+    "line": "rgba(62,42,25,0.14)",
+    "lineAccent": "rgba(91,58,32,0.34)"
+   },
+   "liveUrl": ""
+  },
+  {
+   "id": "kovsch",
+   "title": "Каталог светильников KOVSCH: 88 генераций",
+   "category": "ai",
+   "tags": [
+    "AI-контент",
+    "44 модели",
+    "Без фотосессии"
+   ],
+   "year": 2026,
+   "location": "mg-tehno.ru",
+   "cover": "../images/projects/kovsch/cover.jpg",
+   "description": "Производителю света нужен был каталог, где каждый светильник показан выключенным и включённым - а снимать 44 модели в студии с постановкой света никто не собирался. Сделал 88 генераций: один и тот же кадр в двух состояниях, плюс картинки под все блоки сайта. Сдано в сжатый срок, живёт на mg-tehno.ru.",
+   "featured": true,
+   "theme": {
+    "mode": "dark",
+    "bg": "#0A0E14",
+    "bg2": "#161A1F",
+    "card": "#1F2226",
+    "cardHover": "#2D2F32",
+    "text": "#EFE7DA",
+    "textMuted": "#7C7A77",
+    "accent": "#E8A94A",
+    "accent2": "#F5C877",
+    "line": "rgba(239,231,218,0.14)",
+    "lineAccent": "rgba(232,169,74,0.34)"
+   },
+   "liveUrl": ""
+  },
+  {
+   "id": "remaster-palisad",
+   "title": "Стройка в каталожном виде без выезда фотографа",
+   "category": "ai",
+   "tags": [
+    "Ремастер",
+    "Стройка",
+    "До / после"
+   ],
+   "year": 2026,
+   "location": "Нейросети",
+   "cover": "../images/projects/remaster-palisad/cover.jpg",
+   "description": "У строительной компании был только рабочий архив: телефонные кадры с площадок, выбитое белое небо, вялая детализация, мусор и стройматериалы в кадре. Пятнадцать кадров пересобраны нейросетью - восстановлена резкость, заменены небо и свет, вычищен фон, кадр расширен до широкого формата. Каталожные фото объектов из того, что уже лежало на диске.",
+   "featured": false,
+   "theme": {
+    "mode": "dark",
+    "bg": "#101820",
+    "bg2": "#1C242C",
+    "card": "#242C33",
+    "cardHover": "#323A41",
+    "text": "#F0F4F8",
+    "textMuted": "#7C8288",
+    "accent": "#5FA8E8",
+    "accent2": "#E3A45C",
+    "line": "rgba(240,244,248,0.14)",
+    "lineAccent": "rgba(95,168,232,0.34)"
+   },
+   "liveUrl": ""
+  },
+  {
+   "id": "remaster-print",
+   "title": "Цех типографии, который не стыдно показать",
+   "category": "ai",
+   "tags": [
+    "Ремастер",
+    "Производство",
+    "До / после"
+   ],
+   "year": 2026,
+   "location": "Нейросети",
+   "cover": "../images/projects/remaster-print/cover.jpg",
+   "description": "Съёмка цеха на телефон: жёлтые облезлые стены, случайные люди в кадре, коробки и канистры под ногами. Работа тут не в дорисовке, а в чистке - ровный светлый цех, графитовая машина вместо выцветшей синей, отполированный пол. Кадр тот же, поэтому ползунок показывает ровно то, что сделано.",
+   "featured": false,
+   "theme": {
+    "mode": "dark",
+    "bg": "#101820",
+    "bg2": "#1C242C",
+    "card": "#242C33",
+    "cardHover": "#323A41",
+    "text": "#F0F4F8",
+    "textMuted": "#7C8288",
+    "accent": "#5FA8E8",
+    "accent2": "#E3A45C",
+    "line": "rgba(240,244,248,0.14)",
+    "lineAccent": "rgba(95,168,232,0.34)"
+   },
+   "liveUrl": ""
+  },
+  {
+   "id": "predmetka-v-edinom-stile",
+   "title": "Каталог предметки в едином стиле - без студии, света и предметника",
+   "category": "ai",
+   "tags": [
+    "Предметка",
+    "22 карточки",
+    "Единый стиль"
+   ],
+   "year": 2026,
+   "location": "Нейросети",
+   "cover": "../images/projects/predmetka-v-edinom-stile/cover.jpg",
+   "description": "У клиента (типография / мастерская полиграфии) товар был снят на телефон: разные фоны, кривой свет, мелкие кропы с сайта, часть кадров с водяными знаками. Каждую позицию нейросеть пересобрала в студийный кадр 4:3 на одном тёплом песочном фоне - с мягкой тенью и одинаковым светом. Получилось 22 позиции, которые выглядят как один съёмочный день: пакеты, коробки конфет, дипломы, наклейки, термокружки, тубусы, крафт-пакеты, значки.",
+   "featured": false,
+   "theme": {
+    "mode": "light",
+    "bg": "#F2E7DA",
+    "bg2": "#EBE0D3",
+    "card": "#E7DCCF",
+    "cardHover": "#DED4C7",
+    "text": "#211A14",
+    "textMuted": "#6E665D",
+    "accent": "#0F6E6A",
+    "accent2": "#8A5A18",
+    "line": "rgba(33,26,20,0.14)",
+    "lineAccent": "rgba(15,110,106,0.34)"
+   },
+   "liveUrl": ""
+  },
+  {
+   "id": "pet-feeder-product-shots",
+   "title": "Карточки товара без студии, света и предметника",
+   "category": "ai",
+   "tags": [
+    "Предметка",
+    "Каталог",
+    "До / после"
+   ],
+   "year": 2026,
+   "location": "Нейросети",
+   "cover": "../images/projects/pet-feeder-product-shots/cover.jpg",
+   "description": "Снимал сам производитель: белый картон, приставленный к серой стене, холодный комнатный свет, кормушка мелко в углу вертикального кадра, шильдик бренда не читается. Каждый из четырёх товаров пересобран в студийный предметный кадр - тёплый бесшовный фон, мягкая направленная тень, ровная геометрия, чистая матовая покраска и разборчивая табличка Paul & Table. На выходе четыре горизонтальные карточки одного формата и одного света, которые можно ставить в каталог и на маркетплейс, не арендуя студию и не нанимая предметника.",
+   "featured": false,
+   "theme": {
+    "mode": "light",
+    "bg": "#F3E6D9",
+    "bg2": "#ECDFD2",
+    "card": "#E8DBCE",
+    "cardHover": "#E0D3C7",
+    "text": "#241B14",
+    "textMuted": "#71665D",
+    "accent": "#5A6630",
+    "accent2": "#8A5324",
+    "line": "rgba(36,27,20,0.14)",
+    "lineAccent": "rgba(90,102,48,0.34)"
+   },
+   "liveUrl": ""
+  },
+  {
+   "id": "food-zelen",
+   "title": "Зелень для каталога без фуд-съёмки",
+   "category": "ai",
+   "tags": [
+    "Фуд",
+    "Packshot",
+    "До / после"
+   ],
+   "year": 2026,
+   "location": "Нейросети",
+   "cover": "../images/projects/food-zelen/cover.jpg",
+   "description": "Зелень снимали телефоном прямо на складе: пластиковый лоток, серый стол, блики плёнки, вялые веточки. Нейросеть пересобрала каждую позицию в чистый белый packshot - товар выглядит свежим и лежит ровно. Тяни ручку, чтобы увидеть, из чего это сделано.",
+   "featured": false,
+   "theme": {
+    "mode": "light",
+    "bg": "#FBF4EA",
+    "bg2": "#F3EDE3",
+    "card": "#EEE8DE",
+    "cardHover": "#E5E0D6",
+    "text": "#152018",
+    "textMuted": "#6C7168",
+    "accent": "#2F7A34",
+    "accent2": "#8FBF3F",
+    "line": "rgba(21,32,24,0.14)",
+    "lineAccent": "rgba(47,122,52,0.34)"
+   },
+   "liveUrl": ""
+  },
+  {
+   "id": "food-moti",
+   "title": "Девять вкусов моти, которых никто не снимал",
+   "category": "ai",
+   "tags": [
+    "Фуд",
+    "Линейка вкусов",
+    "С нуля"
+   ],
+   "year": 2026,
+   "location": "Нейросети",
+   "cover": "../images/projects/food-moti/cover.jpg",
+   "description": "Линейка моти нарисована с нуля: девять вкусов в одной подаче - целый десерт плюс разрез, где видно начинку. Одинаковый свет, фон и ракурс на всех девяти, поэтому это готовый разворот каталога, а не набор случайных картинок. Ни одного моти при этом не существовало.",
+   "featured": false,
+   "theme": {
+    "mode": "light",
+    "bg": "#F7EFE5",
+    "bg2": "#F1E8DE",
+    "card": "#ECE4DA",
+    "cardHover": "#E5DCD2",
+    "text": "#33221C",
+    "textMuted": "#786A62",
+    "accent": "#BB5068",
+    "accent2": "#E8A0AF",
+    "line": "rgba(51,34,28,0.14)",
+    "lineAccent": "rgba(187,80,104,0.34)"
+   },
+   "liveUrl": ""
+  },
+  {
+   "id": "ai-environments",
+   "title": "Окружение для бренда без выездной съёмки",
+   "category": "ai",
+   "tags": [
+    "Окружение",
+    "Интерьеры",
+    "Под разделы сайта"
+   ],
+   "year": 2026,
+   "location": "Нейросети",
+   "cover": "../images/projects/ai-environments/cover.jpg",
+   "description": "Три клиента из разных ниш, у которых не было своих съёмок локаций: кофейня GURMAN, мебельный магазин и строительная компания. Под каждого сгенерировано окружение под конкретную задачу - зал и барная стойка с фирменным знаком, шоурум и жилые интерьеры с мебелью, объекты стройки от каркаса до сданного дома с ландшафтом. Пар до/после здесь нет, это готовые кадры, которые закрыли выезд на объект, аренду локации и покупку фотобанка.",
+   "featured": false,
+   "theme": {
+    "mode": "light",
+    "bg": "#F3EDE3",
+    "bg2": "#ECE6DC",
+    "card": "#E8E1D7",
+    "cardHover": "#E0D9CF",
+    "text": "#23180F",
+    "textMuted": "#726960",
+    "accent": "#9A4E10",
+    "accent2": "#2E6C8E",
+    "line": "rgba(35,24,15,0.14)",
+    "lineAccent": "rgba(154,78,16,0.34)"
+   },
+   "liveUrl": ""
+  },
+  {
+   "id": "ai-fashion-models",
+   "title": "Лукбук без модели, студии и фотографа",
+   "category": "ai",
+   "tags": [
+    "Лукбук",
+    "AI-модель",
+    "Без студии"
+   ],
+   "year": 2026,
+   "location": "Нейросети",
+   "cover": "../images/projects/ai-fashion-models/cover.jpg",
+   "description": "Два комплекта одежды показаны на живой модели, при этом ни модели, ни студии, ни съёмочного дня не было. Коричневое боди отснято тремя ракурсами одной и той же девушки на едином студийном фоне - спина, профиль у стены и фас. Розовое боди тем же лицом и фигурой переставлено в три разные локации: тропическая терраса, светлый лофт и город. Это карточка товара и лукбук без гонорара модели, аренды и переездов между локациями.",
+   "featured": false,
+   "theme": {
+    "mode": "dark",
+    "bg": "#241610",
+    "bg2": "#2F211B",
+    "card": "#372922",
+    "cardHover": "#44362E",
+    "text": "#F2E4D6",
+    "textMuted": "#8D7F75",
+    "accent": "#E3ADB8",
+    "accent2": "#C79366",
+    "line": "rgba(242,228,214,0.14)",
+    "lineAccent": "rgba(227,173,184,0.34)"
+   },
+   "liveUrl": ""
+  },
+  {
+   "id": "motion-mr",
+   "title": "Ролик мебельного центра",
+   "category": "motion",
+   "tags": [
+    "AI-видео",
+    "Товарный ролик",
+    "Монтаж"
+   ],
+   "year": 2026,
+   "location": "Kling + Premiere",
+   "cover": "../images/projects/motion-mr/cover.jpg",
+   "description": "Товарный ролик обеденного стола для мебельного центра: сценарий, генерации нейросетью вместо съёмочной смены, монтаж, цветокор и звук. Съёмочная группа, студия и аренда мебели не понадобились.",
+   "featured": false,
+   "theme": null,
+   "liveUrl": ""
+  },
+  {
+   "id": "motion-stories",
+   "title": "Сторис для спортсмена",
+   "category": "motion",
+   "tags": [
+    "Сторис",
+    "Вертикаль",
+    "Монтаж под трек"
+   ],
+   "year": 2026,
+   "location": "Соцсети",
+   "cover": "../images/projects/motion-stories/cover.jpg",
+   "description": "Три вертикальные нарезки для спортсмена: склейка попадает в ритм трека, поэтому ролик досматривают до конца. Формат под сторис и рилс, звук и темп подобраны под каждый трек отдельно.",
+   "featured": false,
+   "theme": null,
+   "liveUrl": ""
+  },
+  {
+   "id": "motion-student",
+   "title": "Ролик для студенческого проекта",
+   "category": "motion",
+   "tags": [
+    "Монтаж",
+    "Цветокор",
+    "Звук"
+   ],
+   "year": 2026,
+   "location": "Premiere",
+   "cover": "../images/projects/motion-student/cover.jpg",
+   "description": "Полуминутный ролик для студенческого проекта: монтаж, ритм, цветокор и звук. Задача была уложить историю в короткий хронометраж и не потерять темп.",
+   "featured": false,
+   "theme": null,
+   "liveUrl": ""
+  },
+  {
+   "id": "yt-preview",
+   "title": "YouTube-канал VATAN",
+   "category": "youtube",
+   "tags": [
+    "Превью",
+    "Шапка канала",
+    "Аватар"
+   ],
+   "year": 2026,
+   "location": "YouTube",
+   "cover": "../images/projects/yt-preview/cover.jpg",
+   "description": "Оформление канала целиком: превью, которые читаются в миниатюре, шапка под все размеры экранов и аватар. Заказчик вернулся за следующей задачей - первое превью согласовали за семь минут переписки.",
+   "featured": false,
+   "theme": null,
+   "liveUrl": ""
+  },
+  {
+   "id": "stories-mr",
+   "title": "Сторис мебельного холдинга",
+   "category": "social",
+   "tags": [
+    "Сторис",
+    "Три бренда",
+    "Серия"
+   ],
+   "year": 2026,
+   "location": "Улан-Удэ",
+   "cover": "../images/projects/stories-mr/cover.jpg",
+   "description": "Сторис для всех трёх брендов холдинга на одной сетке: «Мебельный Рай», мебельный центр «Гвоздь» и гипермаркет «Крокус». Один шаблон - фото сверху, светлая плита с текстом снизу, счётчик серии в углу - поэтому подписчик читает их как систему, а не как набор картинок, и каждый бренд при этом остаётся собой.",
+   "featured": false,
+   "theme": {
+    "mode": "light",
+    "bg": "#FFFFFF",
+    "bg2": "#F2F4F9",
+    "card": "#EDF1F8",
+    "cardHover": "#E3E9F4",
+    "text": "#101A38",
+    "textMuted": "#5A6480",
+    "accent": "#183084",
+    "accent2": "#FACC15",
+    "line": "rgba(16,26,56,0.14)",
+    "lineAccent": "rgba(24,48,132,0.34)"
+   },
+   "liveUrl": ""
+  },
+  {
+   "id": "mebelny-rai",
+   "title": "Мебельный Рай",
+   "category": "campaign",
+   "tags": [
+    "Кампания",
+    "Все носители",
+    "Постоянный клиент"
+   ],
+   "year": 2026,
+   "location": "Улан-Удэ",
+   "cover": "../images/projects/mebelny-rai/cover.jpg",
+   "description": "Мебельный центр пришёл с рекламой, которую делали все подряд: три шрифта на баннере, коллажи из стоков, красные обводки. Пересобрал систему целиком - от знака до табличек над отделами. Один клиент, месяцы задач: смета за сметой, потому что система работает.",
+   "featured": true,
+   "theme": {
+    "mode": "light",
+    "bg": "#FFFFFF",
+    "bg2": "#F2F4F9",
+    "card": "#EDF1F8",
+    "cardHover": "#E3E9F4",
+    "text": "#101A38",
+    "textMuted": "#5A6480",
+    "accent": "#183084",
+    "accent2": "#FACC15",
+    "line": "rgba(16,26,56,0.14)",
+    "lineAccent": "rgba(24,48,132,0.34)"
+   },
+   "liveUrl": ""
+  },
+  {
+   "id": "krokus",
+   "title": "Гипермаркет «Крокус»",
+   "category": "campaign",
+   "tags": [
+    "Кампания",
+    "Наружка",
+    "Навигация"
+   ],
+   "year": 2026,
+   "location": "Улан-Удэ",
+   "cover": "../images/projects/krokus/cover.jpg",
+   "description": "Гипермаркет мебели на пять этажей. Стела на въезде светила шестью случайными цветами, на билборде висели три сообщения разом, а знак давно поплыл. Пересобрал наружку в жёсткий красно-жёлтый ритм: одно сообщение на носитель, обновлённый знак, читаемая навигация.",
+   "featured": false,
+   "theme": {
+    "mode": "light",
+    "bg": "#FFFFFF",
+    "bg2": "#F7F2F1",
+    "card": "#F5EDEC",
+    "cardHover": "#EFE3E1",
+    "text": "#1A1413",
+    "textMuted": "#6B5D59",
+    "accent": "#CC1824",
+    "accent2": "#FCC00C",
+    "line": "rgba(26,20,19,0.14)",
+    "lineAccent": "rgba(204,24,36,0.34)"
+   },
+   "liveUrl": ""
+  },
+  {
+   "id": "gvozd",
+   "title": "Мебельный центр «Гвоздь»",
+   "category": "campaign",
+   "tags": [
+    "Кампания",
+    "Наружка",
+    "Знак"
+   ],
+   "year": 2026,
+   "location": "Улан-Удэ",
+   "cover": "../images/projects/gvozd/cover.jpg",
+   "description": "Мебельный центр в чёрном с кислотно-жёлтым. На старых носителях спорили четыре чужих логотипа, красные капсы и жёлтые стрелки. Свёл всё к одному сообщению на баннер и перерисовал знак начисто.",
+   "featured": false,
+   "theme": {
+    "mode": "dark",
+    "bg": "#141412",
+    "bg2": "#1B1B18",
+    "card": "#232321",
+    "cardHover": "#2E2E2A",
+    "text": "#F5F3EC",
+    "textMuted": "#9A978C",
+    "accent": "#F0D80C",
+    "accent2": "#FCE40C",
+    "line": "rgba(245,243,236,0.14)",
+    "lineAccent": "rgba(240,216,12,0.4)"
+   },
+   "liveUrl": ""
+  },
+  {
+   "id": "mr-naruzhka",
+   "title": "Наружка «Мебельный Рай»",
+   "category": "outdoor",
+   "tags": [
+    "Наружка",
+    "Навигация",
+    "Препресс"
+   ],
+   "year": 2026,
+   "location": "Улан-Удэ",
+   "cover": "../images/projects/mr-naruzhka/cover.jpg",
+   "description": "Все носители мебельного центра в одном стиле: баннеры по 9,4 м в торговом зале, вертикальный баннер на фасаде «Крокуса», магистральные баннеры, оклейка фуры, указатели и навигационный стенд, таблички, календари и digital-форматы для сайта. Пять смет подряд от одного заказчика, макеты сданы в CMYK под печать большого формата.",
+   "featured": false,
+   "theme": {
+    "mode": "light",
+    "bg": "#FFFFFF",
+    "bg2": "#F2F4F9",
+    "card": "#EDF1F8",
+    "cardHover": "#E3E9F4",
+    "text": "#101A38",
+    "textMuted": "#5A6480",
+    "accent": "#183084",
+    "accent2": "#FACC15",
+    "line": "rgba(16,26,56,0.14)",
+    "lineAccent": "rgba(24,48,132,0.34)"
+   },
+   "liveUrl": ""
+  },
+  {
+   "id": "krokus-naruzhka",
+   "title": "Наружка «Крокус»",
+   "category": "outdoor",
+   "tags": [
+    "Наружка",
+    "Стела",
+    "Билборд 6х3"
+   ],
+   "year": 2026,
+   "location": "Улан-Удэ",
+   "cover": "../images/projects/krokus-naruzhka/cover.jpg",
+   "description": "Наружка гипермаркета мебели: билборд 6х3 на трассе, баннер на ограждении у входа, двусторонняя стела высотой в этаж и навигационный стенд внутри центра.",
+   "featured": false,
+   "theme": {
+    "mode": "light",
+    "bg": "#FFFFFF",
+    "bg2": "#F7F2F1",
+    "card": "#F5EDEC",
+    "cardHover": "#EFE3E1",
+    "text": "#1A1413",
+    "textMuted": "#6B5D59",
+    "accent": "#CC1824",
+    "accent2": "#FCC00C",
+    "line": "rgba(26,20,19,0.14)",
+    "lineAccent": "rgba(204,24,36,0.34)"
+   },
+   "liveUrl": ""
+  },
+  {
+   "id": "gvozd-naruzhka",
+   "title": "Наружка «Гвоздь»",
+   "category": "outdoor",
+   "tags": [
+    "Наружка",
+    "Фасад",
+    "Вывеска"
+   ],
+   "year": 2026,
+   "location": "Улан-Удэ",
+   "cover": "../images/projects/gvozd-naruzhka/cover.jpg",
+   "description": "Наружка мебельного центра в чёрном с кислотно-жёлтым: баннер во всю глухую стену здания, придорожная лента 6,3:1 и вывески бизнес-центра «Квадрат» в том же здании.",
+   "featured": false,
+   "theme": {
+    "mode": "dark",
+    "bg": "#141412",
+    "bg2": "#1B1B18",
+    "card": "#232321",
+    "cardHover": "#2E2E2A",
+    "text": "#F5F3EC",
+    "textMuted": "#9A978C",
+    "accent": "#F0D80C",
+    "accent2": "#FCE40C",
+    "line": "rgba(245,243,236,0.14)",
+    "lineAccent": "rgba(240,216,12,0.4)"
+   },
+   "liveUrl": ""
+  }
+ ],
+ "categories": {
+  "web": "Сайты",
+  "presentation": "Презентации",
+  "marketplace": "Маркетплейс",
+  "outdoor": "Наружка и реклама",
+  "identity": "Лого и айдентика",
+  "ai": "AI-услуги",
+  "motion": "Моушн",
+  "youtube": "Превью YouTube",
+  "social": "Соцсети",
+  "campaign": "Работы с компаниями"
+ },
+ "worksText": {
+  "title": "РАБОТЫ",
+  "companiesTitle": "РАБОТЫ С КОМПАНИЯМИ",
+  "companiesSub": "Комплексные рекламные системы: один клиент - все носители",
+  "categoriesTitle": "КАТЕГОРИИ",
+  "filters": {
+   "all": "ВСЕ",
+   "web": "САЙТЫ",
+   "presentation": "ПРЕЗЕНТАЦИИ",
+   "marketplace": "МАРКЕТПЛЕЙС",
+   "outdoor": "НАРУЖКА И РЕКЛАМА",
+   "identity": "ЛОГО И АЙДЕНТИКА",
+   "ai": "AI-УСЛУГИ",
+   "motion": "МОУШН",
+   "youtube": "ПРЕВЬЮ YOUTUBE",
+   "social": "СОЦСЕТИ"
+  }
+ },
+ "services": {
+  "title": "УСЛУГИ",
+  "subtitle": "Цену не пишу заранее - смета всегда индивидуальная, после короткого разговора о задаче. Два раунда правок включены в каждую услугу. Работаю официально: самозанятый, договор, чек.",
+  "viewWorks": "СМОТРЕТЬ РАБОТЫ",
+  "ctaTitle": "ГОТОВ ОБСУДИТЬ ПРОЕКТ",
+  "ctaButton": "НАПИСАТЬ МНЕ",
+  "categories": [
+   {
+    "id": "web",
+    "title": "САЙТЫ",
+    "items": [
+     {
+      "name": "Сайт под ключ: продумаю структуру, напишу тексты, соберу, адаптирую под телефон"
+     },
+     {
+      "name": "Добавить блок на ваш сайт: акция, отзывы, каталог, форма заявки"
+     },
+     {
+      "name": "Блок, которого нет в конструкторе, - соберу кодом"
+     },
+     {
+      "name": "Доработать существующий сайт: обновить, поправить, навести порядок"
+     }
+    ]
+   },
+   {
+    "id": "presentation",
+    "title": "ПРЕЗЕНТАЦИИ И КП",
+    "items": [
+     {
+      "name": "Презентация под ключ: придумаю структуру, напишу тексты, оформлю"
+     },
+     {
+      "name": "Оформить готовые слайды по вашим материалам"
+     },
+     {
+      "name": "Коммерческое предложение на лист А4 - отправить клиенту или распечатать"
+     }
+    ]
+   },
+   {
+    "id": "marketplace",
+    "title": "МАРКЕТПЛЕЙСЫ WB / OZON",
+    "items": [
+     {
+      "name": "Карточка товара целиком: инфографика, выгоды прямо на слайдах"
+     },
+     {
+      "name": "Фото товара без фотосессии: нейросеть, неотличимо от студийной съёмки"
+     },
+     {
+      "name": "Единый стиль для всей линейки товаров"
+     }
+    ]
+   },
+   {
+    "id": "outdoor",
+    "title": "БАННЕРЫ И НАРУЖНАЯ РЕКЛАМА",
+    "items": [
+     {
+      "name": "Баннер для сайта или соцсетей"
+     },
+     {
+      "name": "Наружная реклама: баннер, вывеска, билборд. Файлы примет любая типография - сам работал в печатном производстве"
+     },
+     {
+      "name": "Кампания в едином стиле: от билборда до сторис"
+     }
+    ]
+   },
+   {
+    "id": "identity",
+    "title": "ЛОГОТИПЫ И АЙДЕНТИКА",
+    "items": [
+     {
+      "name": "Логотип: три разных варианта, доработка выбранного, все исходники ваши"
+     },
+     {
+      "name": "Логотип + фирменный стиль: цвета, шрифты, шаблоны для соцсетей и печати"
+     }
+    ]
+   },
+   {
+    "id": "ai",
+    "title": "AI-КОНТЕНТ И ВИДЕО",
+    "items": [
+     {
+      "name": "Короткий ролик до 15 секунд: анонс, тизер, реклама"
+     },
+     {
+      "name": "Ролик 30-60 секунд под ключ: сценарий, картинка, монтаж, звук"
+     },
+     {
+      "name": "Каталог, интерьеры, стройка - кадры нейросетью, без выезда и съёмки"
+     },
+     {
+      "name": "Закадровый голос студийного качества - без диктора и студии"
+     }
+    ]
+   },
+   {
+    "id": "motion",
+    "title": "МОУШН",
+    "items": [
+     {
+      "name": "Анимация логотипа: живой знак для сайта и соцсетей"
+     },
+     {
+      "name": "Рекламный ролик: продукт в движении, под экраны и сторис"
+     },
+     {
+      "name": "Анимированные сторис для акций и запусков"
+     }
+    ]
+   },
+   {
+    "id": "youtube",
+    "title": "YOUTUBE",
+    "items": [
+     {
+      "name": "Обложка ролика, по которой хочется кликнуть"
+     },
+     {
+      "name": "Монтаж ролика: нарезка, звук, ритм"
+     },
+     {
+      "name": "Оформление канала: шапка и аватар"
+     }
+    ]
+   },
+   {
+    "id": "social",
+    "title": "СОЦСЕТИ",
+    "items": [
+     {
+      "name": "Сторис и посты в едином стиле бренда"
+     },
+     {
+      "name": "Оформление сообщества: обложка, аватар, меню"
+     },
+     {
+      "name": "Серия макетов, которую продолжит ваш SMM-щик"
+     }
+    ]
+   }
+  ]
+ },
+ "contact": {
+  "title": "ДАВАЙТЕ РАБОТАТЬ",
+  "contactsTitle": "КОНТАКТЫ",
+  "formTitle": "НАПИСАТЬ МНЕ",
+  "form": {
+   "name": "Имя",
+   "contact": "Email или Telegram",
+   "message": "Сообщение",
+   "submit": "ОТПРАВИТЬ",
+   "placeholder": {
+    "name": "Как вас зовут?",
+    "contact": "your@email.com или @username",
+    "message": "Расскажите о проекте..."
+   }
+  }
+ }
+}

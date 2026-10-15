@@ -7,3 +7,10 @@ dist-ssr
 !.env.example
 _material
 .playwright-mcp
+site-dist
+_lab-archive
+# 3D: в репозитории только скрипты сборки бюста; модели, рендеры и личная модель — локально
+_3d/*
+!_3d/build_head.py
+!_3d/preview_head.py
+!_3d/probe_mpfb.py
