@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Услуги — Александр Абрамович</title>
+<meta name="description" content="Сайты, презентации, маркетплейсы, наружная реклама, айдентика, AI-контент и моушн. Смета после короткого разговора о задаче.">
+<link rel="canonical" href="https://alexanderabramovich.github.io/portfolio/services.html">
+<meta name="theme-color" content="#F4F2F5">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Александр Абрамович">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:url" content="https://alexanderabramovich.github.io/portfolio/services.html">
+<meta property="og:title" content="Услуги — Александр Абрамович">
+<meta property="og:description" content="Сайты, презентации, маркетплейсы, наружная реклама, айдентика, AI-контент и моушн. Смета после короткого разговора о задаче.">
+<meta property="og:image" content="https://alexanderabramovich.github.io/portfolio/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://alexanderabramovich.github.io/portfolio/og.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23E8102A'/%3E%3Cpath d='M32 11 51 53H41.5l-3.4-8H25.9l-3.4 8H13zm0 14-4 11h8z' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Unbounded:wght@400;600;800;900&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('fx'); setTimeout(() => { if (!window.__fxOK) document.documentElement.classList.remove('fx'); }, 2500);</script>
+<link rel="stylesheet" href="shell.css">
+<style>
+  .pg-head { padding-bottom:8vh; }
+  .facts { margin-top:4vh; display:flex; flex-wrap:wrap; gap:12px; }
+
+  /* направления: номер · название и что делаю · работы веером */
+  .svc { display:grid; grid-template-columns:minmax(70px,7vw) minmax(0,1.15fr) minmax(0,1fr); column-gap:3vw; align-items:start;
+    padding:6vh 4vw; border-top:1.5px solid var(--ink-d); }
+  .svc:last-of-type { border-bottom:1.5px solid var(--ink-d); }
+  .svc .n { font:600 14px 'Unbounded', 'Arial', sans-serif; padding-top:.9em; color:var(--fg2); transition:color .3s; }
+  .svc h2 { font:400 clamp(34px,4.6vw,88px)/1 'Dela Gothic One', 'Arial Black', sans-serif; letter-spacing:-.04em; text-transform:uppercase; transition:color .3s; }
+  .svc ul { margin-top:3vh; list-style:none; display:grid; gap:12px; }
+  .svc li { position:relative; padding-left:28px; font:400 clamp(16px,1.25vw,20px)/1.45 'Golos Text', system-ui, sans-serif; }
+  .svc li::before { content:''; position:absolute; left:0; top:.62em; width:14px; height:1.5px; background:var(--red); }
+  .svc .more { display:inline-flex; align-items:center; gap:14px; margin-top:4vh; padding:12px 0; font:600 13px 'Unbounded', 'Arial', sans-serif; text-transform:lowercase;
+    border-bottom:1.5px solid currentColor; }
+  .svc .more span[aria-hidden] { font:400 20px 'Golos Text', system-ui, sans-serif; transition:transform .3s; }
+  .svc .more:hover { color:var(--red); }
+  .svc .more:hover span[aria-hidden] { transform:translateX(6px); }
+  .svc:hover .n, .svc:hover h2 { color:var(--red); }
+
+  /* веер обложек: три настоящие работы направления, при наведении раскрываются */
+  .fan { position:relative; height:clamp(220px,22vw,380px); margin-top:.6em; }
+  /* веер-колода: у каждой карточки своё место (слева, спереди, справа); курсор у края — та карточка с пружинкой выезжает вперёд */
+  /* --k от прокрутки: 0 — карточка в стопке, ниже и меньше; 1 — на своём месте в веере; после центра экрана чуть шире. Прозрачности нет */
+  .fan a { position:absolute; left:50%; top:50%; width:72%; border-radius:12px; overflow:hidden; box-shadow:0 18px 40px rgba(11,10,12,.18);
+    --x:0%; --y:0%; --r:0deg; --s:1; --k:1;
+    transform:translate(-50%,-50%) translate(calc(var(--x) * var(--k)), calc(var(--y) * var(--k) + (1 - min(var(--k), 1)) * 80px))
+      rotate(calc(var(--r) * var(--k) + (1 - min(var(--k), 1)) * 5deg)) scale(calc(var(--s) * (.86 + .14 * min(var(--k), 1))));
+    transition:transform .6s cubic-bezier(.2,.9,.25,1.15), box-shadow .5s; }
+  .fan a[data-slot="L"] { --x:-24%; --y:6%; --r:-8deg; --s:.9; z-index:1; }
+  .fan a[data-slot="R"] { --x:24%; --y:5%; --r:7deg; --s:.9; z-index:2; }
+  .fan a[data-slot="C"] { --x:0%; --y:-3%; --r:-1.5deg; --s:1; z-index:3; box-shadow:0 30px 60px rgba(11,10,12,.26); }
+  .fan:hover a[data-slot="L"] { --x:-31%; --r:-11deg; }
+  .fan:hover a[data-slot="R"] { --x:31%; --r:10deg; }
+  .fan:hover a[data-slot="C"] { --y:-6%; --r:0deg; --s:1.04; }
+  .fan a img { width:100%; height:auto; }
+  .fan a span { position:absolute; left:10px; bottom:10px; max-width:calc(100% - 20px); padding:8px 12px; border-radius:10px; color:#fff; font:600 11px/1.3 'Unbounded', 'Arial', sans-serif;
+    background:rgba(20,16,24,.45); -webkit-backdrop-filter:blur(14px) saturate(1.8); backdrop-filter:blur(14px) saturate(1.8); box-shadow:inset 0 0 0 1px rgba(255,255,255,.35);
+    opacity:0; transform:translateY(6px); transition:opacity .3s, transform .3s; }
+  .fan:hover a[data-slot="C"] span, .fan a[data-slot="C"]:focus-visible span { opacity:1; transform:none; transition-delay:.2s; }
+
+  .lq p { margin-top:4vh; max-width:720px; font:400 clamp(18px,2vw,30px)/1.3 'Golos Text', system-ui, sans-serif; color:#e9e2e6; }
+  .lq-act { margin-top:5vh; display:flex; flex-wrap:wrap; gap:14px; align-items:center; }
+  .ghost { display:inline-flex; align-items:center; height:60px; padding:0 24px; border-radius:8px; font:600 15px 'Unbounded', 'Arial', sans-serif; color:#fff;
+    background:rgba(255,255,255,.08); -webkit-backdrop-filter:blur(14px); backdrop-filter:blur(14px); box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.4); }
+  .ghost:hover { background:rgba(255,255,255,.16); }
+
+  @media (max-width:980px) {
+    .svc { grid-template-columns:minmax(0,1fr); row-gap:3vh; }
+    .svc .n { padding-top:0; }
+    .fan { height:clamp(200px,52vw,360px); }
+  }
+  @media (max-width:820px) {
+    .svc { padding:5vh 4vw; }
+    .svc h2 { font-size:clamp(30px,9.6vw,52px); }
+    .ghost { width:100%; justify-content:center; height:56px; }
+  }
+  @media (prefers-reduced-motion: reduce) { .fan a, .fan a span { transition:none; } }
+</style>
+</head>
+<body>
+<script src="curtain.js"></script>
+<div id="ring" aria-hidden="true"></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><filter id="lens" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+  <feImage id="lensMap" x="0" y="0" width="96" height="96" preserveAspectRatio="none" result="map"/>
+  <feDisplacementMap in="SourceGraphic" in2="map" scale="34" xChannelSelector="R" yChannelSelector="G"/></filter></svg>
+
+<header id="hdr">
+  <a class="logo" href="./" aria-label="Александр Абрамович, на главную">А<i>А</i></a>
+  <span class="hline" aria-hidden="true"></span>
+  <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="nav">Меню<i aria-hidden="true"></i></button>
+  <nav class="nav" id="nav" aria-label="Разделы">
+    <a href="./">главная</a>
+    <a href="works.html">работы</a>
+    <a href="services.html" aria-current="page">услуги</a>
+    <a href="contacts.html">контакты</a>
+  </nav>
+</header>
+
+<main>
+  <section class="pg-head">
+    <div class="pg-tag rv">Александр Абрамович<em>графический дизайнер · Иркутск</em></div>
+    <h1 class="pg-h rv">Услуги</h1>
+    <p class="pg-lead rv" id="lead"></p>
+    <div class="facts rv"><span class="pill status">беру в работу</span><span class="pill">два раунда правок включены</span><span class="pill">самозанятый, договор, чек</span></div>
+  </section>
+
+  <div id="list"></div>
+
+  <section class="lq dark" aria-labelledby="ctaH">
+    <canvas class="lq-c" aria-hidden="true"></canvas><div class="lq-veil"></div>
+    <h2 id="ctaH" class="rv">Обсудим<br>ваш проект<span class="dot">.</span></h2>
+    <p class="rv">Расскажите, что нужно сделать. Я сориентирую по стоимости и срокам.</p>
+    <div class="lq-act rv">
+      <a class="btn-red" href="https://t.me/Abramovich_AB" target="_blank" rel="noopener">Написать в Telegram <span aria-hidden="true">→</span></a>
+      <a class="ghost" href="contacts.html">Все контакты</a>
+    </div>
+  </section>
+</main>
+<footer><span>© 2026 Александр Абрамович</span><span>Иркутск · работаю по всей России</span></footer>
+
+<script src="liquid.js"></script>
+<script src="shell.js"></script>
+<script>
+const { $, data, reveal } = Shell;
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const tgt = Shell.CASE_TAB ? ` target="${Shell.CASE_TAB}" rel="noopener"` : '';
+
+data().then((d) => {
+  const s = d.services;
+  // первое предложение подзаголовка о смете оставляем как на сайте; про правки и договор — плашками выше
+  $('lead').textContent = s.subtitle.split('. ').slice(0, 1).join('. ') + '.';
+  $('list').innerHTML = s.categories.map((c, i) => {
+    const ws = d.works.filter((w) => w.category === c.id);
+    const pick = [...ws.filter((w) => w.featured), ...ws.filter((w) => !w.featured)].slice(0, 3);
+    const fan = pick.length ? `<div class="fan" aria-label="Примеры работ">${pick.map((w) =>
+      `<a href="${Shell.CASE + w.id}"${tgt}${w.theme ? ` data-cbg="${w.theme.bg}" data-cfg="${w.theme.accent}"` : ''}><img src="${w.cover}" alt="${esc(w.title)}" loading="lazy"><span>${esc(w.title)}</span></a>`).join('')}</div>` : '<div></div>';
+    return `<section class="svc rv" id="${c.id}" aria-labelledby="h-${c.id}">
+      <div class="n">${String(i + 1).padStart(2, '0')}</div>
+      <div>
+        <h2 id="h-${c.id}">${esc(c.title)}</h2>
+        <ul>${c.items.map((it) => `<li>${esc(it.name)}</li>`).join('')}</ul>
+        ${ws.length ? `<a class="more" href="works.html?cat=${c.id}">смотреть работы · ${ws.length} <span aria-hidden="true">→</span></a>` : ''}
+      </div>
+      ${fan}
+    </section>`;
+  }).join('');
+  /* колода: передняя карточка — первая (избранная); курсор у левого/правого края меняет её с соседней */
+  const ORDER = ['C', 'L', 'R'], fans = [];
+  document.querySelectorAll('.fan').forEach((f) => {
+    const cards = [...f.children];
+    cards.forEach((c, i) => c.dataset.slot = ORDER[i]);
+    if (cards.length < 2) { fans.push({ f, cards }); return; }
+    const at = (slot) => cards.find((c) => c.dataset.slot === slot);
+    const front = (slot) => { const a = at(slot), c = at('C'); if (!a || !c || a === c) return; a.dataset.slot = 'C'; c.dataset.slot = slot; };
+    let zone = 'C';
+    f.addEventListener('pointermove', (e) => {
+      if (e.pointerType !== 'mouse') return;
+      const r = f.getBoundingClientRect(), x = (e.clientX - r.left) / r.width;
+      const z = x < .34 ? 'L' : x > .66 ? 'R' : 'C';
+      if (z !== zone) { zone = z; if (z !== 'C') front(z); }
+    });
+    f.addEventListener('pointerleave', () => { zone = 'C'; });
+    fans.push({ f, cards });
+    f.addEventListener('focusin', (e) => { const c = e.target.closest('a'); if (c && c.dataset.slot !== 'C') front(c.dataset.slot); });
+    // палец: тап по задней карточке выводит её вперёд, по передней — открывает кейс
+    f.addEventListener('click', (e) => {
+      const c = e.target.closest('a'); if (!c || !Shell.IS_TOUCH || c.dataset.slot === 'C') return;
+      e.preventDefault(); front(c.dataset.slot);
+    }, true);
+  });
+
+  /* раскрытие от прокрутки: первой встаёт передняя, за ней левая и правая */
+  const RANK = { C: 0, L: 1, R: 2 };
+  let sq = false;
+  const spread = () => {
+    sq = false;
+    const H = innerHeight;
+    fans.forEach(({ f, cards }) => {
+      const r = f.getBoundingClientRect();
+      if (r.bottom < -200 || r.top > H + 200) return;
+      const p = 1 - ((r.top + r.height / 2) - H * .5) / (H * .6);   // 0 — у нижнего края экрана, 1 — в середине
+      cards.forEach((c) => c.style.setProperty('--k', Math.max(0, Math.min(1.25, (p - RANK[c.dataset.slot] * .12) / .7)).toFixed(3)));
+    });
+  };
+  if (!Shell.RM.matches) {
+    addEventListener('scroll', () => { if (!sq) { sq = true; requestAnimationFrame(spread); } }, { passive: true });
+    addEventListener('resize', spread); spread();
+  }
+
+  reveal(); document.fonts.ready.then(Shell.fit); Shell.relayout();
+  if (location.hash) document.getElementById(location.hash.slice(1))?.scrollIntoView();
+});
+</script>
+</body>
+</html>

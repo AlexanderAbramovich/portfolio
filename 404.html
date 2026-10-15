@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script>
+(function () {
+  var m = location.pathname.match(/\/portfolio\/(works|services|contacts?|case)\/?$/);
+  if (m) location.replace('/portfolio/' + (m[1] === 'contact' ? 'contacts' : m[1]) + '.html' + location.search);
+})();
+</script>
+<title>Страница не найдена — Александр Абрамович</title>
+<meta name="description" content="Такой страницы нет. Все работы, услуги и контакты — на главной.">
+<link rel="canonical" href="https://alexanderabramovich.github.io/portfolio/">
+<meta name="theme-color" content="#F4F2F5">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Александр Абрамович">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:url" content="https://alexanderabramovich.github.io/portfolio/">
+<meta property="og:title" content="Страница не найдена — Александр Абрамович">
+<meta property="og:description" content="Такой страницы нет. Все работы, услуги и контакты — на главной.">
+<meta property="og:image" content="https://alexanderabramovich.github.io/portfolio/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://alexanderabramovich.github.io/portfolio/og.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23E8102A'/%3E%3Cpath d='M32 11 51 53H41.5l-3.4-8H25.9l-3.4 8H13zm0 14-4 11h8z' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Unbounded:wght@600&family=Golos+Text:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/portfolio/shell.css">
+<style>
+  .nf { min-height:100svh; display:flex; flex-direction:column; justify-content:center; padding:12vh 4vw; }
+  .nf h1 { font:400 clamp(64px,16vw,260px)/.9 'Dela Gothic One', 'Arial Black', sans-serif; letter-spacing:-.05em; }
+  .nf h1 i { font-style:normal; color:var(--red); }
+  .nf p { margin-top:4vh; max-width:560px; font:400 clamp(18px,1.8vw,26px)/1.4 'Golos Text', system-ui, sans-serif; }
+  .nf nav { margin-top:5vh; display:flex; flex-wrap:wrap; gap:12px; }
+  .nf nav a { display:inline-flex; align-items:center; height:52px; padding:0 22px; border-radius:26px; border:1.5px solid var(--fg); font:600 13px 'Unbounded', 'Arial', sans-serif; text-transform:lowercase; }
+  .nf nav a:first-child { background:var(--fg); color:var(--bg); }
+  .nf nav a:hover { border-color:var(--red); color:var(--red); } .nf nav a:first-child:hover { background:var(--red); color:#fff; }
+</style>
+</head>
+<body>
+<main class="nf">
+  <h1>404<i>.</i></h1>
+  <p>Такой страницы нет. Возможно, ссылка устарела.</p>
+  <nav aria-label="Куда дальше"><a href="/portfolio/">главная</a><a href="/portfolio/works.html">работы</a><a href="/portfolio/services.html">услуги</a><a href="/portfolio/contacts.html">контакты</a></nav>
+</main>
+</body>
+</html>
