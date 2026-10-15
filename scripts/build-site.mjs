@@ -56,11 +56,11 @@ const meta = (p, url) => `
 <meta property="og:url" content="${url}">
 <meta property="og:title" content="${esc(p.title)}">
 <meta property="og:description" content="${esc(p.desc)}">
-<meta property="og:image" content="${SITE}og-card-2026-10.jpg">
+<meta property="og:image" content="${SITE}og-card-2026-10b.jpg">
 <meta property="og:image:width" content="2400">
 <meta property="og:image:height" content="1260">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="${SITE}og-card-2026-10.jpg">`
+<meta name="twitter:image" content="${SITE}og-card-2026-10b.jpg">`
 
 // старые адреса React-сайта (#/works/argos-site и т.п.) уже разосланы в письмах и КП — ведём их на новые страницы
 const REDIRECT = `<script>
