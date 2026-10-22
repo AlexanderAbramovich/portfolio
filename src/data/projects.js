@@ -208,6 +208,13 @@ export const projectThemes = {
     accent: '#BC4A1E', accent2: '#EE5F36',
     line: 'rgba(30,26,24,0.14)', lineAccent: 'rgba(188,74,30,0.34)',
   },
+  'weeknd-fanclips': {
+    mode: 'dark',
+    bg: '#0A0809', bg2: '#140C0E', card: '#1E1214', cardHover: '#2A171B',
+    text: '#F4EFEA', textMuted: '#9C9290',
+    accent: '#E3141B', accent2: '#D6246E',
+    line: 'rgba(244,239,234,0.14)', lineAccent: 'rgba(227,20,27,0.42)',
+  },
   'argos-site': {
     mode: 'dark',
     bg: '#0D0C0A', bg2: '#171512', card: '#1F1D19', cardHover: '#2A2722',
@@ -345,6 +352,38 @@ export const projectThemes = {
 
 export const projects = [
   // ═══ НОВОЕ (сентябрь-октябрь 2026) ═════════════════════════════════════
+  {
+    id: 'weeknd-fanclips',
+    theme: projectThemes['weeknd-fanclips'],
+    title: 'Фан-клипы The Weeknd',
+    titleEn: 'The Weeknd Fan Edits',
+    category: 'motion',
+    tags: ['Монтаж в долю', 'Саунд-дизайн', 'After Effects'],
+    tagsEn: ['Beat editing', 'Sound design', 'After Effects'],
+    cover: cover('weeknd-fanclips'),
+    year: 2026,
+    location: 'Бангкок · After Effects',
+    description: 'Три вертикальных фан-клипа по съёмке друга с концерта The Weeknd в Бангкоке и фан-съёмкам этого тура: Moth To A Flame, Blinding Lights и São Paulo. Каждая склейка стоит на долю трека, сверху цветокор, переходы и саунд-дизайн: свуши, удары, гул стадиона и крики толпы из самой съёмки. Финальную версию собирали по правкам: меньше психоделики и только кадры этого тура.',
+    descriptionEn: 'Three vertical fan edits from a friend\'s footage of The Weeknd in Bangkok plus fan footage from the same tour: Moth To A Flame, Blinding Lights and São Paulo. Every cut lands on the beat, with colour, transitions and sound design: whooshes, hits, stadium rumble and crowd noise from the footage itself.',
+    steps: [
+      'Разобрал 25 минут съёмки и подобрал кадры по цвету',
+      'Нашёл точный темп трека и поставил склейки на доли',
+      'Эффекты, переходы и цветокор в After Effects',
+      'Саунд-дизайн: 110+ звуков и живая толпа под музыкой',
+      'Три круга правок по отзыву друга',
+    ],
+    stepsEn: [
+      'Went through 25 minutes of footage and picked shots by colour',
+      'Measured the exact tempo and put every cut on the beat',
+      'Effects, transitions and colour in After Effects',
+      'Sound design: 110+ sounds and live crowd under the music',
+      'Three feedback rounds with the friend',
+    ],
+    sections: [
+      camp('weeknd-fanclips', 'reel', 'Три ролика', 'Three Edits', { videos: 3, layout: 'story' }),
+    ],
+    featured: true,
+  },
   {
     id: 'argos-site',
     theme: projectThemes['argos-site'],

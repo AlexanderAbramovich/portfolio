@@ -1,6 +1,35 @@
 {
  "works": [
   {
+   "id": "weeknd-fanclips",
+   "title": "Фан-клипы The Weeknd",
+   "category": "motion",
+   "tags": [
+    "Монтаж в долю",
+    "Саунд-дизайн",
+    "After Effects"
+   ],
+   "year": 2026,
+   "location": "Бангкок · After Effects",
+   "cover": "../images/projects/weeknd-fanclips/cover.jpg",
+   "description": "Три вертикальных фан-клипа по съёмке друга с концерта The Weeknd в Бангкоке и фан-съёмкам этого тура: Moth To A Flame, Blinding Lights и São Paulo. Каждая склейка стоит на долю трека, сверху цветокор, переходы и саунд-дизайн: свуши, удары, гул стадиона и крики толпы из самой съёмки. Финальную версию собирали по правкам: меньше психоделики и только кадры этого тура.",
+   "featured": true,
+   "theme": {
+    "mode": "dark",
+    "bg": "#0A0809",
+    "bg2": "#140C0E",
+    "card": "#1E1214",
+    "cardHover": "#2A171B",
+    "text": "#F4EFEA",
+    "textMuted": "#9C9290",
+    "accent": "#E3141B",
+    "accent2": "#D6246E",
+    "line": "rgba(244,239,234,0.14)",
+    "lineAccent": "rgba(227,20,27,0.42)"
+   },
+   "liveUrl": ""
+  },
+  {
    "id": "argos-site",
    "title": "Сайт батальона «Аргос»",
    "category": "web",
