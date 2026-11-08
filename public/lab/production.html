@@ -108,7 +108,7 @@
   .w-grid2 .w-name { font-size:clamp(26px,2.6vw,44px); }
 
   .verts { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:2vw; margin-top:3vw; }
-  .verts.n2, .verts.n1 { grid-template-columns:repeat(4, minmax(0,1fr)); }
+  .verts.n2, .verts.n1, .verts.n4 { grid-template-columns:repeat(4, minmax(0,1fr)); }
   .verts figure figcaption { margin-top:10px; font:500 12px 'Unbounded', 'Arial', sans-serif; color:var(--fg2); text-transform:lowercase; }
   .verts-head { display:flex; align-items:baseline; gap:14px; margin-top:6vh; font:600 12px 'Unbounded', 'Arial', sans-serif; text-transform:uppercase; color:var(--fg2); }
   .verts-head::after { content:''; flex:1; height:1px; background:var(--line); }
@@ -154,6 +154,7 @@
     .w-grid2 { grid-template-columns:1fr; gap:7vh; }
     .w-info { grid-template-columns:1fr; gap:12px; }
     .verts, .verts.n2, .verts.n1 { gap:8px; grid-template-columns:repeat(3, minmax(0,1fr)); }
+    .verts.n4 { gap:8px; grid-template-columns:repeat(2, minmax(0,1fr)); }
     .gig { grid-template-columns:1fr; gap:22px; }
     .gig-side { position:static; }
     .play { left:14px; bottom:14px; } .play span { display:none; }
@@ -200,7 +201,7 @@
       <p>Монтаж, цвет, звук, графика и 3D. Клипы артистам, рилсы с концертов, трейлеры спектаклей.</p>
       <ul class="stats">
         <li><b>6</b><span>проектов<br>с октября</span></li>
-        <li><b>13</b><span>роликов<br>на странице</span></li>
+        <li><b>16</b><span>роликов<br>на странице</span></li>
         <li><b>3D</b><span>в одном кадре<br>с живыми актёрами</span></li>
       </ul>
     </div>
@@ -212,7 +213,6 @@
         <a class="btn fill" href="#reach">Написать <span class="arr" aria-hidden="true">→</span></a>
       </div>
     </div>
-    <span class="scroll-cue" aria-hidden="true"></span>
   </section>
 
   <div class="ticker dark" aria-hidden="true"><div id="tick"></div></div>
@@ -269,9 +269,9 @@ const CLIPS = [
 ];
 const TRAILERS = [
   { id:'zhuk', name:'Инь и Янь', sub:'Богдан Жук · трейлер спектакля', dur:'1:32', big:true,
-    desc:'Живые актёры и 3D-шахматы в одном кадре: фигуры разлетаются от смаха, камера пролетает над доской. Голос, музыка и грейд собраны в один ритм. К трейлеру — сторис 9:16 для соцсетей.',
+    desc:'Живые актёры и 3D-шахматы в одном кадре: фигуры разлетаются от смаха, камера пролетает над доской. Голос, музыка и грейд собраны в один ритм. К трейлеру — вертикальная версия и три сторис для соцсетей.',
     roles:['монтаж','цвет','звук','3D','VFX'],
-    verts:[ { id:'zhuk-r1', cap:'сторис · пролёт', dur:'0:11' } ] },
+    verts:[ { id:'zhuk-full', cap:'трейлер целиком 9:16', dur:'1:32' }, { id:'zhuk-r2', cap:'сторис · закулисье', dur:'0:14' }, { id:'zhuk-r3', cap:'сторис · смах', dur:'0:14' }, { id:'zhuk-r1', cap:'сторис · пролёт', dur:'0:11' } ] },
 ];
 const GIGS = [
   { name:'Дора', sub:'Концерт-холл, Иркутск · 7 ноября', desc:'Три рилса для организаторов: зал, артистка крупно, свет и шоу. Снимал из зала по аккредитации.',
@@ -288,7 +288,7 @@ const shot = (src, poster, label, cls = '', dur = '', cap = '') =>
   `<a class="shot ${cls}" href="${src}" data-v="${src}" data-cap="${esc(cap || label)}" aria-label="Смотреть: ${esc(cap || label)}">
      <img src="${poster}" alt="" loading="lazy"><span class="play"><b aria-hidden="true"></b><span>${esc(label)}</span></span>${dur ? `<span class="dur">${dur}</span>` : ''}</a>`;
 const roles = (w) => `<div class="roles">${w.roles.map((r) => `<span>${r}</span>`).join('')}${w.credit ? `<span class="cr">${w.credit}</span>` : ''}</div>`;
-const vertsHtml = (vs, title) => `<div class="verts${vs.length < 3 ? ' n' + vs.length : ''}">${vs.map((v) => `<figure>${shot(v.src || P + v.id + '.mp4', v.poster || P + v.id + '.jpg', '', 'v916', v.dur || '', `${title} · ${v.cap}`)}<figcaption>${v.cap}</figcaption></figure>`).join('')}</div>`;
+const vertsHtml = (vs, title) => `<div class="verts${vs.length !== 3 ? ' n' + vs.length : ''}">${vs.map((v) => `<figure>${shot(v.src || P + v.id + '.mp4', v.poster || P + v.id + '.jpg', '', 'v916', v.dur || '', `${title} · ${v.cap}`)}<figcaption>${v.cap}</figcaption></figure>`).join('')}</div>`;
 const work = (w) => `<article class="work rv">
     ${shot(P + w.id + '.mp4', P + w.id + '.jpg', 'смотреть', w.ar || '', w.dur, `${w.name} — ${w.sub}`)}
     <div class="w-info"><h3 class="w-name">${esc(w.name)}<small>${esc(w.sub)}</small></h3><div><p class="w-desc">${w.desc}</p>${roles(w)}</div></div>
