@@ -300,9 +300,9 @@
     /* герой — в потоке: подпись, место капли, заголовок, пояснение и кнопки не делят одну область */
     #hero { height:auto; min-height:100svh; display:flex; flex-direction:column; padding:calc(var(--hdr) + 22px) 4vw 28px; }
     .hero-tag, .hero-h, .hero-copy { position:relative; left:auto; right:auto; top:auto; bottom:auto; }
-    .hero-h { margin-top:44vw; font-size:9.2vw; }
+    .hero-h { margin-top:auto; padding-top:44vw; font-size:9.2vw; }   /* заголовок с бюстом стоят внизу, у текста */
     .hero-top { display:none; }
-    .hero-copy { margin-top:auto; padding-top:26px; flex-direction:column; align-items:stretch; gap:20px; }
+    .hero-copy { margin-top:0; padding-top:26px; flex-direction:column; align-items:stretch; gap:20px; }
     .hero-copy p { font-size:18px; }
     .btns { flex-wrap:wrap; }
     .btn { flex:1 1 auto; height:54px; padding:0 16px; font-size:14px; }
@@ -339,6 +339,7 @@
 </head>
 <body>
 <script src="curtain.js"></script>
+<script src="whip.js"></script>
 
 <div id="ring" aria-hidden="true"></div>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><filter id="lens" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
@@ -450,7 +451,7 @@
       <a class="row" href="case.html?id=cocos"><span class="cat">презентации</span><span class="name">cocos</span><span class="pv"><span class="peek"><img src="../images/projects/cocos/cover.jpg" alt="" width="1440" height="720" loading="lazy"></span></span><span class="desc">Коммерческое предложение студии красоты: аудитория в цифрах</span><span class="arr" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M8 32 32 8M13 8h19v19"/></svg></span></a>
       <a class="row" href="case.html?id=mr-naruzhka"><span class="cat">наружка</span><span class="name">мебельный рай</span><span class="pv"><span class="peek"><img src="../images/projects/mr-naruzhka/cover.jpg" alt="" width="1440" height="810" loading="lazy"></span></span><span class="desc">Пять смет подряд: фасады, торговый зал, навигация, фура</span><span class="arr" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M8 32 32 8M13 8h19v19"/></svg></span></a>
       <a class="row" href="case.html?id=polina"><span class="cat">айдентика</span><span class="name">павельчук</span><span class="pv"><span class="peek"><img src="../images/projects/polina/cover.jpg" alt="" width="1440" height="720" loading="lazy"></span></span><span class="desc">Логотип фотографа, палитра, шрифт и бланк письма</span><span class="arr" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M8 32 32 8M13 8h19v19"/></svg></span></a>
-      <a class="row" href="case.html?id=motion-mr"><span class="cat">моушн</span><span class="name">стол за 22 сек</span><span class="pv"><span class="peek" data-video="../images/projects/motion-mr/reel/1.mp4"><img src="../images/projects/motion-mr/reel/poster-1.jpg" alt="" width="1600" height="900" loading="lazy"><i class="play" aria-hidden="true"></i></span></span><span class="desc">Товарный ролик мебельного центра без съёмочной смены</span><span class="arr" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M8 32 32 8M13 8h19v19"/></svg></span></a>
+      <a class="row" href="case.html?id=perimetr"><span class="cat">презентации</span><span class="name">периметр</span><span class="pv"><span class="peek"><img src="../images/projects/perimetr/cover.jpg" alt="" width="1440" height="720" loading="lazy"></span></span><span class="desc">Партнёрская программа видеонаблюдения на четырёх слайдах</span><span class="arr" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M8 32 32 8M13 8h19v19"/></svg></span></a>
       <a class="row" href="case.html?id=vtn-avito"><span class="cat">маркетплейс</span><span class="name">vtn</span><span class="pv"><span class="peek"><img src="../images/projects/vtn-avito/cover.jpg" alt="" width="1440" height="720" loading="lazy"></span></span><span class="desc">Обложки Авито «до / после», которые читаются в ленте</span><span class="arr" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M8 32 32 8M13 8h19v19"/></svg></span></a>
     </div>
   </section>
@@ -684,8 +685,9 @@ const roomFx = effect(hero, () => {
 window.heroPlace = function (w, h){
   const hr = hero.getBoundingClientRect();
   if (matchMedia('(max-width: 820px)').matches){
-    const tag = document.querySelector('.hero-tag').getBoundingClientRect(), r = w * .29;
-    return { cx: w * .7, cy: tag.bottom - hr.top + r + 8, r };
+    // бюст стоит над заголовком и опускается вместе с ним
+    const h1 = document.querySelector('.hero-h > span').getBoundingClientRect(), r = w * .29;
+    return { cx: w * .7, cy: h1.top - hr.top - w * .15 + 8, r };
   }
   // фигура крупная и стоит низко: макушка чуть ниже цифр справа, грудь уходит за нижний край героя
   const top = document.querySelector('.hero-top').getBoundingClientRect();
@@ -707,7 +709,6 @@ setTimeout(() => { if (!heroBlob.dataset.ok) heroBlob.classList.add('still-on');
 const STRIP = [
   { id: 'aps', src: '../images/projects/aps/cover.jpg', title: 'Академия Проф Стандарта', kind: 'сайт', ratio: 2, rotation: -3 },
   { id: 'spektr', src: '../images/projects/spektr/cover.jpg', title: 'Завод «Спектр»', kind: 'презентация', ratio: 2, rotation: 2 },
-  { id: 'argos-intro', src: '../images/projects/argos-intro/cover.jpg', title: 'Заставки «Аргос»', kind: 'моушн', ratio: 2, rotation: -2 },
   { id: 'sopka', src: '../images/projects/sopka/cover.jpg', title: 'Кофейня «Сопка»', kind: 'айдентика', ratio: 16 / 9, rotation: 3 },
   { id: 'skorohod', src: '../images/projects/skorohod/cover.jpg', title: 'Дмитрий Скороход', kind: 'сайт', ratio: 2, rotation: -4 },
   { id: 'gurman', src: '../images/projects/gurman/cover.jpg', title: 'GURMAN', kind: 'презентация', ratio: 2, rotation: 2 },

@@ -90,6 +90,7 @@
 </head>
 <body>
 <script src="curtain.js"></script>
+<script src="whip.js"></script>
 <div id="ring" aria-hidden="true"></div>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><filter id="lens" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
   <feImage id="lensMap" x="0" y="0" width="96" height="96" preserveAspectRatio="none" result="map"/>
@@ -133,7 +134,7 @@
 <script>
 const { $, data, reveal, IS_TOUCH, RM } = Shell;
 const CASE = Shell.CASE, CASE_TAB = Shell.CASE_TAB;
-const ORDER = ['web', 'presentation', 'marketplace', 'outdoor', 'identity', 'ai', 'motion', 'youtube', 'social'];
+const ORDER = ['web', 'presentation', 'marketplace', 'outdoor', 'identity', 'ai', 'youtube', 'social'];   // моушн и монтаж — на странице «продакшн»
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const first = (s) => { const m = String(s || '').match(/^.*?[.!?](\s|$)/); return (m ? m[0] : s).trim(); };
 const caseHref = (id) => CASE + id;

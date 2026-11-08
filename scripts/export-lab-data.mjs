@@ -19,7 +19,9 @@ const { translations } = await import(pathToFileURL(join(tmp, 'i18n.mjs')).href)
 
 // пути картинок: в lab страница лежит в /portfolio/lab/, картинки в /portfolio/images/
 const rel = (p) => typeof p === 'string' ? p.replace(/^\/portfolio\//, '../') : p
-const works = projects.filter(p => !p.aliasOf).map(p => ({
+// моушн и монтаж живут на странице «продакшн» (production.html), в дизайн-части их нет; кейсы по прямым ссылкам остаются в cases.json
+const PROD_CATS = new Set(['motion'])
+const works = projects.filter(p => !p.aliasOf && !PROD_CATS.has(p.category)).map(p => ({
   id: p.id, title: p.title, category: p.category, tags: p.tags || [], year: p.year,
   location: p.location || '', cover: rel(p.cover), description: p.description || '',
   featured: !!p.featured, theme: p.theme || null, liveUrl: p.liveUrl || '',
@@ -27,9 +29,9 @@ const works = projects.filter(p => !p.aliasOf).map(p => ({
 const t = translations.ru
 const out = {
   works,
-  categories: categoryLabels.ru,
+  categories: Object.fromEntries(Object.entries(categoryLabels.ru).filter(([k]) => !PROD_CATS.has(k))),
   worksText: t.works,
-  services: t.services,
+  services: { ...t.services, categories: t.services.categories.filter(c => !PROD_CATS.has(c.id)) },
   contact: t.contact,
 }
 writeFileSync(join(root, 'public/lab/site-data.json'), JSON.stringify(out, null, 1))

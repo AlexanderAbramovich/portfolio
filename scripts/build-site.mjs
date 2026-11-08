@@ -25,17 +25,19 @@ for (const name of fs.readdirSync(PUB)) {
 }
 
 // 3. страницы и их файлы — только белый список, черновики не уходят
-const ASSETS = ['shell.css', 'shell.js', 'curtain.js', 'liquid.js', 'blob.js', 'dela.json', 'head-still.webp', 'bust.glb', 'site-data.json', 'cases.json']
+const ASSETS = ['shell.css', 'shell.js', 'curtain.js', 'whip.js', 'liquid.js', 'blob.js', 'dela.json', 'head-still.webp', 'bust.glb', 'site-data.json', 'cases.json']
 const NB = ' '
 const PAGES = {
   'home.html': { out: 'index.html', title: `Александр Абрамович${NB}— графический дизайнер`,
     desc: 'Сайты на Тильде, презентации, наружная реклама и айдентика. Иркутск, работаю по всей России.' },
   'works.html': { out: 'works.html', title: `Работы${NB}— Александр Абрамович`,
-    desc: `${works.length} проектов: сайты, презентации, наружка, айдентика, карточки маркетплейсов, моушн.` },
+    desc: `${works.length} проектов: сайты, презентации, наружка, айдентика, карточки маркетплейсов.` },
   'services.html': { out: 'services.html', title: `Услуги${NB}— Александр Абрамович`,
-    desc: 'Сайты, презентации, маркетплейсы, наружная реклама, айдентика, AI-контент и моушн. Смета после короткого разговора о задаче.' },
+    desc: 'Сайты, презентации, маркетплейсы, наружная реклама, айдентика и AI-контент. Смета после короткого разговора о задаче.' },
   'contacts.html': { out: 'contacts.html', title: `Контакты${NB}— Александр Абрамович`,
     desc: 'Telegram @Abramovich_AB, kapen4design@gmail.com, +7 902 161-14-41. Иркутск, работаю по всей России.' },
+  'production.html': { out: 'production.html', title: `Продакшн${NB}— Александр Абрамович`,
+    desc: 'Клипы, концерты и трейлеры: монтаж, цвет, звук, графика и 3D. MILITANTUM, FORTUNA 812, GIPPY, Дора, The Weeknd, трейлер «Инь и Янь».' },
   'case.html': { out: 'case.html', title: `Кейс${NB}— Александр Абрамович`,
     desc: 'Проект из портфолио Александра Абрамовича: задача, этапы и материалы.' },
 }
