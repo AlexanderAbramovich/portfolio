@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Работы — Александр Абрамович</title>
-<meta name="description" content="50 проектов: сайты, презентации, наружка, айдентика, карточки маркетплейсов, моушн.">
+<meta name="description" content="44 проектов: сайты, презентации, наружка, айдентика, карточки маркетплейсов.">
 <link rel="canonical" href="https://alexanderabramovich.github.io/portfolio/works.html">
 <meta name="theme-color" content="#F4F2F5">
 <meta property="og:type" content="website">
@@ -12,7 +12,7 @@
 <meta property="og:locale" content="ru_RU">
 <meta property="og:url" content="https://alexanderabramovich.github.io/portfolio/works.html">
 <meta property="og:title" content="Работы — Александр Абрамович">
-<meta property="og:description" content="50 проектов: сайты, презентации, наружка, айдентика, карточки маркетплейсов, моушн.">
+<meta property="og:description" content="44 проектов: сайты, презентации, наружка, айдентика, карточки маркетплейсов.">
 <meta property="og:image" content="https://alexanderabramovich.github.io/portfolio/og-card-2026-10b.jpg">
 <meta property="og:image:width" content="2400">
 <meta property="og:image:height" content="1260">
@@ -104,6 +104,7 @@
 </head>
 <body>
 <script src="curtain.js"></script>
+<script src="whip.js"></script>
 <div id="ring" aria-hidden="true"></div>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><filter id="lens" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
   <feImage id="lensMap" x="0" y="0" width="96" height="96" preserveAspectRatio="none" result="map"/>
@@ -147,7 +148,7 @@
 <script>
 const { $, data, reveal, IS_TOUCH, RM } = Shell;
 const CASE = Shell.CASE, CASE_TAB = Shell.CASE_TAB;
-const ORDER = ['web', 'presentation', 'marketplace', 'outdoor', 'identity', 'ai', 'motion', 'youtube', 'social'];
+const ORDER = ['web', 'presentation', 'marketplace', 'outdoor', 'identity', 'ai', 'youtube', 'social'];   // моушн и монтаж — на странице «продакшн»
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const first = (s) => { const m = String(s || '').match(/^.*?[.!?](\s|$)/); return (m ? m[0] : s).trim(); };
 const caseHref = (id) => CASE + id;

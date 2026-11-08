@@ -1,35 +1,6 @@
 {
  "works": [
   {
-   "id": "weeknd-fanclips",
-   "title": "Фан-клипы The Weeknd",
-   "category": "motion",
-   "tags": [
-    "Монтаж в долю",
-    "Саунд-дизайн",
-    "After Effects"
-   ],
-   "year": 2026,
-   "location": "Бангкок · After Effects",
-   "cover": "images/projects/weeknd-fanclips/cover.jpg",
-   "description": "Три вертикальных фан-клипа по съёмке друга с концерта The Weeknd в Бангкоке и фан-съёмкам этого тура: Moth To A Flame, Blinding Lights и São Paulo. Каждая склейка стоит на долю трека, сверху цветокор, переходы и саунд-дизайн: свуши, удары, гул стадиона и крики толпы из самой съёмки. Финальную версию собирали по правкам: меньше психоделики и только кадры этого тура.",
-   "featured": true,
-   "theme": {
-    "mode": "dark",
-    "bg": "#0A0809",
-    "bg2": "#140C0E",
-    "card": "#1E1214",
-    "cardHover": "#2A171B",
-    "text": "#F4EFEA",
-    "textMuted": "#9C9290",
-    "accent": "#E3141B",
-    "accent2": "#D6246E",
-    "line": "rgba(244,239,234,0.14)",
-    "lineAccent": "rgba(227,20,27,0.42)"
-   },
-   "liveUrl": ""
-  },
-  {
    "id": "argos-site",
    "title": "Сайт батальона «Аргос»",
    "category": "web",
@@ -175,23 +146,6 @@
    "liveUrl": ""
   },
   {
-   "id": "argos-intro",
-   "title": "Заставки для видео «Аргос»",
-   "category": "motion",
-   "tags": [
-    "Интро",
-    "Аутро",
-    "AI-видео"
-   ],
-   "year": 2026,
-   "location": "Kling + After Effects",
-   "cover": "images/projects/argos-intro/cover.jpg",
-   "description": "Интро на пять секунд и аутро на три для видео батальона в Telegram: герб проявляется из бетона, флаг на ветру. Генерация в Kling, сборка, свет и звук в After Effects. Отдал две версии, полную и простую, после одного круга правок.",
-   "featured": true,
-   "theme": null,
-   "liveUrl": ""
-  },
-  {
    "id": "julia-invite",
    "title": "Сайт-приглашение «Герои и злодеи»",
    "category": "web",
@@ -276,23 +230,6 @@
     "line": "rgba(244,244,244,0.14)",
     "lineAccent": "rgba(240,38,45,0.4)"
    },
-   "liveUrl": ""
-  },
-  {
-   "id": "vtn-reel",
-   "title": "Рилс детейлинг-центра VTN",
-   "category": "motion",
-   "tags": [
-    "Рилс",
-    "Монтаж",
-    "Титры"
-   ],
-   "year": 2026,
-   "location": "Соцсети",
-   "cover": "images/projects/vtn-reel/cover.jpg",
-   "description": "Вертикальный ролик на 41 секунду для детейлинг-центра: монтаж под речь мастеров, крупные титры, простая анимированная схема и звук. Рассчитан на просмотр без звука, суть понятна по титрам.",
-   "featured": false,
-   "theme": null,
    "liveUrl": ""
   },
   {
@@ -1106,57 +1043,6 @@
    "liveUrl": ""
   },
   {
-   "id": "motion-mr",
-   "title": "Ролик мебельного центра",
-   "category": "motion",
-   "tags": [
-    "AI-видео",
-    "Товарный ролик",
-    "Монтаж"
-   ],
-   "year": 2026,
-   "location": "Kling + Premiere",
-   "cover": "images/projects/motion-mr/cover.jpg",
-   "description": "Товарный ролик обеденного стола для мебельного центра: сценарий, генерации нейросетью вместо съёмочной смены, монтаж, цветокор и звук. Съёмочная группа, студия и аренда мебели не понадобились.",
-   "featured": false,
-   "theme": null,
-   "liveUrl": ""
-  },
-  {
-   "id": "motion-stories",
-   "title": "Сторис для спортсмена",
-   "category": "motion",
-   "tags": [
-    "Сторис",
-    "Вертикаль",
-    "Монтаж под трек"
-   ],
-   "year": 2026,
-   "location": "Соцсети",
-   "cover": "images/projects/motion-stories/cover.jpg",
-   "description": "Три вертикальные нарезки для спортсмена: склейка попадает в ритм трека, поэтому ролик досматривают до конца. Формат под сторис и рилс, звук и темп подобраны под каждый трек отдельно.",
-   "featured": false,
-   "theme": null,
-   "liveUrl": ""
-  },
-  {
-   "id": "motion-student",
-   "title": "Ролик для студенческого проекта",
-   "category": "motion",
-   "tags": [
-    "Монтаж",
-    "Цветокор",
-    "Звук"
-   ],
-   "year": 2026,
-   "location": "Premiere",
-   "cover": "images/projects/motion-student/cover.jpg",
-   "description": "Полуминутный ролик для студенческого проекта: монтаж, ритм, цветокор и звук. Задача была уложить историю в короткий хронометраж и не потерять темп.",
-   "featured": false,
-   "theme": null,
-   "liveUrl": ""
-  },
-  {
    "id": "yt-preview",
    "title": "YouTube-канал VATAN",
    "category": "youtube",
@@ -1384,7 +1270,6 @@
   "outdoor": "Наружка и реклама",
   "identity": "Лого и айдентика",
   "ai": "AI-услуги",
-  "motion": "Моушн",
   "youtube": "Превью YouTube",
   "social": "Соцсети",
   "campaign": "Работы с компаниями"
@@ -1504,21 +1389,6 @@
      },
      {
       "name": "Закадровый голос студийного качества - без диктора и студии"
-     }
-    ]
-   },
-   {
-    "id": "motion",
-    "title": "МОУШН",
-    "items": [
-     {
-      "name": "Анимация логотипа: живой знак для сайта и соцсетей"
-     },
-     {
-      "name": "Рекламный ролик: продукт в движении, под экраны и сторис"
-     },
-     {
-      "name": "Анимированные сторис для акций и запусков"
      }
     ]
    },
