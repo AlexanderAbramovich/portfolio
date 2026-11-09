@@ -37,7 +37,8 @@ const PAGES = {
   'contacts.html': { out: 'contacts.html', title: `Контакты${NB}— Александр Абрамович`,
     desc: 'Telegram @Abramovich_AB, kapen4design@gmail.com, +7 902 161-14-41. Иркутск, работаю по всей России.' },
   'production.html': { out: 'production.html', title: `Продакшн${NB}— Александр Абрамович`,
-    desc: 'Клипы, концерты и трейлеры: монтаж, цвет, звук, графика и 3D. MILITANTUM, FORTUNA 812, GIPPY, Дора, The Weeknd, трейлер «Инь и Янь».' },
+    desc: 'Клипы, концерты и трейлеры: монтаж, цвет, звук, графика и 3D. MILITANTUM, FORTUNA 812, GIPPY, Дора, The Weeknd, трейлер «Инь и Янь».',
+    og: 'og-prod-2026-11.jpg' },   // своя карточка ссылки: чёрная, кадр FORTUNA (исходник _lab-archive/og-card-prod.html)
   'case.html': { out: 'case.html', title: `Кейс${NB}— Александр Абрамович`,
     desc: 'Проект из портфолио Александра Абрамовича: задача, этапы и материалы.' },
 }
@@ -58,11 +59,11 @@ const meta = (p, url) => `
 <meta property="og:url" content="${url}">
 <meta property="og:title" content="${esc(p.title)}">
 <meta property="og:description" content="${esc(p.desc)}">
-<meta property="og:image" content="${SITE}og-card-2026-10b.jpg">
+<meta property="og:image" content="${SITE}${p.og || 'og-card-2026-10b.jpg'}">
 <meta property="og:image:width" content="2400">
 <meta property="og:image:height" content="1260">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="${SITE}og-card-2026-10b.jpg">`
+<meta name="twitter:image" content="${SITE}${p.og || 'og-card-2026-10b.jpg'}">`
 
 // старые адреса React-сайта (#/works/argos-site и т.п.) уже разосланы в письмах и КП — ведём их на новые страницы
 const REDIRECT = `<script>
